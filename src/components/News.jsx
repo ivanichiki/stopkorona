@@ -2,23 +2,14 @@ import React, { useEffect, useState } from 'react'
 import '../styles/News.scss'
 import { client } from '../client'
 import { NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import { KoronaContext } from '../App'
 
 export const News = () => {
+  
+  const {state} = useContext(KoronaContext)
 
-  const [state, setstate] = useState('')
-  const fetchData = async () => {
-    const entries = await client.getEntries({
-      content_type: "news",
-
-
-    })
-    console.log(entries.items[0].fields)
-    setstate(entries.items)
-  }
-  useEffect(() => {
-    fetchData()
-
-  }, [])
+ 
   let i = 0;
   return (
     <div className='news_wrapper'>

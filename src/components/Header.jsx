@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import '../styles/Header.scss'
 import logo from '../svg/logo.svg'
 import gov from '../svg/gov.svg'
@@ -10,6 +10,7 @@ import telega from '../svg/telega.svg'
 import odnokashniki from '../svg/odnokashniki.svg'
 import vk from '../svg/vk.svg'
 import { NavLink } from 'react-router-dom'
+import { KoronaContext } from '../App'
 
 
 
@@ -17,6 +18,9 @@ export const Header = () => {
   const [statistic_toggle, setstatistic_toggle] = useState(false)
   const [simptom_toggle, setsimptom_toggle] = useState(false)
   const [more_toggle, setmore_toggle] = useState(false)
+  const {executeScrolltoVideo,executeScrolltoOper} = useContext(KoronaContext)
+
+
   return (
     <div style={{width:'100%',marhinLeft:'0px',left:'0',  backgroundColor:'white', height:'145px', position:'fixed', zIndex:'9999'}}>
     <div style={{marginLeft:'auto',marginRight:'auto', width:'1160px', backgroundColor:'white', paddingRight:'5px', }} >
@@ -81,7 +85,7 @@ export const Header = () => {
 
             <div className={`hiddenstat ${statistic_toggle && 'active'}`}>
               <div className='scrolltext'>  Сайты с официальной информацией  </div>
-              <div className='scrolltext'>  Оперативные данные </div>
+              <div onClick={executeScrolltoOper} className='scrolltext'>  Оперативные данные </div>
               <div className='scrolltext'>  Мировая статистика  </div>
             </div>
           </div>
@@ -108,7 +112,7 @@ export const Header = () => {
               <div className='scrolltext'>  Что такое коронавирус? </div>
               <div className='scrolltext'>  Вопросы и ответы </div>
               <div className='scrolltext'>  Мифы </div>
-              <div className='scrolltext'>  Видео о коронавирусе </div>
+              <div onClick={executeScrolltoVideo} className='scrolltext'>  Видео о коронавирусе </div>
               <div className='scrolltext'>  Официальные документы </div>
               <div className='scrolltext'>  Все памятки </div>
             </div>

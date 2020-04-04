@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import '../styles/Oper.scss'
 import snimok from '../svg/snimok.jpg'
 import load from '../svg/load.svg'
@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { useReducer } from 'react'
 import { stataReducer } from '../reducers/stateReducer'
 import { client } from '../client'
+import { KoronaContext } from '../App'
 
 export const Operativdata = () => {
 
@@ -31,11 +32,12 @@ useEffect(() => {
 }, [])
 const initialstate = {stat:'', mounth:'',day:'', time:''}
 const [state,dispatch] = useReducer(stataReducer,initialstate)
+const {OperRef} = useContext(KoronaContext)
 
   return (
 
   
-    <div className='oper_wrapper'>
+    <div ref={OperRef} className='oper_wrapper'>
           
       <div className='title_download'>
 

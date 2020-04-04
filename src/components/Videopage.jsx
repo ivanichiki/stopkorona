@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useRef, useContext } from 'react'
 import '../styles/Videopage.scss'
 import { useState } from 'react'
 import { useReducer } from 'react'
 import { videopageReducer } from '../reducers/videopageReducer'
+import { KoronaContext } from '../App'
 
 export const Videopage = () => {
+
+  const {VideoRef} = useContext(KoronaContext)
+
 
   const [right, setright] = useState(0)
 
@@ -19,9 +23,10 @@ export const Videopage = () => {
     }
   }
   const initialstate = { right: 0 }
+ 
   const [state, dispatch] = useReducer(videopageReducer, initialstate)
   return (
-    <div style={{ position: 'relative', width: '1240px', paddingLeft: '30px', marginRight: '20px', backgroundColor: 'white', right: '55px', paddingBottom: '100px' }}>
+    <div ref={VideoRef} style={{ position: 'relative', width: '1240px', paddingLeft: '30px', marginRight: '20px', backgroundColor: 'white', right: '55px', paddingBottom: '100px' }}>
       <div className='videotitle'>
         Узнай больше про коронавирус <span>COVID–19</span>
       </div>
