@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Header } from './components/Header';
+import { Operativdata } from './components/Operativdata';
+import { News } from './components/News';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { HashRouter, Route } from 'react-router-dom';
+import { AllNews } from './components/AllNews';
+import { ExactNews } from './components/ExactNews';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <HashRouter>
+    <div className='wrapper'>
+    
+   <Header/>
+  <Route exact path='/'render={()=> <Operativdata/>}/>
+  
+   <ScrollAnimation   delay='100' duration='1' animateOnce animateIn = "fadeIn">
+   <Route exact path='/'render={()=> <News/>}/>
+   <Route exact path="/news/" render={()=> <AllNews/>}/>
+       
+   <Route path="/news/:newsid"
+        component= {ExactNews}/>  
+   </ScrollAnimation>
+ 
     </div>
+    </HashRouter>
   );
 }
 
