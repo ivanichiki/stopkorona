@@ -18,7 +18,8 @@ export const Header = () => {
   const [simptom_toggle, setsimptom_toggle] = useState(false)
   const [more_toggle, setmore_toggle] = useState(false)
   return (
-    <div style={{position:'fixed', width:'1180px', backgroundColor:'white', zIndex:'9999', paddingRight:'5px', }} >
+    <div style={{width:'100%',marhinLeft:'0px',left:'0',  backgroundColor:'white', height:'145px', position:'fixed', zIndex:'9999'}}>
+    <div style={{marginLeft:'auto',marginRight:'auto', width:'1160px', backgroundColor:'white', paddingRight:'5px', }} >
       <div  className='header_wrapper'>
         <div className='left_secsion'>
         <NavLink to='/'><img src={logo} alt="" /></NavLink> 
@@ -124,6 +125,7 @@ export const Header = () => {
         </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
