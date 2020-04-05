@@ -26,19 +26,19 @@ export const Videopage = () => {
  
   const [state, dispatch] = useReducer(videopageReducer, initialstate)
   return (
-    <div ref={VideoRef} style={{ position: 'relative', width: '1240px', paddingLeft: '30px', marginRight: '20px', backgroundColor: 'white', right: '55px', paddingBottom: '100px' }}>
-      <div className='videotitle'>
+    <div ref={VideoRef}  style={{ position: 'relative', width: '1240px', paddingLeft: '30px', marginRight: '20px', backgroundColor: 'white', right: '55px', paddingBottom: '100px' }}>
+      <div  className='videotitle'>
         Узнай больше про коронавирус <span>COVID–19</span>
       </div>
       <div onClick={() => dispatch({ type: 'plusright' })} className={`rightstralka ${state.right == 1200 && 'off'}`}>&rsaquo;</div>
       <div onClick={() => dispatch({ type: 'minusrigh' })} className={`leftstrelka ${state.right == 0 && 'off'}`}>&lsaquo;</div>
 
-      <div className='video_wrapper'>
+      <div  className='video_wrapper'>
         <div style={{ right: state.right }} className='videocontainer'>
           <iframe width="360" height="360" src="https://www.youtube.com/embed/OovOLgepfIY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
         </div>
 
-        <div style={{ right: state.right }} className='videocontainer'>
+        <div  style={{ right: state.right }} className='videocontainer'>
           <iframe width="360" height="360" src="https://www.youtube.com/embed/mor0ac6hm98" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
         </div>
         <div style={{ right: state.right }} className='videocontainer'>

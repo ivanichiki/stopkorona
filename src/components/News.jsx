@@ -34,7 +34,7 @@ export const News = () => {
 
           <div>
             {state.map(el => <div>
-              <div style={{ display: 'none' }}> {console.log(el)}{i++}</div>
+              <div style={{ display: 'none' }}> {i++}</div>
 
               {i > 1 & i < 7 ?
                 <div className={`right_news ${i == 6 && 'without_border'}`}>

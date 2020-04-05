@@ -18,12 +18,12 @@ export const Header = () => {
   const [statistic_toggle, setstatistic_toggle] = useState(false)
   const [simptom_toggle, setsimptom_toggle] = useState(false)
   const [more_toggle, setmore_toggle] = useState(false)
-  const {executeScrolltoVideo,executeScrolltoOper} = useContext(KoronaContext)
+  const {executeScrolltoVideo,executeScrolltoOper,executeScrolltoSolutions} = useContext(KoronaContext)
 
 
   return (
-    <div style={{width:'100%',marhinLeft:'0px',left:'0',  backgroundColor:'white', height:'145px', position:'fixed', zIndex:'9999'}}>
-    <div style={{marginLeft:'auto',marginRight:'auto', width:'1160px', backgroundColor:'white', paddingRight:'5px', }} >
+    <div  className={`header_wrapper_wrap`} >
+    <div style={{marginLeft:'auto',marginRight:'auto', width:'1160px',  paddingRight:'5px', }} >
       <div  className='header_wrapper'>
         <div className='left_secsion'>
         <NavLink to='/'><img src={logo} alt="" /></NavLink> 
@@ -107,7 +107,7 @@ export const Header = () => {
 
             <div className={`hiddenstat more ${more_toggle && 'active'}`}>
             <NavLink to='/news'> <div className='scrolltext'>  Новости  </div> </NavLink>
-              <div className='scrolltext'>  Меры борбы с коронавирусом </div>
+              <div onClick={executeScrolltoSolutions} className='scrolltext'>  Меры борбы с коронавирусом </div>
               <div className='scrolltext'>  Подержка МСП </div>
               <div className='scrolltext'>  Что такое коронавирус? </div>
               <div className='scrolltext'>  Вопросы и ответы </div>
