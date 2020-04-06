@@ -16,6 +16,7 @@
       object-fit: cover;
       overflow: hidden;
       border-radius: 10px;
+      cursor: pointer;
     }
     img {
       border-radius: 10px;
@@ -26,7 +27,7 @@
       cursor: pointer;
       position: relative;
     }
-    img:hover {
+    .pic:hover img{
    
       transform: scale(1.2);
     }
