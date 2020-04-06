@@ -10,8 +10,15 @@ import zig from '../svg/zig.svg'
 import world from '../svg/world.svg'
 import skorb from '../svg/skorb.svg'
 import line from '../svg/line.svg'
+import { useEffect } from 'react'
 
 const ModalBlock = (props) => {
+
+useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
+
+
   const { SolutionsRef, modal, setmodal, setmodalId } = useContext(KoronaContext)
 
   return (

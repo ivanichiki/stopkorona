@@ -13,6 +13,7 @@ import { client } from './client';
 import { Solutions } from './components/Solutions';
 import { Modal } from './components/modal';
 import { Footer } from './components/Footer';
+import { Menu } from './components/Menu';
 
 export const KoronaContext = React.createContext(null)
 
@@ -100,17 +101,22 @@ console.log(modalcontent, modalId)
           <Route exact path='/' render={() => <LinksunderNews />} />
         </ScrollAnimation>
 
+       
         <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
-          <Route exact path='/' render={() => <Videopage />} />
-        </ScrollAnimation>
-        
-        <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
-          <Route exact path='/' render={() => <Solutions />} />
+          <Route exact path='/what-is-done/council' render={() => <Solutions />} />
           </ScrollAnimation>
 
+        
 
        
       </div>
+      <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
+          <Route exact path='/' render={() => <Videopage />} />
+        </ScrollAnimation>
+        
+      <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
+          <Route exact path='/' render={() => <Menu />} />
+          </ScrollAnimation>
       <Footer/>
       </KoronaContext.Provider>
     </HashRouter>

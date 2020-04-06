@@ -13,6 +13,11 @@ export const ExactNews = ({ match }) => {
 
   const [exactstate, setstate] = useState('')
   const {state} = useContext(KoronaContext)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   const fetchData = () => {
     if(state!='')
     {

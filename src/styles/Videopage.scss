@@ -1,6 +1,7 @@
 .video_wrapper{
   width: 1160px;
-  margin-left: 25px;
+ margin-left: auto;
+ margin-right: auto;
   display: flex;
   object-fit: cover;
   overflow: hidden;
@@ -19,9 +20,9 @@
   top: 210px;
   color: #083383;
   font-size: 80px;
-   margin-right: 22px;
+   margin-right: 11px;
   z-index: 4;
-  margin-left: 20px;
+  
   right: 0;
   user-select: none;
 }
@@ -33,7 +34,7 @@
   font-size: 80px;
   padding-left: 5px;
   z-index: 4;
-  margin-left: 20px;
+  margin-left: 8px;
   left: 0;
   user-select: none;
 }
@@ -53,6 +54,7 @@
     height: 12px;
     background-color: #d6d6d6;
     border-radius: 20px;
+    margin-bottom: 50px;
   }
   .select{
     background-color: #083383;

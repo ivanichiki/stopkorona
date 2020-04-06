@@ -7,7 +7,11 @@ import { useContext } from 'react'
 import { KoronaContext } from '../App'
 
 export const AllNews = () => {
-
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   const {state} = useContext(KoronaContext) ;
   let i = 0;
   return (

@@ -119,7 +119,7 @@ const {OperRef} = useContext(KoronaContext)
           {state.stat.deaths}
         </div>
           <div style={{ fontSize: '18px' }}>
-            Чуеловек умело
+            Человек умерло
 
         </div>
         </div>
