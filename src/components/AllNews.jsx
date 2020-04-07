@@ -115,7 +115,7 @@ let counter = 0;
       }
         </>
       )}
-           {match.params.page==state.length
+           {match.params.page== Math.ceil(state.length / postsPerPage)
             ?        <div className='disable RightBtn'> &rsaquo; </div>
             :         <NavLink to={`/allnews/${Number(match.params.page)+1}`}> <div onClick={()=> settoggle(false)}         className='RightBtn'> &rsaquo; </div></NavLink> 
            }
