@@ -105,7 +105,7 @@ export const Header = () => {
 
               <div className={`hiddenstat ${simptom_toggle && 'active'}`}>
                 <div className='scrolltext'>  Каждому  </div>
-                <div className='scrolltext'>  Предприятиям </div>
+                <NavLink to='/what-to-do/business'> <div className='scrolltext'>  Предприятиям </div></NavLink> 
                 <div className='scrolltext'>  Работадателям </div>
                 <div className='scrolltext'>  Работникам </div>
                 <div className='scrolltext'>  Волонтерам </div>

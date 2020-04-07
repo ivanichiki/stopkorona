@@ -13,6 +13,15 @@ a {
   text-decoration: none;
   color: black;
 }
-.act {
-
+.Fadein_wrapper {
+  padding-top: 150px;
+  opacity: 0;
+ 
+  padding-bottom: 50px;
+}
+.show {
+  transition-duration: 500ms;
+  transition-delay: 200ms;
+  transition-property: opacity;
+  opacity: 1;
 }

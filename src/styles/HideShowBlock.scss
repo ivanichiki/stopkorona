@@ -1,0 +1,88 @@
+.topic{
+  background-color: #f2f7ff;
+  border-radius: 10px;
+  max-height: 600px;
+
+  object-fit: cover;
+  overflow: hidden;
+  transition-property: max-height;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+  margin-bottom: 20px;
+  
+  .topic_title{
+    display: flex;
+    justify-content: space-between;
+    color: #003188;
+    font-weight: 600;
+    font-size: 25px;
+
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  .topic_text{
+
+    width: 90%;
+    font-size: 19px;
+    padding-bottom: 30px;
+      a {
+        color: #fb5f3d;
+        text-decoration-line: underline;
+      }
+    span {
+      display:flex;
+      justify-content:space-between;
+    }
+   ul {
+     padding-left:20px;
+    display:block;
+     width:450px;
+     li {
+      list-style: none;
+       padding-bottom: 15px;
+     }
+    
+   }
+  }
+
+  ul li::before {
+    content: "\2022";
+    color: #fb5f3d;;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+   }
+
+ .btn {
+   right: 10px;
+  user-select: none;
+  position: absolute;
+   transform: rotate(0deg);
+   transition-property: transform;
+   transition-duration: 450ms;
+   transition-timing-function: ease;
+   color:#fb5f3d;
+   font-size: 30px;
+   font-weight: lighter;
+   cursor: pointer;
+ }
+ 
+}
+.hide{
+
+    .btn {
+     transform: rotate(45deg);
+    }
+ 
+ 
+  max-height: 100px;
+}
+.BusinessTopic_wrapper{
+  h1 {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+}

@@ -14,6 +14,10 @@ import { Solutions } from './components/Solutions';
 import { Modal } from './components/modal';
 import { Footer } from './components/Footer';
 import { Menu } from './components/Menu';
+import { BusinessMesures } from './components/BusinessMesures';
+import { BusinessTopic } from './components/BusinessMesures/BusinessTopic';
+import { Fadein } from './components/Fadein';
+
 
 export const KoronaContext = React.createContext(null)
 
@@ -34,7 +38,7 @@ function App() {
   const [modal, setmodal] = useState(false)
   const [modalId, setmodalId] = useState(0)
   const [modalcontent, setmodalcontent] = useState([])
-  
+
 
   const fetchData = async () => {
     const entries = await client.getEntries({
@@ -91,24 +95,22 @@ console.log(modalcontent, modalId)
        
         <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Route exact path='/' render={() => <News />} />
-          <Route exact path="/news/" render={() => <AllNews />} />
+      
 
-          <Route path="/news/:newsid"
-            component={ExactNews} />
         </ScrollAnimation>
-       
+
+        <Route path="/news/:newsid"
+            component={ExactNews} />
+
         <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Route exact path='/' render={() => <LinksunderNews />} />
         </ScrollAnimation>
-
        
-        <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
-          <Route exact path='/what-is-done/council' render={() => <Solutions />} />
-          </ScrollAnimation>
-
-        
-
-       
+        <Route exact path="/allnews/:page" component={AllNews} />
+          <Route exact path='/what-is-done/council' render={() => <Fadein props={<Solutions/>} />} />
+          <Route exact path='/what-to-do/business' render={() => <Fadein props={<BusinessMesures/>} />} />
+          <Route path="/what-to-do/business/topics/:topicid" component={BusinessTopic} />
+ 
       </div>
       <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Route exact path='/' render={() => <Videopage />} />

@@ -11,34 +11,15 @@ import world from '../svg/world.svg'
 import skorb from '../svg/skorb.svg'
 import line from '../svg/line.svg'
 import { useEffect } from 'react'
-
-const ModalBlock = (props) => {
-
-useEffect(() => {
-  window.scrollTo(0, 0)
-}, [])
+import { ModalBlock } from './ModalBlock'
 
 
-  const { SolutionsRef, modal, setmodal, setmodalId } = useContext(KoronaContext)
-
-  return (
-
-    <div  onClick={() => { setmodal(true); setmodalId(props.id) }} className='modal'>
-      <div className='insidemodal'>
-        <img src={props.props} alt="" />
-      </div>
-      <div className='insidemodal text'>
-        {props.text}
-      </div>
-    </div>
-
-  )
-
-}
 
 
 
 export const Solutions = () => {
+
+  
   const { SolutionsRef, modal, setmodal, setmodalId } = useContext(KoronaContext)
 
 

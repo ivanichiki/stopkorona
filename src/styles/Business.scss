@@ -1,0 +1,47 @@
+.Business_wrapper {
+
+
+  h1 {
+    font-size: 50px;
+    line-height: 1;
+    padding-bottom: 30px;
+  }
+  .modal_container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+}
+
+.link{
+  padding-top: 20px;
+
+  img {
+    width: 17px;
+    position: relative;
+    top: 1px;
+    margin-right: 10px;
+  }
+  a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fb5f3d;
+  }
+}
+.btn_back{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 180px;
+  font-size: 15px;
+  color: #3662ff;
+  font-weight: 600;
+  background-color: #f2f7ff;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+
+}
+.btn_back:hover{
+  background-color: #e4edfa;
+ }

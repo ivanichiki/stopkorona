@@ -16,14 +16,27 @@ const Block =(props)=> {
       <div>
         <img src={props.img} alt=""/>
       </div>
-    <NavLink to={props.link}> <div className='btn'>
+
+{!props.alink?
+    <NavLink to={props.link}> 
+     <div className='btn'>
         <span>
         Подробнее
         </span>
-     
       </div>
       </NavLink> 
+
+: 
+<a href={props.alink}> 
+     <div className='btn'>
+        <span>
+        Подробнее
+        </span>
+      </div>
+      </a> 
+}
     </div>
+    
   </div>
   )
 }
@@ -31,9 +44,9 @@ const Block =(props)=> {
 export const Menu = () => {
   return (
     <div className='Menu_wrapper'>
-     <Block link='/' img={group} title='Памятка для пожилых людей' width='170px' tag='ЧТО ПРЕДПРИНЯТЬ?'/>
-     <Block  link='/what-is-done/council' img={ok} title='Антикризисный план' width='135px' tag='ЧТО СДЕЛАНО?'/>
-     <Block link='/' img={lab} title='Где и как сдают анализы?' width='190px'tag='ВСЕ О КОРОНАВИРУСЕ'/>
+     <Block alink='https://стопкоронавирус.рф/ai/doc/4/attach/4.pdf' img={group} title='Памятка для пожилых людей' width='170px' tag='ЧТО ПРЕДПРИНЯТЬ?'/>
+     <Block  link='/what-is-done/council'  img={ok} title='Антикризисный план' width='135px' tag='ЧТО СДЕЛАНО?'/>
+     <Block link='/'  img={lab} title='Где и как сдают анализы?' width='190px'tag='ВСЕ О КОРОНАВИРУСЕ'/>
     </div>
   )
 }

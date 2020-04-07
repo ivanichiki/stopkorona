@@ -54,7 +54,7 @@ export const News = () => {
       {state !== '' &&
         <div style={{ color: '#8790ba', fontSize: '15px', paddingTop: '10px' }}> {state[0].fields.author}</div>}
 
-      <NavLink to='/news'>
+      <NavLink to='/allnews/1'>
         <div style={{ display: 'flex', alignItems: 'center' }} className='lenktonews' >Смотреть все новости
         </div>
       </NavLink>

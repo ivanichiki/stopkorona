@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import { client } from '../client'
-import { findRenderedDOMComponentWithClass } from 'react-dom/test-utils'
+
 import { useState } from 'react'
 import '../styles/ExactNews.scss'
 import { Markup } from 'interweave'
@@ -10,11 +9,12 @@ import { KoronaContext } from '../App'
 export const ExactNews = ({ match }) => {
 
   console.log(match.params.newsid)
-
+  const [toggle, settoggle] = useState(false)
   const [exactstate, setstate] = useState('')
   const {state} = useContext(KoronaContext)
 
   useEffect(() => {
+    settoggle(true)
     window.scrollTo(0, 0)
   }, [])
   
@@ -32,6 +32,7 @@ export const ExactNews = ({ match }) => {
 
   }, [state])
   return (
+    <div className={`Fadein_wrapper ${toggle && 'show'}`}>
     <div className='allNews_wrapper'>
       <div className='imgtitle' style={{ color: 'white' }}>
         {exactstate.img&&
@@ -60,7 +61,8 @@ export const ExactNews = ({ match }) => {
           <div className='source' style={{color:'#8d8795'}}>Источник: <span style={{color:'#fb5f3d'}}> {exactstate.source}</span>  </div>
         </div>
       }
-     <NavLink to='/news'> <div className='btnback'>К списку новостей</div></NavLink>
+     <NavLink to='/allnews/1'> <div className='btnback'>К списку новостей</div></NavLink>
+    </div>
     </div>
   )
 }
