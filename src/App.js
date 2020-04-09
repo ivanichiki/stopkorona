@@ -157,9 +157,9 @@ function App() {
           <Route exact path='/' render={() => <Menu />} />
       </ScrollAnimation>
     
-      {/* <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
+      <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Footer/>
-      </ScrollAnimation>  */}
+      </ScrollAnimation> 
 
  {/* </div>  */}
       </KoronaContext.Provider>

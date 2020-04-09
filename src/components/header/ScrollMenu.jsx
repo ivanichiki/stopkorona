@@ -70,7 +70,7 @@ export const ScrollMenu = () => {
         <div className={`blocks `}>Памятки</div>
 
         <div style={{ color: '#fb5f3d', marginTop:'30px' }} className={`blocks `}>Единная горячая линия</div>
-        <div className='number'>
+        <div className='Number'>
           8-800-2000-112
 
 

@@ -21,6 +21,7 @@
   .Footer_up{
     height: 200px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     .soc{
       width: 450px;
@@ -151,5 +152,10 @@
   }
 
  }
- 
+ @media screen and (max-width: 1160px) {
+  .Footer {
+   width: 100%;
+
+  }
+}
 }
