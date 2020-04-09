@@ -1,3 +1,11 @@
+.video_wrapp_wrapper{
+  position: relative;
+  width: 1240px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .video_wrapper{
   width: 1160px;
  margin-left: auto;
@@ -13,7 +21,15 @@
   }
 
 }
+@media screen and (max-width: 1160px) {
+  .video_wrapp_wrapper{
+    width: 100%;
+  }
+  .video_wrapper {
+    width: 90%;
 
+  }
+}
 .rightstralka{
   cursor: pointer;
   position: absolute;

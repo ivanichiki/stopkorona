@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect, useReducer } from 'react';
 import './App.css';
-import { Header } from './components/Header';
+import { Header } from './components/header/Header';
 import { Operativdata } from './components/Operativdata';
 import { News } from './components/News';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -29,6 +29,7 @@ function App() {
   const VideoRef = useRef(null)
   const OperRef = useRef(null)
   const SolutionsRef = useRef(null)
+  
   const scrollToRef = (ref) => window.scrollTo({top: ref.current.offsetTop-200, behavior: 'smooth'})   
 
   const executeScrolltoVideo = () => scrollToRef(VideoRef)
@@ -40,6 +41,7 @@ function App() {
   const [modalId, setmodalId] = useState(0)
   const [modalcontent, setmodalcontent] = useState([])
   const [detaleData, sedetaleData] = useState('')
+  const [scrollMenuToggle, setscrollMenuToggle] = useState(false)
 
   const fetchData = async () => {
     const entries = await client.getEntries({
@@ -114,13 +116,16 @@ function App() {
     <HashRouter>
     
       <KoronaContext.Provider
-      value={{VideoRef, OperRef, scrollToRef, executeScrolltoVideo,executeScrolltoOper,state,SolutionsRef,executeScrolltoSolutions, modal, setmodal,wrapperRef,modalcontent,setmodalId,modalId,detaleData,stateOper}}
+      value={{VideoRef, OperRef, scrollToRef, executeScrolltoVideo,executeScrolltoOper,state,SolutionsRef,executeScrolltoSolutions, modal, setmodal,wrapperRef,modalcontent,setmodalId,modalId,detaleData,stateOper,scrollMenuToggle, setscrollMenuToggle}}
       >
 
-      <div style={{overflow:'hidden'}} className='wrapper'>
-  
-     <div className={`modalwrapper ${modal==false&&'act'}`} > <Modal/> </div>
-      <Header /> 
+    <div style={{overflow:'hidden'}} className='wrapper'>
+    
+       <div className={`modalwrapper ${modal==false&&'act'}`}><Modal/></div>
+      
+        <Header /> 
+     
+
 
         <Route exact path='/' render={() => <Operativdata />} />
        
@@ -137,26 +142,30 @@ function App() {
           <Route exact path='/' render={() => <LinksunderNews />} />
         </ScrollAnimation>
        
-        <Route exact path="/allnews/:page" component={AllNews} />
+          <Route exact path="/allnews/:page" component={AllNews} />
           <Route exact path='/what-is-done/council' render={() => <Fadein props={<Solutions/>} />} />
           <Route exact path='/what-to-do/business' render={() => <BusinessMesures />} />
           <Route path="/what-to-do/business/topics/:topicid" component={BusinessTopic} />
     
-      </div>
+    </div>
+
       <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Route exact path='/' render={() => <Videopage />} />
-        </ScrollAnimation>
-        
-      <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
+      </ScrollAnimation>
+ 
+  <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Route exact path='/' render={() => <Menu />} />
-          </ScrollAnimation>
+      </ScrollAnimation>
     
-          <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
+      {/* <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Footer/>
-          </ScrollAnimation>
+      </ScrollAnimation>  */}
+
+ {/* </div>  */}
       </KoronaContext.Provider>
   
     </HashRouter>
+ 
     </>
   );
 }

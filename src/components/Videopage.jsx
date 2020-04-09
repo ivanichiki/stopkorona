@@ -26,7 +26,7 @@ export const Videopage = () => {
  
   const [state, dispatch] = useReducer(videopageReducer, initialstate)
   return (
-    <div ref={VideoRef}  style={{ position: 'relative', width: '1240px', backgroundColor: 'white', marginLeft:'auto', marginRight:'auto'}}>
+    <div ref={VideoRef}  className='video_wrapp_wrapper'>
       <div  className='videotitle'>
         Узнай больше про коронавирус <span>COVID–19</span>
       </div>

@@ -4,6 +4,13 @@
   margin-right: auto;
   
 }
+@media screen and (max-width: 1160px) {
+  .wrapper {
+ 
+    width: 100%;
+  }
+}
+
 body {
   font-family: sans-serif;
   line-height: 1.5;

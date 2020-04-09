@@ -1,0 +1,143 @@
+
+.header_wrapper_wrap {
+  opacity: 0;
+  width:100%;
+  margin-left: 0px;
+  left: 0;
+  background-color: white;
+  height: 145px;
+  position:fixed;
+  z-index: 21321;
+.centrolize{
+  margin-left:auto;
+  margin-right: auto;
+  width: 1160px;
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 1160px) {
+  .centrolize {
+    width: 90%;
+ 
+  }
+  .left_secsion {
+    display: flex;
+   }
+  
+}
+
+  .header_wrapper {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    border-bottom: 1px solid #e4e4e5;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  
+    
+    img {
+      width: 300px;
+      
+    }
+    .movile-gov{
+      display: none;
+    }
+    @media screen and (max-width: 1160px) {
+      img {
+        margin-top: 10px;
+        margin-right: 12px;
+        width: 230px;
+      }
+      .movile-gov{
+        display: block;
+        .img_gov {
+          margin-top: 0px;
+    
+        }
+         border-right: 0px solid #5878b1;
+    
+         padding-left: 10px;
+         border-left: 1px solid #5878b1;
+       }
+    }
+
+    .MENU {
+     display: none;
+     transform: rotate(90deg);
+    }
+
+    @media screen and (max-width: 1160px) {
+      .MENU {
+     
+        display: block;
+      }
+    }
+    
+    .right_secsion{
+      display: flex;
+   
+      .socseti{
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        .social {
+         
+          margin-right: 13px;
+        }
+        .odnokashniki{
+          width: 14px;
+        }
+        .facebook {
+          width: 12px;
+        }
+        .instagram{
+          width: 24px;
+       
+        }
+      }
+      @media screen and (max-width: 1160px) {
+        .socseti {
+          display: none;
+      
+        }
+      }
+      .gov {
+        border-right: 1px solid #5878b1;
+        padding: 0 10px 0 0;
+        margin: 0 10px 0 0;
+      }
+      .oficcial{
+        padding-top: 5px;
+        font-size: 14px;
+        width: 180px;
+        color:#5878b1
+      }
+      @media screen and (max-width: 1160px) {
+        .oficcial {
+          display: none;
+        }
+        .gov {
+          display: none;
+        }
+       
+      }
+    }
+  }
+  
+ 
+}
+@media screen and (max-width: 1160px) {
+  .header_wrapper_wrap {
+    height: 83px;
+  }
+}
+.show {
+  transition-duration: 500ms;
+  transition-delay: 200ms;
+  transition-property: opacity;
+  opacity: 1;
+}
+

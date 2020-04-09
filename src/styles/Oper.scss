@@ -4,6 +4,7 @@
   border-bottom: 1px solid #e4e4e5;
   .title_download {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 40px;
   }
@@ -15,7 +16,7 @@
     color: #003188;
   }
   .otchet{
- margin-top: 30px;
+    margin-top: 30px;
     width: 370px;
     height: 160px;
     border-radius: 5px;
@@ -64,6 +65,7 @@
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .stat{
       
       font-size: 50px;

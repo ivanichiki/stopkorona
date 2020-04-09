@@ -1,0 +1,90 @@
+.scrollMenu {
+  margin-top: -420px;
+
+  position: fixed;
+  z-index: 3;
+  background-color: white;
+
+
+  
+  width:100%;
+  transition-property: margin-top;
+  transition-duration: 500ms;
+
+  .modalOverlay{
+    background-color: rgba(0, 0, 0, 0.6);
+   
+    opacity: 0;
+  
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 595px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+   
+  }
+  i{
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+    margin-left: 2px;
+   }
+}
+
+.scroll{
+  margin-top: 80px;
+  .modalOverlay{
+    transition-delay: 500ms;
+    transition-property: opacity;
+    opacity: 1;
+  }
+}
+.blocks{
+  margin-bottom: 15px;
+  max-height: 30px;
+  transition-property: max-height;
+  transition-duration: 300ms;
+  text-align: center;
+  overflow: hidden;
+  object-fit: cover;
+  .podsos{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+.last {
+
+  border-bottom: 1px solid #e4e4e5;
+}
+
+
+
+}
+.hided {
+  max-height: 530px;
+
+}
+.number{
+  margin-left: auto;
+  margin-right: auto;
+      width: 115px;
+  cursor: pointer;
+  color:#fb5f3d;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #fff0ed;
+  padding: 8px 16px 10px 16px;
+}
+.socseti{
+justify-content: space-between;
+
+a {
+  margin-right: 9px;
+}
+}

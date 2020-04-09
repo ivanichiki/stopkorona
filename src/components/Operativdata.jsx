@@ -3,11 +3,6 @@ import '../styles/Oper.scss'
 import snimok from '../svg/snimok.jpg'
 import load from '../svg/load.svg'
 import globe from '../svg/globe.svg'
-
-import { useState } from 'react'
-import { useReducer } from 'react'
-import { stataReducer } from '../reducers/stateReducer'
-import { client } from '../client'
 import { KoronaContext } from '../App'
 
 export const Operativdata = () => {

@@ -4,6 +4,7 @@ import group from '../svg/Group.png'
 import ok from '../svg/Ok.png'
 import lab from '../svg/Lab.png'
 import { NavLink } from 'react-router-dom'
+import Scrollbars from 'react-custom-scrollbars'
 
 const Block =(props)=> {
   return (
@@ -43,10 +44,15 @@ const Block =(props)=> {
 
 export const Menu = () => {
   return (
+    <Scrollbars style={{ width: '100%', height:600 }}>
     <div className='Menu_wrapper'>
+   
      <Block alink='https://стопкоронавирус.рф/ai/doc/4/attach/4.pdf' img={group} title='Памятка для пожилых людей' width='170px' tag='ЧТО ПРЕДПРИНЯТЬ?'/>
      <Block  link='/what-is-done/council'  img={ok} title='Антикризисный план' width='135px' tag='ЧТО СДЕЛАНО?'/>
      <Block link='/'  img={lab} title='Где и как сдают анализы?' width='190px'tag='ВСЕ О КОРОНАВИРУСЕ'/>
+
     </div>
+    </Scrollbars>
+
   )
 }
