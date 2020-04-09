@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useReducer } from 'react';
 import './App.css';
 import { Header } from './components/Header';
 import { Operativdata } from './components/Operativdata';
@@ -17,6 +17,7 @@ import { Menu } from './components/Menu';
 import { BusinessMesures } from './components/BusinessMesures';
 import { BusinessTopic } from './components/BusinessMesures/BusinessTopic';
 import { Fadein } from './components/Fadein';
+import { stataReducer } from './reducers/stateReducer';
 
 
 export const KoronaContext = React.createContext(null)
@@ -38,28 +39,53 @@ function App() {
   const [modal, setmodal] = useState(false)
   const [modalId, setmodalId] = useState(0)
   const [modalcontent, setmodalcontent] = useState([])
-
+  const [detaleData, sedetaleData] = useState('')
 
   const fetchData = async () => {
     const entries = await client.getEntries({
       content_type: "news",
+      // order: 'fields.id'
     })
     setstate(entries.items)
+  }
+  const fetchDetaleData = async () => {
+    const entries = await client.getEntries({
+      content_type: "detaleData",
+      order: 'fields.id'
+    })
+    sedetaleData(entries.items)
   }
 
   const fetchModalContent = async () => {
     const entries = await client.getEntries({
-      content_type: "modal",
+      content_type: "modal"
     })
     setmodalcontent(entries.items)
   }
+
+
+  const fetchOperData = async ()=> {
+
+    const entries = await client.getEntries({
+      content_type: "stata",
+      
+     
+    })
+   
+    dispatch({type:'setamount',value:entries.items[0].fields})
+    dispatch({type:'setmounth',value:entries.items[0].sys.updatedAt.slice(5,7)})
+    dispatch({type:'setday',value:entries.items[0].sys.updatedAt.slice(8,10)})
+    dispatch({type:'settime',value:entries.items[0].sys.updatedAt.slice(11,16)})
+  }
+  const initialstate = {stat:'', mounth:'',day:'', time:''}
+  const [stateOper,dispatch] = useReducer(stataReducer,initialstate)
+
   useEffect(() => {
     fetchData()
+    fetchOperData()
     fetchModalContent()
-
+    fetchDetaleData()
   }, [])
-
-console.log(modalcontent, modalId)
 
   function useOutsideAlerter(ref) {
     useEffect(() => {
@@ -83,13 +109,18 @@ console.log(modalcontent, modalId)
   const wrapperRef = useRef(null)
   useOutsideAlerter(wrapperRef)
   return (
+    <>
+    
     <HashRouter>
+    
       <KoronaContext.Provider
-      value={{VideoRef, OperRef, scrollToRef, executeScrolltoVideo,executeScrolltoOper,state,SolutionsRef,executeScrolltoSolutions, modal, setmodal,wrapperRef,modalcontent,setmodalId,modalId}}
+      value={{VideoRef, OperRef, scrollToRef, executeScrolltoVideo,executeScrolltoOper,state,SolutionsRef,executeScrolltoSolutions, modal, setmodal,wrapperRef,modalcontent,setmodalId,modalId,detaleData,stateOper}}
       >
+
       <div style={{overflow:'hidden'}} className='wrapper'>
+  
      <div className={`modalwrapper ${modal==false&&'act'}`} > <Modal/> </div>
-        <Header />
+      <Header /> 
 
         <Route exact path='/' render={() => <Operativdata />} />
        
@@ -108,9 +139,9 @@ console.log(modalcontent, modalId)
        
         <Route exact path="/allnews/:page" component={AllNews} />
           <Route exact path='/what-is-done/council' render={() => <Fadein props={<Solutions/>} />} />
-          <Route exact path='/what-to-do/business' render={() => <Fadein props={<BusinessMesures/>} />} />
+          <Route exact path='/what-to-do/business' render={() => <BusinessMesures />} />
           <Route path="/what-to-do/business/topics/:topicid" component={BusinessTopic} />
- 
+    
       </div>
       <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Route exact path='/' render={() => <Videopage />} />
@@ -119,9 +150,14 @@ console.log(modalcontent, modalId)
       <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Route exact path='/' render={() => <Menu />} />
           </ScrollAnimation>
-      <Footer/>
+    
+          <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
+          <Footer/>
+          </ScrollAnimation>
       </KoronaContext.Provider>
+  
     </HashRouter>
+    </>
   );
 }
 

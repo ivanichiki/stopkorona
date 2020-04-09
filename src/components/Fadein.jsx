@@ -7,7 +7,7 @@ export const Fadein = ({props}) => {
     settoggle(true)
 
   }, [])
-  console.log(props)
+
   return (
     <div className={`Fadein_wrapper ${toggle && 'show'}`}>
       {props}

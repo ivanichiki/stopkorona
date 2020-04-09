@@ -12,9 +12,11 @@ import load from '../svg/load.svg'
 
 import '../styles/Business.scss'
 import { NavLink } from 'react-router-dom'
+import { useEffect } from 'react'
 export const BusinessMesures = () => {
 
-
+const [loaded, setloaded] = useState(false)
+const [counter, setcounter] = useState(0)
 const [state, setstate] = useState([{id:0, size:'21px', props:measure1, text:'Мораторий на банкротство'},
 {id:1, size:'21px', props:measure2, text:'Мораторий на проверки бизнеса'},
 {id:2, size:'21px', props:measure3, text:'Кредитные каникулы'},
@@ -25,13 +27,32 @@ const [state, setstate] = useState([{id:0, size:'21px', props:measure1, text:'М
 {id:7, size:'21px', props:measure8, text:'Помощь экспертам'},
 
 ])
+function onLoad() {
+  setcounter(counter=>counter+1)
 
+  if (counter==8) {
+  setloaded(true);
+  }
+}
+useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
 
   return (
-    <div className={`Business_wrapper `}>
+    <div onLoad={onLoad} className={`Business_wrapper`}>
       <h1>Меры поддержки малых и средних предприятий</h1>
-      <div className='modal_container'>
-        {state.map(el=> <NavLink  to={`/what-to-do/business/topics/${el.id}`}>  <ModalBlock size={el.size} width={el.width} props={el.props} text={el.text} /></NavLink>)}
+      <div  className='modal_container'>
+        {state.map(el=>
+          
+          <>
+    
+          <NavLink  to={`/what-to-do/business/topics/${el.id}`}> 
+        
+        <ModalBlock loaded={loaded} size={el.size} width={el.width} props={el.props} text={el.text} />
+        
+        </NavLink>
+        </>
+        )}
       </div >
 
       <div className='link'>

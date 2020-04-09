@@ -13,40 +13,23 @@ import { KoronaContext } from '../App'
 export const Operativdata = () => {
 
 
+  const { modal, setmodal, setmodalId, modalcontent, modalId,stateOper } = useContext(KoronaContext)
 
-const fetchData = async ()=> {
-  const entries = await client.getEntries({
-    content_type: "stata",
-    
-   
-  })
- 
-  dispatch({type:'setamount',value:entries.items[0].fields})
-  dispatch({type:'setmounth',value:entries.items[0].sys.updatedAt.slice(5,7)})
-  dispatch({type:'setday',value:entries.items[0].sys.updatedAt.slice(8,10)})
-  dispatch({type:'settime',value:entries.items[0].sys.updatedAt.slice(11,16)})
-}
-useEffect(() => {
-  fetchData()
- 
-}, [])
-const initialstate = {stat:'', mounth:'',day:'', time:''}
-const [state,dispatch] = useReducer(stataReducer,initialstate)
-const {OperRef} = useContext(KoronaContext)
+
 
   return (
 
   
-    <div ref={OperRef} className='oper_wrapper'>
+    <div  className='oper_wrapper'>
           
       <div className='title_download'>
 
         <div>
-          <div className='bigwords' >
+          <div  className='bigwords' >
             Оперативные данные
         </div>
           <div style={{ color: '#fc5f3d', marginTop: '20px', fontSize: '18px' }}>
-            По состоянию на {state.day} {state.mounth} {state.time}
+            По состоянию на {stateOper.day} {stateOper.mounth} {stateOper.time}
         </div>
         </div>
 
@@ -72,20 +55,20 @@ const {OperRef} = useContext(KoronaContext)
         <div>
 
           <div className='stat'>
-            {state.stat.amountoftest}
+            {stateOper.stat.amountoftest}
           </div>
           <div style={{ fontSize: '18px' }}>
             Проведено тестов
 
           </div>
-          <div className='more_date'>
+          <div style={{cursor:'pointer'}} onClick={()=>{setmodal(true);setmodalId(10)}} className='more_date'>
             <img src={globe} alt=""/>
             Подробные данные
         </div>
         </div>
         <div>
           <div style={{ color: '#fb5f3d' }} className='stat'>
-           {state.stat.amountofcase}
+           {stateOper.stat.amountofcase}
           </div>
           <div style={{ fontSize: '18px' }}>
             Случаев заболеваний
@@ -96,7 +79,7 @@ const {OperRef} = useContext(KoronaContext)
         <div>
 
           <div style={{ color: '#fb5f3d' }} className='stat'>
-           {state.stat.amountOfCaseToday}
+           {stateOper.stat.amountOfCaseToday}
         </div>
           <div style={{ width: '200px', fontSize: '18px' }}>
             Случаев заболеваний за последние сутки
@@ -106,7 +89,7 @@ const {OperRef} = useContext(KoronaContext)
         <div>
 
           <div className='stat'>
-          {state.stat.amountOfCure}
+          {stateOper.stat.amountOfCure}
           </div>
           <div style={{ fontSize: '18px' }}>
             Человек выздоровел
@@ -116,7 +99,7 @@ const {OperRef} = useContext(KoronaContext)
         <div>
 
           <div className='stat'>
-          {state.stat.deaths}
+          {stateOper.stat.deaths}
         </div>
           <div style={{ fontSize: '18px' }}>
             Человек умерло

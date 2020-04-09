@@ -8,16 +8,17 @@ import { useContext } from 'react'
 import { KoronaContext } from '../App'
 export const ExactNews = ({ match }) => {
 
-  console.log(match.params.newsid)
-  const [toggle, settoggle] = useState(false)
+  
   const [exactstate, setstate] = useState('')
   const {state} = useContext(KoronaContext)
+  const [loaded,setloaded]=useState(false)
 
   useEffect(() => {
-    settoggle(true)
+    
     window.scrollTo(0, 0)
   }, [])
   
+
   const fetchData = () => {
     if(state!='')
     {
@@ -27,19 +28,30 @@ export const ExactNews = ({ match }) => {
     setstate(newarray[0].fields)
   }
   }
+
+   const onLoad = ()=> {
+     if (loaded==false)
+    setloaded(true)
+     
+   }
+
   useEffect(() => {
     fetchData()
 
   }, [state])
+
+
+
   return (
-    <div className={`Fadein_wrapper ${toggle && 'show'}`}>
-    <div className='allNews_wrapper'>
+    <div onLoad={()=> setloaded(true)} className={`Fadein_wrapper ${loaded && 'show'}`}>
+  
       <div className='imgtitle' style={{ color: 'white' }}>
-        {exactstate.img&&
+        {exactstate.img?
         <>
         <img src={exactstate.img.fields.file.url} alt=""/>
       <div style={{color:'#8d8795', fontSize:'14px'}}> {exactstate.author}</div>
         </>
+        : onLoad()
         }
         
         s
@@ -47,7 +59,7 @@ export const ExactNews = ({ match }) => {
 
 
       <div className={`${!exactstate.img&&'line'}`}></div>
-      {exactstate !== '' &&
+      {exactstate !== '' ?
         <div className='textcontainer'>
           <div className='publisher' >
             {exactstate.publisher}
@@ -60,9 +72,10 @@ export const ExactNews = ({ match }) => {
           </div>
           <div className='source' style={{color:'#8d8795'}}>Источник: <span style={{color:'#fb5f3d'}}> {exactstate.source}</span>  </div>
         </div>
+        : <div style={{paddingBottom:'700px'}}></div>
       }
      <NavLink to='/allnews/1'> <div className='btnback'>К списку новостей</div></NavLink>
     </div>
-    </div>
+
   )
 }

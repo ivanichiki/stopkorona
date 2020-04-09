@@ -11,6 +11,7 @@ import odnokashniki from '../svg/odnokashniki.svg'
 import vk from '../svg/vk.svg'
 import { NavLink } from 'react-router-dom'
 import { KoronaContext } from '../App'
+import { useEffect } from 'react'
 
 
 
@@ -19,10 +20,20 @@ export const Header = () => {
   const [simptom_toggle, setsimptom_toggle] = useState(false)
   const [more_toggle, setmore_toggle] = useState(false)
   const { executeScrolltoVideo, executeScrolltoOper, executeScrolltoSolutions } = useContext(KoronaContext)
+  const [counter, setcounter] = useState(0)
+  const [loaded, setloaded] = useState(false)
 
+  function onLoad() {
+    setcounter(counter=>counter+1)
+
+    if (counter==8) {
+    setloaded(true);
+ 
+    }
+  }
 
   return (
-    <div className={`header_wrapper_wrap`} >
+    <div onLoad={onLoad} className={`header_wrapper_wrap ${loaded&&'show'}`} >
       <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '1160px', paddingRight: '5px' }} >
         <div className='header_wrapper'>
           <div className='left_secsion'>

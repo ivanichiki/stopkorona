@@ -16,9 +16,18 @@
   display: flex;
   align-items:center;
   min-height:100vh;
+  .modalwindow-map{
+    position:relative;
+    margin:30px auto;
+    position:relative;
+    background-color: white; 
+    width: 1160px;
+    border-radius: 10px;
+  }
+
   .modalwindow {
     position:relative;
-
+    
     margin:30px auto;
     position:relative;
     background-color: white; 
@@ -131,8 +140,9 @@
           }    
       }    
       }
-   
+     
     }
+   
   .modal_text{
     padding: 1px 30px 30px 40px;
     font-size: 18px;
@@ -154,6 +164,7 @@
     }
   
   }
+  
 }
 
   
@@ -173,6 +184,10 @@
     border-radius:16px;
  
 }
+.clsbtn-hide{
+  display: none;
+  }
+  
 .clsbtn{
   cursor: pointer;
   position: fixed;

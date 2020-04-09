@@ -4,6 +4,7 @@ import { client } from '../client'
 import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import { KoronaContext } from '../App'
+import { ImgLoader } from './ImgLoader'
 
 export const News = () => {
   
@@ -20,7 +21,7 @@ export const News = () => {
 
           <div className='pic' >
 
-            <NavLink to={`/news/${state[0].fields.id}`}> <img src={state[0].fields.img.fields.file.url} alt="" /></NavLink>
+            <NavLink to={`/news/${state[0].fields.id}`}> <ImgLoader src={state[0].fields.img.fields.file.url}/> </NavLink>
 
 
             <div className='news_title'>

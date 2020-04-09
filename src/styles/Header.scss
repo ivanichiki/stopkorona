@@ -1,6 +1,6 @@
 
 .header_wrapper_wrap {
-
+  opacity: 0;
   width:100%;
   margin-left: 0px;
   left: 0;
@@ -183,6 +183,9 @@ background-color: white;
     }
   }
 }
-.modal_active{
- 
+.show {
+  transition-duration: 500ms;
+  transition-delay: 200ms;
+  transition-property: opacity;
+  opacity: 1;
 }
