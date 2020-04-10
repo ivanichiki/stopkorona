@@ -62,7 +62,7 @@ export const ScrollMenu = () => {
             <div className='podsos last'>Учащимся  </div>
 
           </div>
-          <div className={`modalOverlay`}> </div>
+         <div className={`modalOverlay`}> </div>
         </div>
 
 

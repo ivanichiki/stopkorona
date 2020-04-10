@@ -5,7 +5,8 @@ export const videopageReducer = (state, action) => {
       if (state.right != 1200) {
         return {
           ...state,
-          right: state.right + 400
+          right: state.right + 400, 
+          mobile:false
         }
       }
       else return state
@@ -14,7 +15,8 @@ export const videopageReducer = (state, action) => {
       if (state.right != 0) {
         return {
           ...state,
-          right: state.right - 400
+          right: state.right - 400,
+          mobile:false
         }
       }
       else return state
@@ -30,7 +32,8 @@ export const videopageReducer = (state, action) => {
       if (state.right != 5*85) {
       return {
         ...state,
-        right: state.right+85
+        right: state.right+85,
+        mobile:true
       }
     }
       else return state
@@ -39,7 +42,8 @@ export const videopageReducer = (state, action) => {
       if (state.right != 0) {
       return {
         ...state,
-        right: state.right-85
+        right: state.right-85,
+        mobile:true
       }
     }
 
@@ -48,14 +52,16 @@ export const videopageReducer = (state, action) => {
     case 'shortcut': {
       return {
         ...state, 
-        right: action.value
+        right: action.value,
+        mobile:true
       }
     }
     case 'toend': {
 
       return {
         ...state,
-        right: 1200
+        right: 1200,
+        mobile:false
       }
   }
   }

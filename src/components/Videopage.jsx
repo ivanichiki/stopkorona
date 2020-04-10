@@ -9,20 +9,7 @@ export const Videopage = () => {
 
   const {VideoRef} = useContext(KoronaContext)
 
-
-  const [right, setright] = useState(0)
-
-  let plusright = () => {
-    if (right != 1200) {
-      setright(e => e + 400)
-    }
-  }
-  let minusright = () => {
-    if (right != 1200) {
-      setright(e => e - 400)
-    }
-  }
-  const initialstate = { right: 0 }
+  const initialstate = { right: 0, mobile:false }
  
   const [state, dispatch] = useReducer(videopageReducer, initialstate)
   return (
@@ -38,26 +25,26 @@ export const Videopage = () => {
       <div onClick={() => dispatch({ type: 'minusrighMobile' })} className={`leftstrelka  mobile ${state.right == 0 && 'off'}`}>&lsaquo;</div>
 
       <div  className='video_wrapper'>
-        <div style={{ right: `${state.right}vw` }} className='videocontainer'>
+        <div style={{ right: `${state.right}${state.mobile?'vw':'px'}` }} className='videocontainer'>
           <iframe className='video' src="https://www.youtube.com/embed/OovOLgepfIY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
         </div>
 
-        <div  style={{ right: `${state.right}vw` }}  className='videocontainer'>
+        <div  style={{ right: `${state.right}${state.mobile?'vw':'px'}` }}  className='videocontainer'>
           <iframe  className='video'src="https://www.youtube.com/embed/mor0ac6hm98" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
         </div>
-        <div style={{ right: `${state.right}vw` }}  className='videocontainer'>
+        <div style={{ right: `${state.right}${state.mobile?'vw':'px'}` }}  className='videocontainer'>
           <iframe className='video' src="https://www.youtube.com/embed/h-Vhn5Ri32M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
         </div>
 
-        <div style={{ right: `${state.right}vw` }}  className='videocontainer'>
+        <div style={{ right: `${state.right}${state.mobile?'vw':'px'}` }}  className='videocontainer'>
           <iframe className='video' src="https://www.youtube.com/embed/AJBGKRnaTfo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
         </div>
 
-        <div style={{ right: `${state.right}vw` }}  className='videocontainer'>
+        <div style={{ right: `${state.right}${state.mobile?'vw':'px'}` }}  className='videocontainer'>
           <iframe className='video' src="https://www.youtube.com/embed/DBZA6EbrIEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
         </div>
 
-        <div style={{ right: `${state.right}vw` }}  className='videocontainer'>
+        <div style={{ right: `${state.right}${state.mobile?'vw':'px'}` }}  className='videocontainer'>
           <iframe className='video' src="https://www.youtube.com/embed/iLqVMrG8RRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
         </div>
 
