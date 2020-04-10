@@ -8,7 +8,7 @@ import { KoronaContext } from '../App'
 // import { Transition } from 'react-spring/renderprops'
 import closebtn from '../svg/close2.svg'
 import { Circle } from './Circle'
-import { Transition } from 'react-spring'
+import { Transition, useTransition, animated } from 'react-spring'
 
 
 export const MapData = () => {
@@ -24,24 +24,22 @@ export const MapData = () => {
   if (modal == false) {
     document.body.style.overflow = "auto";
   }
-
+  const btn = useTransition(modal, null, {
+    from:{ opacity: 0, delay: 500 },
+    enter:{ opacity: 1, delay: 700 },
+    leave:{opacity: 0 },
+    })
 
   return (
     <div className='Map_wrapper'>
 
-      <Transition
-        items={modal}
-        from={{ opacity: 0, delay: 500 }}
-        enter={{ opacity: 1, top: '0px', delay: 700 }}
-        leave={{ opacity: 0, top: '200px' }}
+        {btn.map(({item,key,props})=>
+        item&&<animated.div onClick={() => setmodal(false)} className={`clsbtn`} key={key} style={props}>
 
-      >
-        {show => show && (props => <div onClick={() => setmodal(false)} className={`clsbtn`} style={props}>
+       
 
           <img src={closebtn} alt="" />
-
-        </div>)}
-      </Transition>
+          </animated.div>)}
 
       <MapDataHeader />
       <div style={{ padding: '25px 25px 25px 25px' }}>

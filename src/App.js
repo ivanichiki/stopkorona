@@ -18,7 +18,7 @@ import { BusinessMesures } from './components/BusinessMesures';
 import { BusinessTopic } from './components/BusinessMesures/BusinessTopic';
 import { Fadein } from './components/Fadein';
 import { stataReducer } from './reducers/stateReducer';
-import { Testblock } from './components/testblock';
+
 
 
 export const KoronaContext = React.createContext(null)
@@ -156,8 +156,8 @@ function App() {
           <Route exact path='/' render={() => <Menu />} />
       </ScrollAnimation>
     
-    <Testblock/>
-    
+
+
       <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Footer/>
       </ScrollAnimation> 

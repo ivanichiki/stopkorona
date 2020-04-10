@@ -12,7 +12,7 @@ import { Markup } from 'interweave';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { MapData } from './MapData';
-import { Transition } from 'react-spring';
+import { Transition, useTransition, animated } from 'react-spring';
 
 
 
@@ -47,26 +47,39 @@ export const Modal = () => {
   if (modal == false) {
     document.body.style.overflow = "auto";
   }
+
+  const transitions = useTransition(modal, null, {
+    from: {opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    config :{duration:500}
+    })
+  const up = useTransition(modal, null, {
+    from: {opacity: 0, top: '200px' },
+    enter: { opacity: 1, top: '0px' },
+    leave: { opacity: 0, top: '200px'  },
+    config :{duration:500}
+  })
+  const btn = useTransition(modal, null, {
+  from:{ opacity: 0, delay: 500 },
+  enter:{ opacity: 1, top: '0px', delay: 700 },
+  leave:{opacity: 0, top: '200px' },
+  })
   return (
 <div>
-    <Transition
-      items={modal}
-      from={{ opacity: 0, }}
-      enter={{ opacity: 1 }}
-      leave={{ opacity: 0, }}
-      config={{ duration: 500 }}
-    >
-      {show => show && (props => <div className={`modalOverlay`} style={props}>
+  {transitions.map(({item,key,props})=>
+  item&&<animated.div className={`modalOverlay`} key={key} style={props}>
+
+   
+    
 
         <div className="text_easy" >
-          <Transition
-            items={modal}
-            from={{ opacity: 0, top: '200px' }}
-            enter={{ opacity: 1, top: '0px' }}
-            leave={{ opacity: 0, top: '200px' }}
-            config={{ duration: 300 }}
-          >
-            {show => show && (props => <div ref={wrapperRef} className={`modalwindow${modalId==10?'-map':''}`} style={{...props}}>
+
+        {up.map(({item,key,props})=>
+         item&&<animated.div ref={wrapperRef} className={`modalwindow${modalId==10?'-map':''}`} key={key} style={props}>
+
+        
+     
             {modalId==10?
             
             <MapData/>
@@ -107,29 +120,25 @@ export const Modal = () => {
 
             }
 
-            </div>)}
-          </Transition>
-        </div>
-        
-        <Transition
-          items={modal}
-          from={{ opacity: 0, delay: 500 }}
-          enter={{ opacity: 1, top: '0px', delay: 700 }}
-          leave={{ opacity: 0, top: '200px' }}
+</animated.div>)}
 
-        >
-          {show => show && (props => <div onClick={() => setmodal(false)} className={`clsbtn${modalId==10?'-hide':''}`} style={props}>
+        </div>
+        {btn.map(({item,key,props})=>
+        item&&<animated.div onClick={() => setmodal(false)} className={`clsbtn${modalId==10?'-hide':''}`} key={key} style={props}>
+         
+        
 
             <img src={closebtn} alt="" />
 
-          </div>)}
-        </Transition>
+            </animated.div>)}
+      
 
+
+        </animated.div>
+    )}
       </div>
 
 
-      )}
-    </Transition>
-    </div>
+  
   )
 }
