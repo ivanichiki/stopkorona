@@ -1,14 +1,50 @@
+
+$mobile: 1160px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$mobile}) {
+    @content
+  }
+}
+
+
 .news_wrapper {
+  .desktop {
+    @include mobile {
+      display: none;
+    }
+  }
+  .mobile {
+    @include desktop {
+      display: none;
+    }
+  }
   padding-bottom: 30px;
   h1 {
     font-size: 50px;
     font-weight: 700;
     padding-bottom: 15px;
+    @include mobile {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      margin-top: 0px;
+      font-size: 32px;
+      font-weight: 600;
+    } 
   }
-
+  
   .news_wrapp{
     display: flex;
     justify-content: space-between;
+    @include mobile {
+      display: block;
+    }
     .pic{
       position: relative;
       width: 75%;
@@ -17,6 +53,10 @@
       overflow: hidden;
       border-radius: 10px;
       cursor: pointer;
+      @include mobile {
+        width: 100%;
+        height: 350px;
+      }
     }
     img {
       border-radius: 10px;
@@ -39,6 +79,9 @@
       font-size: 30px;
       font-weight: 600;
       color: white;
+      @include mobile {
+        font-size: 22px;
+      }
     }
     .right_news{
       margin-left: 80px;
@@ -46,7 +89,11 @@
       padding-top: 10px;
       border-bottom: 1px solid #e4e4e5;
       width: 85%;
-
+      @include mobile {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
       .righttitle{
         cursor: pointer;
         font-weight: 500;
@@ -57,6 +104,7 @@
       border-bottom: 0px solid #e4e4e5;
     }
   }
+ 
 }
 .lenktonews{
   background-color: #f2f7ff;
@@ -70,6 +118,11 @@
   padding-bottom: 5px;
   margin-left: 690px;
   color: #3662ff;
+  @include mobile {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .lenktonews:hover {
   background-color: #e5ecf8;

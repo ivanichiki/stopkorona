@@ -1,9 +1,8 @@
 import React, { useEffect, useContext } from 'react'
-import '../styles/Oper.scss'
-import snimok from '../svg/snimok.jpg'
-import load from '../svg/load.svg'
-import globe from '../svg/globe.svg'
-import { KoronaContext } from '../App'
+import './Oper.scss'
+import globe from '../../svg/globe.svg'
+import { KoronaContext } from '../../App'
+import { Otchet } from './Otchet'
 
 export const Operativdata = () => {
 
@@ -29,20 +28,9 @@ export const Operativdata = () => {
         </div>
 
         <div className='otchet desktop'>
-          <div>
-            <img src={snimok} alt="" />
-          </div>
-          <div style={{ paddingLeft: '15px', height: '200px' }}>
-            <a target="_blank" href="https://стопкоронавирус.рф/ai/html/3/attach/2020-04-03_coronavirus_government_report_1_.pdf" download>
-
-              <span className='text'>   Отчет о текущей ситуации с коронавирусом в РФ: статистика, данные из регионов, меры Правительства РФ.</span>
-
-              <span className='size'>PDF 2.7 MB</span>   <span>Скачать</span>
-              <img src={load} alt="" />
-
-            </a>
-          </div>
-        </div>
+           <Otchet/>
+       </div>
+       
       </div>
      
      
@@ -107,20 +95,8 @@ export const Operativdata = () => {
            </div>
          
            <div className='otchet mobile'>
-          <div>
-            <img src={snimok} alt="" />
-          </div>
-          <div className='right_block' >
-            <a target="_blank" href="https://стопкоронавирус.рф/ai/html/3/attach/2020-04-03_coronavirus_government_report_1_.pdf" download>
-
-              <span className='text'>   Отчет о текущей ситуации с коронавирусом в РФ: статистика, данные из регионов, меры Правительства РФ.</span>
-
-              <span className='size'>PDF 2.7 MB</span>   <span>Скачать</span>
-              <img src={load} alt="" />
-
-            </a>
-          </div>
-        </div>
+              <Otchet/>
+           </div>
       </div>
 
     </div>

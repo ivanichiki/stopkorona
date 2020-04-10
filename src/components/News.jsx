@@ -15,7 +15,8 @@ export const News = () => {
   return (
     <div className='news_wrapper'>
 
-      <h1>Последние новости</h1>
+      <h1 className='desktop'>Последние новости</h1>
+      <h1 className='mobile'>Новости</h1>
       {state !== '' &&
         <div className='news_wrapp'>
 

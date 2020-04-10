@@ -21,6 +21,7 @@ $mobile: 1160px;
   @include mobile {
     padding-top: 120px;
     border-bottom: 0px solid #e4e4e5;
+    padding-bottom: 20px;
   }
   .title_download {
     display: flex;
@@ -55,9 +56,9 @@ $mobile: 1160px;
     box-shadow: 0 0 8px rgba(0,0,0,0.34);
     display: flex;
     @include mobile {
-      margin-left: auto;
-      margin-right: auto;
-      width: 98%;
+      margin-left: 10px;
+      width: 340px;
+    
     }
     .right_block{
       padding-left: 15px;
@@ -73,7 +74,8 @@ $mobile: 1160px;
      
       width: 140px;
       @include mobile {
-        width: 80%;
+     
+        margin-right: 10px;
       }
     }
     a{ 

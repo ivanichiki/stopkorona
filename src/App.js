@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, useReducer } from 'react';
 import './App.scss';
 import { Header } from './components/header/Header';
-import { Operativdata } from './components/Operativdata';
+import { Operativdata } from './components/OperativData/Operativdata';
 import { News } from './components/News';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { HashRouter, Route } from 'react-router-dom';
