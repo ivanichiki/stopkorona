@@ -1,6 +1,21 @@
+$mobile: 1160px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$mobile}) {
+    @content
+  }
+}
 .Menu_wrapper{
+  user-select: none;
   display: flex;
   width: 1160px;
+  position: relative;
   margin-right: auto;
   margin-left: auto;
   padding-top: 40px;
@@ -13,6 +28,9 @@
     width: 350px;
     height: 440px;
     border-radius: 5px;
+    @include mobile {
+      width: 95vw;
+    }
     .content {
       padding: 30px 30px 30px 30px;
       height: 100%;
@@ -65,7 +83,12 @@
 }
 @media screen and (max-width: 1160px) {
   .Menu_wrapper {
-    width: 100%;
+
+ 
 
   }
+}
+.menu_wrap_wrap{
+  object-fit: cover;
+  overflow: hidden;
 }

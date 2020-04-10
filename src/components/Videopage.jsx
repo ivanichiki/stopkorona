@@ -5,6 +5,7 @@ import { useReducer } from 'react'
 import { videopageReducer } from '../reducers/videopageReducer'
 import { KoronaContext } from '../App'
 
+
 export const Videopage = () => {
 
   const {VideoRef} = useContext(KoronaContext)
@@ -12,6 +13,9 @@ export const Videopage = () => {
   const initialstate = { right: 0, mobile:false }
  
   const [state, dispatch] = useReducer(videopageReducer, initialstate)
+
+
+
   return (
     <div ref={VideoRef}  className='video_wrapp_wrapper'>
       <div  className='videotitle'>

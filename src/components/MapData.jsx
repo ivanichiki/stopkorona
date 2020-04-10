@@ -5,16 +5,27 @@ import { ImgLoader } from './ImgLoader'
 import { MapDataHeader } from './MapDataHeader'
 import Scrollbars from 'react-custom-scrollbars'
 import { KoronaContext } from '../App'
-import { Transition } from 'react-spring/renderprops'
+// import { Transition } from 'react-spring/renderprops'
 import closebtn from '../svg/close2.svg'
 import { Circle } from './Circle'
+import { Transition } from 'react-spring'
 
 
 export const MapData = () => {
   
   const {stateOper } = useContext(KoronaContext)
   const { detaleData,setmodal,modal } = useContext(KoronaContext)
-  console.log(detaleData)
+  
+  if (modal) {
+    document.body.style.overflow = "hidden";
+
+  }
+
+  if (modal == false) {
+    document.body.style.overflow = "auto";
+  }
+
+
   return (
     <div className='Map_wrapper'>
 

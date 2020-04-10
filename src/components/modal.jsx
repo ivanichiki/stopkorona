@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './modal.scss'
 import { KoronaContext } from '../App';
-import { Spring, Transition } from 'react-spring/renderprops'
+
 import closebtn from '../svg/closebtn.png'
 import facebook from '../svg/facebook.png'
 import vk1 from '../svg/vk1.png'
@@ -12,6 +12,8 @@ import { Markup } from 'interweave';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { MapData } from './MapData';
+import { Transition } from 'react-spring';
+
 
 
 document.body.style.scrollbar3dlightColor = "black"
@@ -46,7 +48,7 @@ export const Modal = () => {
     document.body.style.overflow = "auto";
   }
   return (
-
+<div>
     <Transition
       items={modal}
       from={{ opacity: 0, }}
@@ -128,5 +130,6 @@ export const Modal = () => {
 
       )}
     </Transition>
+    </div>
   )
 }
