@@ -40,7 +40,7 @@ $mobile: 1160px;
     height: 440px;
     border-radius: 5px;
     @include mobile {
-      width: 90vw;
+      min-width: 90vw;
       margin-left: 5vw;
       margin-right: 5vw;
     }
