@@ -56,8 +56,10 @@ $mobile: 1160px;
     box-shadow: 0 0 8px rgba(0,0,0,0.34);
     display: flex;
     @include mobile {
-      margin-left: 10px;
-      width: 340px;
+      margin-left: 5px;
+      margin-right: 5px;
+      width: 95%;
+     max-width: 335px;
     
     }
     .right_block{

@@ -138,9 +138,7 @@ function App() {
         <Route path="/news/:newsid"
             component={ExactNews} />
 
-        <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
-          <Route exact path='/' render={() => <LinksunderNews />} />
-        </ScrollAnimation>
+    
        
           <Route exact path="/allnews/:page" component={AllNews} />
           <Route exact path='/what-is-done/council' render={() => <Fadein props={<Solutions/>} />} />

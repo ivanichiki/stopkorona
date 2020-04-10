@@ -31,7 +31,7 @@ export const Header = () => {
       <div className='centrolize' >
      
         <HeaderUp/>
-        <UnderHeader />.
+        <UnderHeader />
    
       </div>
  
