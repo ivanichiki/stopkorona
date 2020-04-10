@@ -28,7 +28,7 @@ $mobile: 1160px;
   transition-property: right;
   transition-duration: 500ms;
   @include mobile {
-
+    width: 300vw;
     position: relative;
    
  
@@ -41,6 +41,7 @@ $mobile: 1160px;
     border-radius: 5px;
     @include mobile {
       min-width: 90vw;
+      width: 90vw;
       margin-left: 5vw;
       margin-right: 5vw;
     }
