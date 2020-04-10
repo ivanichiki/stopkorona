@@ -17,7 +17,7 @@ export const Operativdata = () => {
   
     <div  className='oper_wrapper'>
           
-      <div className='title_download'>
+      <div className='title_download '>
 
         <div>
           <div  className='bigwords' >
@@ -28,7 +28,7 @@ export const Operativdata = () => {
         </div>
         </div>
 
-        <div className='otchet'>
+        <div className='otchet desktop'>
           <div>
             <img src={snimok} alt="" />
           </div>
@@ -52,20 +52,20 @@ export const Operativdata = () => {
           <div className='stat'>
             {stateOper.stat.amountoftest}
           </div>
-          <div style={{ fontSize: '18px' }}>
+          <div className='subtitle' >
             Проведено тестов
 
           </div>
-          <div style={{cursor:'pointer'}} onClick={()=>{setmodal(true);setmodalId(10)}} className='more_date'>
+          <div  style={{cursor:'pointer'}} onClick={()=>{setmodal(true);setmodalId(10)}} className='more_date desktop'>
             <img src={globe} alt=""/>
             Подробные данные
-        </div>
+           </div>
         </div>
         <div>
           <div style={{ color: '#fb5f3d' }} className='stat'>
            {stateOper.stat.amountofcase}
           </div>
-          <div style={{ fontSize: '18px' }}>
+          <div   className='subtitle' >
             Случаев заболеваний
 
         </div>
@@ -76,7 +76,7 @@ export const Operativdata = () => {
           <div style={{ color: '#fb5f3d' }} className='stat'>
            {stateOper.stat.amountOfCaseToday}
         </div>
-          <div style={{ width: '200px', fontSize: '18px' }}>
+          <div  className='subtitle' style={{ width: '200px'}}>
             Случаев заболеваний за последние сутки
 
         </div>
@@ -86,7 +86,7 @@ export const Operativdata = () => {
           <div className='stat'>
           {stateOper.stat.amountOfCure}
           </div>
-          <div style={{ fontSize: '18px' }}>
+          <div  className='subtitle'>
             Человек выздоровел
 
         </div>
@@ -96,12 +96,31 @@ export const Operativdata = () => {
           <div className='stat'>
           {stateOper.stat.deaths}
         </div>
-          <div style={{ fontSize: '18px' }}>
+          <div  className='subtitle'>
             Человек умерло
 
         </div>
         </div>
+        <div  style={{cursor:'pointer'}} onClick={()=>{setmodal(true);setmodalId(10)}} className='more_date mobile'>
+            <img src={globe} alt=""/>
+            Подробные данные
+           </div>
+         
+           <div className='otchet mobile'>
+          <div>
+            <img src={snimok} alt="" />
+          </div>
+          <div className='right_block' >
+            <a target="_blank" href="https://стопкоронавирус.рф/ai/html/3/attach/2020-04-03_coronavirus_government_report_1_.pdf" download>
 
+              <span className='text'>   Отчет о текущей ситуации с коронавирусом в РФ: статистика, данные из регионов, меры Правительства РФ.</span>
+
+              <span className='size'>PDF 2.7 MB</span>   <span>Скачать</span>
+              <img src={load} alt="" />
+
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>

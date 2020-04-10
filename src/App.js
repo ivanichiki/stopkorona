@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect, useReducer } from 'react';
-import './App.css';
+import './App.scss';
 import { Header } from './components/header/Header';
 import { Operativdata } from './components/Operativdata';
 import { News } from './components/News';

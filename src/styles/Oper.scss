@@ -1,12 +1,37 @@
+
+$mobile: 1160px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$mobile}) {
+    @content
+  }
+}
+
+
 .oper_wrapper{
   padding-top: 190px;
   padding-bottom: 40px;
   border-bottom: 1px solid #e4e4e5;
+  @include mobile {
+    padding-top: 120px;
+    border-bottom: 0px solid #e4e4e5;
+  }
   .title_download {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 40px;
+    
+    @include mobile {
+      padding-bottom: 0px;
+    }
+  
   }
   .bigwords{
     width: 500px;
@@ -14,8 +39,14 @@
     font-weight: 900;
     line-height: 1.05;
     color: #003188;
+
+    @include mobile {
+      font-size: 40px;
+      width: 90%;
+    }
   }
   .otchet{
+    margin-right: 5px;
     margin-top: 30px;
     width: 370px;
     height: 160px;
@@ -23,13 +54,27 @@
     
     box-shadow: 0 0 8px rgba(0,0,0,0.34);
     display: flex;
-    
+    @include mobile {
+      margin-left: auto;
+      margin-right: auto;
+      width: 98%;
+    }
+    .right_block{
+      padding-left: 15px;
+      height: 200px;
+      @include mobile {
+        padding-left: 0px;
+      }
+    }
     img {
       padding-top: 16px;
       padding-left: 16px;
       border-radius: 5px;
      
       width: 140px;
+      @include mobile {
+        width: 80%;
+      }
     }
     a{ 
       text-decoration: none;
@@ -42,16 +87,23 @@
         color: black;
         font-size: 14px;
         margin: 0px;
-        
+        @include mobile {
+          font-size: 13px;
+        }
         
       }
       .size {
         color: #8396be;
-        width: 100%;
+        width: 90%;
+        @include mobile {
+         font-size: 13px;
+        }
       }
       span{
-        
         color: #fb5f3d;
+        @include mobile {
+          font-size: 13px;
+         }
       }
       img {
         position: relative;
@@ -65,7 +117,11 @@
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+      
+    }
     .stat{
       
       font-size: 50px;
@@ -73,18 +129,48 @@
       line-height: 1.05;
       color: #003188;
       padding-bottom: 10px;
+      @include mobile {
+        font-size: 35px;
+        padding-bottom: 5px;
+      }
+    
+    }
+    .subtitle {
+      font-size: 18px;
+      @include mobile {
+       padding-bottom: 20px;
+       font-size: 16px;
+        
+      }
     }
   }
+  
+
   .more_date{
     display: flex;
     margin-top: 50px;
     font-size: 18px;
-    
     color: #063e66;
+    @include mobile {
+      margin-top: 10px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #e4e4e5;
+    }
     img {
       margin-bottom: 5px;
       padding-right: 10px;
     }
   }
- 
+  .desktop {
+    @include mobile {
+      display: none;
+      }
+  }
+  .mobile {
+    @include desktop {
+      display: none;
+      }
+  }
+
 }
+

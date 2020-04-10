@@ -1,3 +1,11 @@
+$mobile: 1160px;
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+
 
 .header_wrapper_wrap {
   opacity: 0;
@@ -8,24 +16,19 @@
   height: 145px;
   position:fixed;
   z-index: 21321;
+  @include mobile {
+    height: 83px;
+  }
+
 .centrolize{
   margin-left:auto;
   margin-right: auto;
   width: 1160px;
   padding-right: 5px;
-}
-
-@media screen and (max-width: 1160px) {
-  .centrolize {
+  @include mobile {
     width: 90%;
- 
   }
-  .left_secsion {
-    display: flex;
-   }
-  
 }
-
   .header_wrapper {
     z-index: 2;
     display: flex;
@@ -37,43 +40,32 @@
     padding-bottom: 5px;
   
     
-    img {
+    .logotip {
       width: 300px;
-      
-    }
-    .movile-gov{
-      display: none;
-    }
-    @media screen and (max-width: 1160px) {
-      img {
+      @include mobile {
         margin-top: 10px;
         margin-right: 12px;
         width: 230px;
       }
-      .movile-gov{
-        display: block;
-        .img_gov {
-          margin-top: 0px;
-    
-        }
-         border-right: 0px solid #5878b1;
-    
-         padding-left: 10px;
-         border-left: 1px solid #5878b1;
-       }
+      
     }
+    .movile-gov{
+      display: none;
+      @include mobile {
+        display: block;
+      }
+    }
+   
 
     .MENU {
      display: none;
      transform: rotate(90deg);
+     @include mobile {
+      display: block;
+    }
     }
 
-    @media screen and (max-width: 1160px) {
-      .MENU {
-     
-        display: block;
-      }
-    }
+ 
     
     .right_secsion{
       display: flex;
@@ -83,9 +75,12 @@
         display: flex;
         align-items: center;
         margin-right: 30px;
+        @include mobile {
+          display: none;
+        }
         .social {
-         
           margin-right: 13px;
+         
         }
         .odnokashniki{
           width: 14px;
@@ -98,42 +93,31 @@
        
         }
       }
-      @media screen and (max-width: 1160px) {
-        .socseti {
-          display: none;
-      
-        }
-      }
+  
       .gov {
         border-right: 1px solid #5878b1;
         padding: 0 10px 0 0;
         margin: 0 10px 0 0;
+        @include mobile {
+          display: none;
+        }
       }
       .oficcial{
         padding-top: 5px;
         font-size: 14px;
         width: 180px;
-        color:#5878b1
-      }
-      @media screen and (max-width: 1160px) {
-        .oficcial {
+        color:#5878b1;
+        @include mobile {
           display: none;
         }
-        .gov {
-          display: none;
-        }
-       
       }
+     
     }
   }
   
  
 }
-@media screen and (max-width: 1160px) {
-  .header_wrapper_wrap {
-    height: 83px;
-  }
-}
+
 .show {
   transition-duration: 500ms;
   transition-delay: 200ms;
@@ -141,3 +125,16 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 1160px) {  
+  .left_secsion {
+    display: flex;
+   }
+  .movile-gov{
+    .img_gov {
+      margin-top: 0px;
+    }
+     border-right: 0px solid #5878b1;
+     padding-left: 10px;
+     border-left: 1px solid #5878b1;
+   }
+}
