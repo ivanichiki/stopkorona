@@ -11,6 +11,10 @@ $mobile: 1160px;
     @content
   }
 }
+.menu_wrap_wrap{
+  object-fit: cover;
+  overflow: hidden;
+}
 .Menu_wrapper{
   user-select: none;
   display: flex;
@@ -21,7 +25,14 @@ $mobile: 1160px;
   padding-top: 40px;
   padding-bottom: 80px;
   justify-content: space-between;
+  transition-property: right;
+  transition-duration: 500ms;
+  @include mobile {
 
+    position: relative;
+   
+ 
+  }
   .block {
    
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -29,7 +40,9 @@ $mobile: 1160px;
     height: 440px;
     border-radius: 5px;
     @include mobile {
-      width: 95vw;
+      width: 90vw;
+      margin-left: 5vw;
+      margin-right: 5vw;
     }
     .content {
       padding: 30px 30px 30px 30px;
@@ -81,14 +94,4 @@ $mobile: 1160px;
     }
   }
 }
-@media screen and (max-width: 1160px) {
-  .Menu_wrapper {
 
- 
-
-  }
-}
-.menu_wrap_wrap{
-  object-fit: cover;
-  overflow: hidden;
-}

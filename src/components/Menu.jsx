@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
 import '../styles/Menu.scss'
@@ -45,16 +45,18 @@ const Block =(props)=> {
 }
 
 export const Menu = () => {
+  const [count, setcount] = useState(0)
   const [props, set] = useSpring(() => ({ x: 0}))
   const bind = useDrag(({ down, movement: [x] }) => {
-    if (down==false&x>50) {console.log('slide')}
+    if (down==false&x<-50&x!=0) {setcount(e=>e+100)}
+    if (down==false&x>50&x!=0) {setcount(e=>e-100)}
     set({ x: down ? x : 0})
 
   })
 
   return (
   <div className='menu_wrap_wrap'>
-    <animated.div className='Menu_wrapper'  {...bind()} style={props}>
+    <animated.div className='Menu_wrapper'  {...bind()} style={{...props, right:`${count}vw`}}>
 
   <Block alink='https://стопкоронавирус.рф/ai/doc/4/attach/4.pdf' img={group} title='Памятка для пожилых людей' width='170px' tag='ЧТО ПРЕДПРИНЯТЬ?'/> 
      <Block  link='/what-is-done/council'  img={ok} title='Антикризисный план' width='135px' tag='ЧТО СДЕЛАНО?'/>
