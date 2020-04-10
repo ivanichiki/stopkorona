@@ -1,9 +1,26 @@
+$mobile: 1160px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$mobile}) {
+    @content
+  }
+}
+
 .video_wrapp_wrapper{
   position: relative;
   width: 1240px;
   background-color: white;
   margin-left: auto;
   margin-right: auto;
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .video_wrapper{
@@ -13,23 +30,22 @@
   display: flex;
   object-fit: cover;
   overflow: hidden;
+  @include mobile {
+    width: 85vw;
+  }
   .videocontainer{
     position: relative;
- 
-  transition: right 500ms;
+    transition: right 500ms;
     margin-right: 40px;
+ 
+    @include mobile {
+      width: 85vw;
+      margin-right: 0px;
+    }
   }
 
 }
-@media screen and (max-width: 1160px) {
-  .video_wrapp_wrapper{
-    width: 100%;
-  }
-  .video_wrapper {
-    width: 90%;
 
-  }
-}
 .rightstralka{
   cursor: pointer;
   position: absolute;
@@ -41,6 +57,14 @@
   
   right: 0;
   user-select: none;
+
+  @include mobile {
+    font-size: 4em;
+    right: 1%;
+    top:40.4%;
+
+    margin-right: 0px;
+   }
 }
 .leftstrelka{
   cursor: pointer;
@@ -53,6 +77,14 @@
   margin-left: 8px;
   left: 0;
   user-select: none;
+  @include mobile {
+    font-size: 4em;
+   top:42%;
+   left: 1%;
+   padding-left: 0px;
+   margin-left: 0px;
+  }
+  
 }
 .off{
   cursor: default;
@@ -85,11 +117,40 @@
   font-size: 50px;
   font-weight:700; 
   padding-bottom: 40px;
+  @include mobile {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-left: 15px;
+  }
   span {
     position: relative;
     bottom: 16px;
     font-weight: 400;
     font-size: 22px;
     color:#fb5f3d;
+    @include mobile {
+      font-size: 19px;
+      bottom: 10px;
+    }
+  }
+
+}
+.video {
+  margin: 0;
+  width: 360px;
+  height: 360px;
+  @include mobile {
+   width: 85vw;
+    height: 50vw;
+  }
+}
+.desktop {
+  @include mobile {
+    display: none;
+  }
+}
+.mobile {
+  @include desktop {
+    display: none;
   }
 }

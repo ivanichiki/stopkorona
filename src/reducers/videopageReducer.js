@@ -26,6 +26,31 @@ export const videopageReducer = (state, action) => {
           right: 0
         }
     }
+    case 'plusrightMobile': {
+      if (state.right != 5*85) {
+      return {
+        ...state,
+        right: state.right+85
+      }
+    }
+      else return state
+    }
+    case 'minusrighMobile': {
+      if (state.right != 0) {
+      return {
+        ...state,
+        right: state.right-85
+      }
+    }
+
+  else return state
+    }
+    case 'shortcut': {
+      return {
+        ...state, 
+        right: action.value
+      }
+    }
     case 'toend': {
 
       return {
