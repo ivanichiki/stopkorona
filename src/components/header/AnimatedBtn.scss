@@ -1,0 +1,121 @@
+$mobile: 1160px;
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+.MENU {
+  display: none;
+  position: relative;
+  div {
+    display: block;
+    font-size: 25px;
+    position: relative;
+    transform: rotate(90deg);
+  }
+  .up {
+    top: 28px;
+
+  
+   
+  }
+  .down {
+
+
+    bottom:28px;
+
+  }
+
+
+
+
+.up-active-enter {
+  top:28px;
+  transform: rotate(90deg);
+}
+.up-active-enter-active {
+  top:37px;
+ 
+ 
+  transition: top 500ms;
+}
+.up-active-enter-done {
+  transform: rotate(45deg);
+  transition: transform 500ms;
+  top:36px;
+
+}
+.up-active-exit {
+  top:36px;
+  transform: rotate(45deg);
+  transition: top 500ms;
+}
+.up-active-exit-active {
+  transform: rotate(90deg);
+  top:37px;
+  transition: transform 500ms;
+
+}
+.up-active-exit-done {
+  
+  transition: top 500ms;
+  top:28px;
+}
+
+
+.down-active-enter {
+  bottom:28px;
+  transform: rotate(90deg);
+}
+.down-active-enter-active {
+bottom:37px;
+  transition: transform 500ms ease 1500ms;
+  transition: bottom 500ms;
+}
+.down-active-enter-done {
+  transition: transform 500ms;
+  transform: rotate(135deg);
+bottom:35px;
+}
+
+.down-active-exit {
+  transform: rotate(135deg);
+  transition: bottom 500ms;
+ bottom:35px;
+
+}
+.down-active-exit-active {
+  transform: rotate(90deg);
+  transition: transform 500ms;
+bottom:37px;
+
+
+}
+.down-active-exit-done {
+  transform: rotate(90deg);
+  bottom:28px;
+
+  transition: bottom 500ms;
+
+}
+
+
+
+  .center {
+    transform: rotate(90deg);
+    transition-property: opacity;
+    transition-delay: 280ms;
+    opacity: 1;
+   
+  }
+  .center-active {
+  
+    opacity: 0;
+  }
+
+
+  @include mobile {
+   display: block;
+ }
+}

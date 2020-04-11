@@ -1,12 +1,8 @@
 .scrollMenu {
   margin-top: -420px;
-
   position: fixed;
   z-index: 3;
   background-color: white;
-
-
-  
   width:100%;
   transition-property: margin-top;
   transition-duration: 500ms;
@@ -51,6 +47,7 @@
   }
 }
 .blocks{
+  margin-right: 20px;
   margin-bottom: 15px;
   max-height: 30px;
   transition-property: max-height;
@@ -59,6 +56,7 @@
   overflow: hidden;
   object-fit: cover;
   .podsos{
+
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -90,7 +88,9 @@
 .socseti{
 justify-content: space-between;
 
+@media screen and (max-width: 1160px) {
 a {
   margin-right: 9px;
+}
 }
 }
