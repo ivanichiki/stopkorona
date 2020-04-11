@@ -40,7 +40,7 @@ export const Footer = () => {
           </div>
           <div className='end'>
           <div className='hotline'>Единая горячая линия:</div>
-          <div className='number'> <span> <a href="tel:88002000112"> 8-800-2000-112</a></span></div>
+          <div className='number'> <span> <a href="tel:88002000112">8-800-2000-112</a></span></div>
           </div>
        
         </div>

@@ -1,41 +1,90 @@
+$mobile: 1160px;
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
 .Footer_wrapper{
   width: 100%;
   height: 390px;
+ 
   background-color: #f2f7ff;
   padding-top: 50px;
+
+  @include mobile {
+    height: 100%;
+    padding-top: 20px;
+    }
  .Footer {
   margin-left: auto;
   margin-right: auto;
   height: 100%;
   width: 1160px;
+  @include mobile {
+  width: 100%;
+  }
   .Footer_down{
     border-bottom: 1px solid #e4e4e5;
     padding-top: 130px;  
+    @include mobile {
+      padding-top: 20px;  
+    }
     
   }
   .footertext{
     padding-top: 20px;
     color: #83878f;
-    
+    @include mobile {
+      width: 92%;
+      margin-left: 15px;
+      padding-bottom: 20px;
+    }
   }
   .Footer_up{
     height: 200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include mobile {
+    display: block;
+    height: 100%;
+    }
     .soc{
       width: 450px;
-      
+      @include mobile {
+        margin-left: 15px;
+        width: 90%;
+      }
+      h1 {
+        @include mobile {
+         
+          font-size: 24px;
+        }
+        p {
+          @include mobile {
+          
+            font-size: 20px;
+          }
+        }
+      }
     }
     .center{
       width: 340px;
       img {
         width: 320px;
         margin-bottom: 20px;
+        @include mobile {
+          margin-left: 15px;
+        }
       }
     }
     .end{
       text-align: end;
+      @include mobile {
+        text-align: start;
+        margin-left: 15px;
+      }
+
       .hotline {
         font-size: 18px;
       }
@@ -45,6 +94,10 @@
          a{
           font-size: 30px;
           color: #fb5f3d;
+          @include mobile {
+            position: relative;
+            right: 5px;
+          }
          }
       
        }
@@ -71,36 +124,62 @@
       display: flex;
       padding-bottom: 10px;
       padding-top: 25px;
+      @include mobile {
+        padding-top:  5px;
+        padding-bottom: 20px;
+      }
     }
     .soc_wrapper{
       padding-top: 2px;
       height: 50px;
       border-radius: 3px;
       margin-right: 5px;
-
+      @include mobile {
+        height: 30px;
+       
+      }
        
       .vk{
         padding-right: 5px;
         padding-left: 2px;
         border-right: 1px solid #6b99ce;  
+        @include mobile {
+          padding-left: 0px;
+        
+        }
         img {
            margin-top: 4px;
           margin-left: 5px;
           width: 40px; 
+          @include mobile {
+            width: 25px; 
+            margin-top: 1px;
+          }
          }
       }
       .counter{
        span {
          padding-top: 7px;
          font-size: 20px;
+         @include mobile {
+          font-size: 16px;
+          padding-top: 1px;
+
+        }
        }
        padding-right: 10px;
+       @include mobile {
+          padding-right: 5px;
+       }
        }
     }
     .odnoklasniki_wrapper {
       background-color: #eb722e;
       .counter{
         padding-right: 10px;
+        @include mobile {
+          padding-right: 5px;
+        }
         }
       .odnoklasniki{
         border-right: 1px solid #ec9c71;
@@ -111,10 +190,20 @@
           padding-left: 2px;
           width: 35px;
           padding-right: 3px;
+          @include mobile {
+            width: 22px;
+            margin-top: 3px;
+            padding-left: 0px;
+            padding-right: 1px;
+          }
         }
         span {
           padding-top: 9px;
           font-size: 17px;
+          @include mobile {
+            font-size: 16px;
+            padding-top: 1px;
+          }
         }    
     }
   } 
@@ -141,21 +230,25 @@
       width: 50px;
       height: 52px;
       cursor: pointer;
+      @include mobile {
+        height: 32px;
+        width: 30px;
+      }
       img {  
       padding-left: 4px;
       padding-top: 7px;
       position: relative;
       bottom: 3px;
       width: 40px;
+      @include mobile {
+        padding-top: 6px;
+        width: 25px;
+        padding-left: 2px;
+      }
       }
     }
   }
 
  }
- @media screen and (max-width: 1160px) {
-  .Footer {
-   width: 100%;
 
-  }
-}
 }
