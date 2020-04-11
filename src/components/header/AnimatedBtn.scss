@@ -12,21 +12,28 @@ $mobile: 1160px;
     display: block;
     font-size: 25px;
     position: relative;
-    transform: rotate(90deg);
+    transform-origin: center;
+     transform: rotate(90deg);
   }
   .up {
-    top: 28px;
+    position: relative;
 
+ 
+    top: 28px;
+   
   }
   .down {
- bottom:28px;
+   
+ 
+    bottom:28px;
   }
+
 .up-active-enter {
   top:28px;
   transform: rotate(90deg);
 }
 .up-active-enter-active {
-  top:37px;
+  top:36px;
  
  
   transition: top 500ms;
@@ -34,17 +41,17 @@ $mobile: 1160px;
 .up-active-enter-done {
   transform: rotate(45deg);
   transition: transform 500ms;
-  top:37px;
+  top:36px;
 
 }
 .up-active-exit {
-  top:37px;
+  top:36px;
   transform: rotate(45deg);
   transition: top 500ms;
 }
 .up-active-exit-active {
   transform: rotate(90deg);
-  top:37px;
+  top:36px;
   transition: transform 500ms;
 
 }
@@ -60,26 +67,26 @@ $mobile: 1160px;
   transform: rotate(90deg);
 }
 .down-active-enter-active {
-bottom:37px;
+bottom:36px;
   transition: transform 500ms ease 1500ms;
   transition: bottom 500ms;
 }
 .down-active-enter-done {
   transition: transform 500ms;
   transform: rotate(135deg);
-bottom:35px;
+bottom:36px;
 }
 
 .down-active-exit {
   transform: rotate(135deg);
   transition: bottom 500ms;
- bottom:35px;
+ bottom:36px;
 
 }
 .down-active-exit-active {
   transform: rotate(90deg);
   transition: transform 500ms;
-bottom:37px;
+bottom:36px;
 
 
 }
