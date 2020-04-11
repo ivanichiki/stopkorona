@@ -50,10 +50,12 @@ export const Menu = () => {
   const [count, setcount] = useState(0)
   const [props, set] = useSpring(() => ({ x: 0}))
   const bind = useDrag(({ down, movement: [x] }) => {
-   if (x>30||x<-30&x!=0) {
+   if (x>20||x<-20&x!=0) {
      settouch(true)
+     document.body.style.overflow = "hidden";
    }
    if (down==false) {
+    document.body.style.overflow = "auto";
     settouch(false)
    }
     if (down==false&x<-50&x!=0&count!=200) {setcount(e=>e+100)}
