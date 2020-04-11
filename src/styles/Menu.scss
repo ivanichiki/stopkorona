@@ -15,6 +15,7 @@ $mobile: 1160px;
   object-fit: cover;
   overflow: hidden;
 }
+
 .Menu_wrapper{
   user-select: none;
   display: flex;
@@ -27,6 +28,8 @@ $mobile: 1160px;
   justify-content: space-between;
   transition-property: right;
   transition-duration: 500ms;
+
+
   @include mobile {
     width: 300vw;
     position: relative;
@@ -94,5 +97,6 @@ $mobile: 1160px;
       }
     }
   }
+
 }
 

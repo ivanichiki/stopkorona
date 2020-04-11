@@ -46,15 +46,16 @@ const Block =(props)=> {
 
 
 export const Menu = () => {
+  const [touch, settouch] = useState(false)
   const [count, setcount] = useState(0)
   const [props, set] = useSpring(() => ({ x: 0}))
   const bind = useDrag(({ down, movement: [x] }) => {
-    if (down) {
-      document.body.style.overflow = "hidden"
-    }
-    if (down==false) {
-      document.body.style.overflow = "auto";
-    }
+   if (x>30||x<-30&x!=0) {
+     settouch(true)
+   }
+   if (down==false) {
+    settouch(false)
+   }
     if (down==false&x<-50&x!=0&count!=200) {setcount(e=>e+100)}
     if (down==false&x>50&x!=0&count!=0) {setcount(e=>e-100)}
     set({ x: down ? x : 0})
@@ -62,8 +63,8 @@ export const Menu = () => {
   })
 
   return (
-  <div className='menu_wrap_wrap'>
-    <animated.div className='Menu_wrapper'  {...bind()} style={{...props, right:`${count}vw`}}>
+  <div className={`menu_wrap_wrap`}>
+    <animated.div className={`Menu_wrapper`}  {...bind()} style={{...props,touchAction:`${touch?"none":"auto"}` ,right:`${count}vw`}}>
 
   <Block alink='https://стопкоронавирус.рф/ai/doc/4/attach/4.pdf' img={group} title='Памятка для пожилых людей' width='170px' tag='ЧТО ПРЕДПРИНЯТЬ?'/> 
      <Block  link='/what-is-done/council'  img={ok} title='Антикризисный план' width='135px' tag='ЧТО СДЕЛАНО?'/>
