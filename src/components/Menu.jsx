@@ -44,10 +44,17 @@ const Block =(props)=> {
   )
 }
 
+
 export const Menu = () => {
   const [count, setcount] = useState(0)
   const [props, set] = useSpring(() => ({ x: 0}))
   const bind = useDrag(({ down, movement: [x] }) => {
+    if (down) {
+      document.body.style.overflow = "hidden"
+    }
+    if (down==false) {
+      document.body.style.overflow = "auto";
+    }
     if (down==false&x<-50&x!=0&count!=200) {setcount(e=>e+100)}
     if (down==false&x>50&x!=0&count!=0) {setcount(e=>e-100)}
     set({ x: down ? x : 0})
