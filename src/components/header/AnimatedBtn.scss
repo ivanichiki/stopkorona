@@ -11,30 +11,31 @@ $mobile: 1160px;
   align-items: center;
   div {
     text-align: center;
-  
+    width: 20px;
+    height: 2px;
+    background-color: #333;
     display: block;
     font-size: 25px;
     position: relative;
 
-     transform: rotate(90deg);
+  
   }
   .up {
  
-    transform: rotate(45deg) translate(-2px);
-    top: 37px;
+   top: -5px;
    
   }
   .down {
-    transform: rotate(135deg) translate(1px) ;
-    bottom: 37px;
+
+    bottom: -5px;
   }
 
 .up-active-enter {
-  top:28px;
-  transform: rotate(90deg);
+  top:-5px;
+  transform: rotate(0deg);
 }
 .up-active-enter-active {
-  top:36px;
+  top:2px;
  
  
   transition: top 500ms;
@@ -42,58 +43,58 @@ $mobile: 1160px;
 .up-active-enter-done {
   transform: rotate(45deg);
   transition: transform 500ms;
-  top:36px;
+  top:2px;
 
 }
 .up-active-exit {
-  top:36px;
+  top:2px;
   transform: rotate(45deg);
   transition: top 500ms;
 }
 .up-active-exit-active {
-  transform: rotate(90deg);
-  top:36px;
+  transform: rotate(0deg);
+  top:2px;
   transition: transform 500ms;
 
 }
 .up-active-exit-done {
   
   transition: top 500ms;
-  top:28px;
+  top:-5px;
 }
 
 
 .down-active-enter {
-  bottom:28px;
-  transform: rotate(90deg);
+  bottom:-5px;
+  transform: rotate(0deg);
 }
 .down-active-enter-active {
-bottom:36px;
+bottom:2px;
   transition: transform 500ms ease 1500ms;
   transition: bottom 500ms;
 }
 .down-active-enter-done {
   transition: transform 500ms;
-  transform: rotate(135deg);
-bottom:36px;
+  transform: rotate(-45deg);
+bottom:2px;
 }
 
 .down-active-exit {
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
   transition: bottom 500ms;
- bottom:36px;
+ bottom:2px;
 
 }
 .down-active-exit-active {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
   transition: transform 500ms;
-bottom:36px;
+bottom:2px;
 
 
 }
 .down-active-exit-done {
-  transform: rotate(90deg);
-  bottom:28px;
+  transform: rotate(0deg);
+  bottom:-5px;
 
   transition: bottom 500ms;
 
@@ -102,10 +103,10 @@ bottom:36px;
 
 
   .center {
-    transform: rotate(90deg);
+    transform: rotate(0deg);
     transition-property: opacity;
     transition-delay: 280ms;
-    opacity: 0;
+    opacity: 1;
    
   }
   .center-active {
