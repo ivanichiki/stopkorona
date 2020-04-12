@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import '../styles/MapData.scss'
 import map from '../svg/map.svg'
-import { ImgLoader } from './ImgLoader'
+
 import { MapDataHeader } from './MapDataHeader'
 import Scrollbars from 'react-custom-scrollbars'
 import { KoronaContext } from '../App'

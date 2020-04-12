@@ -1,3 +1,9 @@
+$mobile: 1160px;
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
 .modal {
   cursor: pointer;
   padding: 30px 30px 30px 30px;
@@ -7,6 +13,13 @@
   background-color: #f2f7ff;
   
   margin-bottom: 40px;
+  @include mobile {
+    padding-top: 5px;
+    height: 140px;
+    width: 95%;
+    padding-bottom: 40px;
+    padding-right: 5px;
+  }
   .insidemodal{
     margin-top: 20px;
     width: 100%;
@@ -21,6 +34,10 @@
     line-height: 1.2;
     font-weight: 500;
     font-family: sans-serif;
+    @include mobile {
+      padding-top: 5px;
+
+    }
   }
 }
 .modal:hover .text {

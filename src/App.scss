@@ -34,8 +34,11 @@ a {
 .Fadein_wrapper {
   padding-top: 150px;
   opacity: 0;
- 
   padding-bottom: 50px;
+  @include mobile {
+    padding-top: 110px;
+    padding-bottom: 0px;
+  }
 }
 .show {
   transition-duration: 500ms;

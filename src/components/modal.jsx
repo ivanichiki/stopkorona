@@ -7,7 +7,7 @@ import facebook from '../svg/facebook.png'
 import vk1 from '../svg/vk1.png'
 import odno from '../svg/odno.png'
 import twitter from '../svg/twitter.png'
-
+import closebtn2 from '../svg/close2.svg'
 import { Markup } from 'interweave';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -116,6 +116,14 @@ export const Modal = () => {
 
                 </div>
 
+                {btn.map(({item,key,props})=>
+        item&&<animated.div onClick={() => setmodal(false)} className={`mobile clsbtn${modalId==10?'-hide':''}`} key={key} style={props}>
+         
+        
+
+            <img src={closebtn2} alt="" />
+
+            </animated.div>)}
               </div>
 
             }
@@ -123,15 +131,17 @@ export const Modal = () => {
 </animated.div>)}
 
         </div>
+
+        
         {btn.map(({item,key,props})=>
-        item&&<animated.div onClick={() => setmodal(false)} className={`clsbtn${modalId==10?'-hide':''}`} key={key} style={props}>
+        item&&<animated.div onClick={() => setmodal(false)} className={`desktop clsbtn${modalId==10?'-hide':''}`} key={key} style={props}>
          
         
 
             <img src={closebtn} alt="" />
 
             </animated.div>)}
-      
+         
 
 
         </animated.div>

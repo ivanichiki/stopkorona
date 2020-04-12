@@ -5,6 +5,12 @@ $mobile: 1160px;
   }
 }
 
+@mixin desktop {
+  @media screen and (min-width: #{$mobile}) {
+    @content
+  }
+}
+
 .modalOverlay{
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 99999999;
@@ -48,7 +54,9 @@ $mobile: 1160px;
     position:relative;
     background-color: white; 
     width: 700px;
-    
+    @include mobile {
+ margin: 0px;
+    }
     
     .social_modal{
 
@@ -57,7 +65,10 @@ $mobile: 1160px;
       margin-left: 10px;
       padding-bottom: 10px;
       padding-top: 25px;
-
+      @include mobile {
+        margin-left: 0px;
+        padding-bottom: 0px;
+      }
       img {
         object-fit: cover;
         overflow: hidden;
@@ -162,9 +173,17 @@ $mobile: 1160px;
   .modal_text{
     padding: 1px 30px 30px 40px;
     font-size: 18px;
+    @include mobile {
+      font-size: 16px;
+      padding-left: 20px;
+    }
     h1{
       font-size: 35px;
       line-height: 1.2;
+      @include mobile {
+        font-size: 25px;
+   
+      }
     }
  
       a{
@@ -176,6 +195,9 @@ $mobile: 1160px;
      margin: 0;
      li {
        margin-left:20px;
+       @include mobile {
+        margin-left:15px;
+      }
      }
     }
   
@@ -188,12 +210,16 @@ $mobile: 1160px;
 
 .modalOverlay::-webkit-scrollbar {
 
-  width:10px
+  width:10px;
+  @include mobile {
+    width:6px;
+  }
 }
 .modamodalOverlaylwindow::-webkit-scrollbar-track:hover{
   background-color:#babac0;
     border-radius:16px;
-    border:5px solid #fff
+    border:5px solid #fff;
+  
 }
 .modalOverlay::-webkit-scrollbar-thumb {
   background-color:#babac0;
@@ -215,4 +241,9 @@ $mobile: 1160px;
    width: 30px;
  }
 
+}
+.desktop {
+  @include mobile {
+    display: none;
+  }
 }
