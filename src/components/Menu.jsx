@@ -64,7 +64,7 @@ usePreventScroll(preventScrollRef)
       return () => document.removeEventListener('touchmove', preventScrolling)
     }, [])
   }
-
+ const [cantoucn, setcantoucn] = useState(false)
   const [count, setcount] = useState(0)
   const [props, set] = useSpring(() => ({ x: 0, y:0}))
   const bind = useDrag(({ down, movement: [x, y] }) => {
@@ -86,8 +86,13 @@ usePreventScroll(preventScrollRef)
     if (down==false&x<-50&x!=0&count!=200) {setcount(e=>e+100)}
     if (down==false&x>50&x!=0&count!=0) {setcount(e=>e-100)}
     console.log(y)
-
-    set({ x: down ? x : 0,
+if (y==0&x!==0) {
+  setcantoucn(true)
+}
+if (down==false) {
+  setcantoucn(false)
+}
+    set({ x: down&cantoucn ? x : 0,
       immediate: down
     })
 
