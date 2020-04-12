@@ -86,12 +86,11 @@ usePreventScroll(preventScrollRef)
     if (down==false&x<-50&x!=0&count!=200) {setcount(e=>e+100)}
     if (down==false&x>50&x!=0&count!=0) {setcount(e=>e-100)}
     console.log(y)
-  if (y==0)
-  {
+
     set({ x: down ? x : 0,
       immediate: down
     })
-  }
+
   })
 
   return (
