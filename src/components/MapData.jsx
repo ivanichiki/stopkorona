@@ -9,18 +9,18 @@ import { KoronaContext } from '../App'
 import closebtn from '../svg/close2.svg'
 import { Circle } from './Circle'
 import { Transition, useTransition, animated, useSpring } from 'react-spring'
-import { useGesture, useDrag } from 'react-use-gesture'
 
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 export const MapData = () => {
   
  
   const { detaleData,setmodal,modal } = useContext(KoronaContext)
-  const [props, set] = useSpring(() => ({ x: 0, y: 0}))
-  const bind=useDrag(({down, movement:[x,y]})=>{
-  set({x:x,y:y})
-}
-  )
+//   const [props, set] = useSpring(() => ({ x: 0, y: 0}))
+//   const bind=useDrag(({down, movement:[x,y]})=>{
+//   set({x:x,y:y})
+// }
+//   )
 
   if (modal) {
     document.body.style.overflow = "hidden";
@@ -54,8 +54,11 @@ export const MapData = () => {
       <div style={{ padding: '25px 25px 25px 25px' }}>
         <div className='mapContent' >
 <div className='img_container_wrapper'>
-
-          <animated.div {...bind()} style={props} className='img_container'>
+<TransformWrapper
+limitToBounds={false}
+>
+<TransformComponent>
+<div className='img_container'>
              <img src={map} alt="" />
 
 
@@ -67,7 +70,11 @@ export const MapData = () => {
           <Circle left='8.3%' top='76%' infected={detaleData[5].fields.infected} name={detaleData[5].fields.name}/>
           <Circle left='12%' top='61%' infected={detaleData[6].fields.infected} name={detaleData[6].fields.name}/>
  
-          </animated.div>
+          </div>
+
+</TransformComponent>
+</TransformWrapper>
+     
  </div>
  <div className='up_scrollbar' >
 
