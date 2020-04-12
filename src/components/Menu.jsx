@@ -68,25 +68,12 @@ usePreventScroll(preventScrollRef)
   const [count, setcount] = useState(0)
   const [props, set] = useSpring(() => ({ x: 0, y:0}))
   const bind = useDrag(({ down, movement: [x, y] }) => {
-   if ((x>20||x<-20)&(x!==0)) {
-   
-   
-   }
-   if (down==false) {
-    
-  
-   }
-//   if (down) {
-//     // Prevent scroll on touch screens while dragging:
-//     preventScrollRef.current = true
-//     }
-//  else {
-//     preventScrollRef.current = false
-//   }
+
     if (down==false&x<-50&x!=0&count!=200) {setcount(e=>e+100)}
     if (down==false&x>50&x!=0&count!=0) {setcount(e=>e-100)}
     console.log(`y:${y}`)
     console.log(`x:${x}`)
+
 if (Math.abs(x)>Math.abs(y)) {
   setcantoucn(true)
   preventScrollRef.current = true

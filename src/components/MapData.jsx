@@ -8,14 +8,20 @@ import { KoronaContext } from '../App'
 // import { Transition } from 'react-spring/renderprops'
 import closebtn from '../svg/close2.svg'
 import { Circle } from './Circle'
-import { Transition, useTransition, animated } from 'react-spring'
+import { Transition, useTransition, animated, useSpring } from 'react-spring'
+import { useGesture, useDrag } from 'react-use-gesture'
 
 
 export const MapData = () => {
   
-  const {stateOper } = useContext(KoronaContext)
+ 
   const { detaleData,setmodal,modal } = useContext(KoronaContext)
-  
+  const [props, set] = useSpring(() => ({ x: 0, y: 0}))
+  const bind=useDrag(({down, movement:[x,y]})=>{
+  set({x:x,y:y})
+}
+  )
+
   if (modal) {
     document.body.style.overflow = "hidden";
 
@@ -30,6 +36,9 @@ export const MapData = () => {
     leave:{opacity: 0 },
     })
 
+  
+
+
   return (
     <div className='Map_wrapper'>
 
@@ -43,9 +52,10 @@ export const MapData = () => {
 
       <MapDataHeader />
       <div style={{ padding: '25px 25px 25px 25px' }}>
-        <div style={{ display: 'flex' }}>
+        <div className='mapContent' >
+<div className='img_container_wrapper'>
 
-          <div className='img_container'>
+          <animated.div {...bind()} style={props} className='img_container'>
              <img src={map} alt="" />
 
 
@@ -57,19 +67,22 @@ export const MapData = () => {
           <Circle left='8.3%' top='76%' infected={detaleData[5].fields.infected} name={detaleData[5].fields.name}/>
           <Circle left='12%' top='61%' infected={detaleData[6].fields.infected} name={detaleData[6].fields.name}/>
  
-          </div>
+          </animated.div>
+ </div>
+ <div className='up_scrollbar' >
 
-          <Scrollbars style={{ width: 450, height: 350 }}>
+ 
+          <Scrollbars style={{ width: '100%', height: 350 }}>
             <div> {detaleData.sort((a, b) => b.fields.infected - a.fields.infected).map(el =>
 
-              <div style={{ display: 'flex', borderBottom: '1px solid #e4e4e5', paddingBottom: '10px', paddingTop: '10px', justifyContent: 'space-between', marginRight:'20px' }}>
+              <div className='scrollbar'>
 
-                <div style={{ fontSize: '20px' }}> {el.fields.name}</div>
+                <div className='city' > {el.fields.name}</div>
 
                 <div style={{ display: 'flex', paddingTop: '5px' }}>
-                  <div style={{ width: '80px', fontSize: '19px' }}> <span className='dot'></span> {el.fields.infected}</div>
-                  <div style={{ width: '60px', fontSize: '19px' }}> <span style={{ backgroundColor: '#03c8a4', marginRight: '6px' }} className='dot'></span>{el.fields.recovered}</div>
-                  <div style={{ width: '40px', fontSize: '19px' }}> <span style={{ backgroundColor: "#cd0712" }} className='dot'></span> {el.fields.deaths}</div>
+                  <div className='scroll_infected' > <span className='dot'></span> {el.fields.infected}</div>
+                  <div className='scroll_recovered' > <span style={{ backgroundColor: '#03c8a4', marginRight: '6px' }} className='dot'></span>{el.fields.recovered}</div>
+                  <div className='scroll_deaths'> <span style={{ backgroundColor: "#cd0712" }} className='dot'></span> {el.fields.deaths}</div>
                 </div>
               </div>)}
 
@@ -77,7 +90,7 @@ export const MapData = () => {
 
           </Scrollbars>
 
-
+          </div>
         </div>
       </div>
     </div>

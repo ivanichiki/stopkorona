@@ -1,3 +1,10 @@
+$mobile: 1160px;
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
 .modalOverlay{
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 99999999;
@@ -27,6 +34,11 @@
     background-color: white; 
     width: 1160px;
     border-radius: 10px;
+    @include mobile {
+      border-radius: 0px;
+      margin: 0px;
+      width: 100%;
+    }
   }
 
   .modalwindow {
