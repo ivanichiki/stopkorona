@@ -70,10 +70,10 @@ usePreventScroll(preventScrollRef)
   const bind = useDrag(({ down, movement: [x, y] }) => {
    if ((x>20||x<-20)&(x!==0)) {
    
-    preventScrollRef.current = true
+   
    }
    if (down==false) {
-    preventScrollRef.current = false
+    
   
    }
 //   if (down) {
@@ -85,12 +85,15 @@ usePreventScroll(preventScrollRef)
 //   }
     if (down==false&x<-50&x!=0&count!=200) {setcount(e=>e+100)}
     if (down==false&x>50&x!=0&count!=0) {setcount(e=>e-100)}
-    console.log(y)
-if (y==0&x!==0) {
+    console.log(`y:${y}`)
+    console.log(`x:${x}`)
+if (Math.abs(x)>Math.abs(y)) {
   setcantoucn(true)
+  preventScrollRef.current = true
 }
 if (down==false) {
   setcantoucn(false)
+  preventScrollRef.current = false
 }
     set({ x: down&cantoucn ? x : 0,
       immediate: down
