@@ -68,7 +68,7 @@ usePreventScroll(preventScrollRef)
   const [count, setcount] = useState(0)
   const [props, set] = useSpring(() => ({ x: 0, y:0}))
   const bind = useDrag(({ down, movement: [x, y] }) => {
-   if (x>20||x<-20&x!=0) {
+   if ((x>20||x<-20)&(x!==0)) {
    
     preventScrollRef.current = true
    }
@@ -86,15 +86,17 @@ usePreventScroll(preventScrollRef)
     if (down==false&x<-50&x!=0&count!=200) {setcount(e=>e+100)}
     if (down==false&x>50&x!=0&count!=0) {setcount(e=>e-100)}
     console.log(y)
-    set({ x: down&(y<40) ? x : 0,
+  if (y==0)
+  {
+    set({ x: down ? x : 0,
       immediate: down
     })
-  
+  }
   })
 
   return (
   <div className={`menu_wrap_wrap`}>
-    <animated.div ref={preventScrollRef} className={`Menu_wrapper`}  {...bind()} style={{...props ,right:`${count}vw`}}>
+    <animated.div className={`Menu_wrapper`}  {...bind()} style={{...props ,right:`${count}vw`}}>
 
   <Block alink='https://стопкоронавирус.рф/ai/doc/4/attach/4.pdf' img={group} title='Памятка для пожилых людей' width='170px' tag='ЧТО ПРЕДПРИНЯТЬ?'/> 
      <Block  link='/what-is-done/council'  img={ok} title='Антикризисный план' width='135px' tag='ЧТО СДЕЛАНО?'/>
