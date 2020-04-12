@@ -65,6 +65,13 @@ export const Modal = () => {
   enter:{ opacity: 1, top: '0px', delay: 700 },
   leave:{opacity: 0, top: '200px' },
   })
+
+  const btn2 = useTransition(modal, null, {
+    from:{ opacity: 0, delay: 500 },
+    enter:{ opacity: 1, delay: 700 },
+    leave:{opacity: 0 },
+    })
+
   return (
 <div>
   {transitions.map(({item,key,props})=>
@@ -116,7 +123,7 @@ export const Modal = () => {
 
                 </div>
 
-                {btn.map(({item,key,props})=>
+                {btn2.map(({item,key,props})=>
         item&&<animated.div onClick={() => setmodal(false)} className={`mobile clsbtn${modalId==10?'-hide':''}`} key={key} style={props}>
          
         
@@ -124,6 +131,7 @@ export const Modal = () => {
             <img src={closebtn2} alt="" />
 
             </animated.div>)}
+
               </div>
 
             }

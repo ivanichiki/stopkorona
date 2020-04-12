@@ -5,7 +5,6 @@ import map from '../svg/map.svg'
 import { MapDataHeader } from './MapDataHeader'
 import Scrollbars from 'react-custom-scrollbars'
 import { KoronaContext } from '../App'
-// import { Transition } from 'react-spring/renderprops'
 import closebtn from '../svg/close2.svg'
 import { Circle } from './Circle'
 import { Transition, useTransition, animated, useSpring } from 'react-spring'
@@ -16,11 +15,7 @@ export const MapData = () => {
   
  
   const { detaleData,setmodal,modal } = useContext(KoronaContext)
-//   const [props, set] = useSpring(() => ({ x: 0, y: 0}))
-//   const bind=useDrag(({down, movement:[x,y]})=>{
-//   set({x:x,y:y})
-// }
-//   )
+
 
   if (modal) {
     document.body.style.overflow = "hidden";
