@@ -39,6 +39,7 @@ function App() {
   const executeScrolltoSolutions = () => scrollToRef(SolutionsRef)
   
   const [state, setstate] = useState('')
+  const [headerloaded, setheaderloaded] = useState(false)
   const [modal, setmodal] = useState(false)
   const [modalId, setmodalId] = useState(0)
   const [modalcontent, setmodalcontent] = useState([])
@@ -118,7 +119,7 @@ function App() {
     <HashRouter>
     
       <KoronaContext.Provider
-      value={{VideoRef, OperRef, scrollToRef, executeScrolltoVideo,executeScrolltoOper,state,SolutionsRef,executeScrolltoSolutions, modal, setmodal,wrapperRef,modalcontent,setmodalId,modalId,detaleData,stateOper,scrollMenuToggle, setscrollMenuToggle}}
+      value={{VideoRef, OperRef, scrollToRef, executeScrolltoVideo,executeScrolltoOper,state,SolutionsRef,executeScrolltoSolutions, modal, setmodal,wrapperRef,modalcontent,setmodalId,modalId,detaleData,stateOper,scrollMenuToggle, setscrollMenuToggle,headerloaded,setheaderloaded}}
       >
 
     <div style={{overflow:'hidden'}} className='wrapper'>
@@ -126,7 +127,9 @@ function App() {
        <div className={`modalwrapper ${modal==false&&'act'}`}><Modal/></div>
       
         <Header /> 
-     
+   {headerloaded&&
+   <>
+
        {scrollMenuToggle&& <div className={`modalOverlay_mobile`}> </div>}
 
         <Route exact path='/' render={() => <Operativdata />} />
@@ -147,9 +150,9 @@ function App() {
           <Route exact path='/what-is-done/council' render={() => <Council  />} />
           <Route exact path='/what-to-do/business' render={() => <BusinessMesures />} />
           <Route path="/what-to-do/business/topics/:topicid" component={BusinessTopic} />
-    
+          </>  }  
     </div>
-
+  
       <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Route exact path='/' render={() => <Videopage />} />
       </ScrollAnimation>
@@ -163,7 +166,7 @@ function App() {
       <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Footer/>
       </ScrollAnimation> 
-
+  
  {/* </div>  */}
       </KoronaContext.Provider>
   

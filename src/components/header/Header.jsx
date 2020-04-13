@@ -11,7 +11,7 @@ import { ScrollMenu } from './ScrollMenu'
 
 export const Header = () => {
  
-  const { executeScrolltoVideo, executeScrolltoOper, executeScrolltoSolutions } = useContext(KoronaContext)
+  const { executeScrolltoVideo, executeScrolltoOper, executeScrolltoSolutions,headerloaded,setheaderloaded } = useContext(KoronaContext)
 
   const [counter, setcounter] = useState(0)
   const [loaded, setloaded] = useState(false)
@@ -20,14 +20,14 @@ export const Header = () => {
     setcounter(counter => counter + 1)
 
     if (counter == 8) {
-      setloaded(true);
+      setheaderloaded(true);
 
     }
   }
 
   return (
     <>
-    <div onLoad={onLoad} className={`header_wrapper_wrap ${loaded && 'show'}`} >
+    <div onLoad={onLoad} className={`header_wrapper_wrap ${headerloaded && 'showheader'}`} >
       <div className='centrolize' >
      
         <HeaderUp/>
