@@ -12,9 +12,7 @@ import { ScrollMenu } from './ScrollMenu'
 export const Header = () => {
  
   const { executeScrolltoVideo, executeScrolltoOper, executeScrolltoSolutions,headerloaded,setheaderloaded } = useContext(KoronaContext)
-
   const [counter, setcounter] = useState(0)
-  const [loaded, setloaded] = useState(false)
 
   function onLoad() {
     setcounter(counter => counter + 1)

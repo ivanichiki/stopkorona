@@ -1,0 +1,45 @@
+$mobile: 1160px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+
+.council_wrapper{
+  padding-top: 140px;
+  @include mobile {
+    padding-top: 80px;
+  }
+
+  h2 {
+    @include mobile {
+    font-size: 20px;
+    }
+  }
+  .title {
+    
+    h1 {
+      font-size: 50px;
+      width: 80%;
+      line-height: 1.1;
+      margin-bottom: 10px;
+      font-weight:700;
+      @include mobile {
+        font-size: 32px;
+        font-weight:900;
+      }
+    }
+    p { 
+       width: 90%;
+      font-size: 18px;
+      font-weight:normal;
+      padding-bottom: 25px;
+      @include mobile {
+        width: 95%;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

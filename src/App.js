@@ -19,6 +19,7 @@ import { BusinessTopic } from './components/BusinessMesures/BusinessTopic';
 import { Fadein } from './components/Fadein';
 import { stataReducer } from './reducers/stateReducer';
 import { Council } from './components/Council';
+import { Hq } from './components/Hq';
 
 
 
@@ -148,6 +149,7 @@ function App() {
           <Route exact path="/allnews/:page" component={AllNews} />
           <Route exact path='/what-is-done/solutions' render={() => <Fadein props={<Solutions/>} />} />
           <Route exact path='/what-is-done/council' render={() => <Council  />} />
+          <Route exact path='/what-is-done/hq' render={() => <Hq  />} />
           <Route exact path='/what-to-do/business' render={() => <BusinessMesures />} />
           <Route path="/what-to-do/business/topics/:topicid" component={BusinessTopic} />
           </>  }  

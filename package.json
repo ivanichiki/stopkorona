@@ -1,4 +1,4 @@
-{
+{ "homepage": "http://ivanichiki.github.io/stopkorona",
   "name": "stopkorona",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "animate.css": "^3.7.2",
     "contentful": "^7.14.2",
+    "gh-pages": "^2.2.0",
     "install": "^0.13.0",
     "interweave": "^12.5.0",
     "node-sass": "^4.13.1",
@@ -24,6 +25,8 @@
     "react-zoom-pan-pinch": "^1.6.1"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
