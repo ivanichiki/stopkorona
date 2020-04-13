@@ -17,7 +17,7 @@ export const HideShowBlock = (props) => {
      </div>
     <div className='topic_text'>
    <Markup content={props.text}/>  
-    
+  
     </div>
     </div>
   </div>

@@ -23,8 +23,8 @@ export const UnderHeader = () => {
         <NavLink to='/what-is-done/council'> <div onMouseLeave={() => setmore_toggle(false)} onMouseEnter={() => setmore_toggle(true)} className='statistika'>  Что сделано <i></i>
 
           <div className={`hiddenstat ${more_toggle && 'active'}`}>
-            <NavLink to='/what-is-done/council'>     <div className='scrolltext'>  Меры правительства РФ  </div>  </NavLink>
-            <div className='scrolltext'>  Координационный совет </div>
+            <NavLink to='/what-is-done/solutions'><div className='scrolltext'>  Меры правительства РФ  </div>  </NavLink>
+            <NavLink to='/what-is-done/council'> <div className='scrolltext'>  Координационный совет </div></NavLink>
             <div className='scrolltext'>  Оперативный штаб </div>
           </div>
 

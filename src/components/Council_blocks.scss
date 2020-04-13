@@ -1,0 +1,43 @@
+$mobile: 1160px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+
+.council_block_wrapper{
+  width: 260px;
+
+margin: 20px;
+
+@include mobile {
+width: 100%;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+ .name{
+   color: #00318c;
+   font-size: 24px;
+   font-weight: 700;
+ }
+ .position {
+   margin-top: 15px;
+   color: #83878f;
+   font-weight: 600;
+   font-size: 16px;
+   @include mobile {
+     margin-top: 5px;
+     }
+ }
+ .sub_position{
+   margin-top: 15px;
+   font-size: 14px;
+   color: #83878f;
+   font-weight: 400;
+   @include mobile {
+     margin-top: 5px;
+     }
+ }
+}

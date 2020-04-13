@@ -3,10 +3,11 @@ import './ScrollMenu.scss'
 import { KoronaContext } from '../../App'
 import Scrollbars from 'react-custom-scrollbars'
 import  {SocialImgs} from './SocialImgs'
+import { NavLink } from 'react-router-dom'
 
 export const ScrollMenu = () => {
 
-  const { scrollMenuToggle } = useContext(KoronaContext)
+  const { scrollMenuToggle, setscrollMenuToggle } = useContext(KoronaContext)
   const [hideMenu, sethideMenu] = useState(false)
   const [hideMenu1, sethideMenu1] = useState(false)
   const [hideMenu2, sethideMenu2] = useState(false)
@@ -26,7 +27,7 @@ export const ScrollMenu = () => {
     <div className={`scrollMenu ${scrollMenuToggle && 'scroll'}`}>
       <Scrollbars style={{ minHeight: 515, maxHeight: 600 }}>
         <div style={{ paddingTop: '40px' }}>
-          <div onClick={() => sethideMenu(!hideMenu)} className={`blocks ${hideMenu && 'hided'}`}>Все о коронавирусе  <i></i>
+          <div onClick={() => sethideMenu(!hideMenu)} className={`blocks ${hideMenu && 'hided'}`}> <span>Все о коронавирусе  </span> <i></i>
 
             <div className='podsos'>Симптомы</div>
             <div className='podsos'>Пути передачи</div>
@@ -39,10 +40,10 @@ export const ScrollMenu = () => {
         </div>
 
         <div >
-          <div onClick={() => sethideMenu1(!hideMenu1)} className={`blocks ${hideMenu1 && 'hided'}`}>Что сделано?  <i></i>
+          <div className={`blocks ${hideMenu1 && 'hided'}`}> < span  onClick={() => sethideMenu1(!hideMenu1)} >Что сделано?  </ span> <i></i>
 
-            <div className='podsos'>Меры правителсьтва РФ</div>
-            <div className='podsos'>Координационный совет</div>
+          <NavLink to='/what-is-done/solutions'>   <div onClick={() => {sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Меры правителсьтва РФ</div></NavLink>
+          <NavLink to='/what-is-done/council'>  <div onClick={() => {sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Координационный совет</div></NavLink>
             <div className='podsos last'>Оперативный штаб</div>
 
           </div>
@@ -50,7 +51,7 @@ export const ScrollMenu = () => {
         </div>
 
         <div >
-          <div onClick={() => sethideMenu2(!hideMenu2)} className={`blocks ${hideMenu2 && 'hided'}`}>Что предпринять?  <i></i>
+          <div onClick={() => sethideMenu2(!hideMenu2)} className={`blocks ${hideMenu2 && 'hided'}`}> <span>Что предпринять? <i></i> </span>
 
             <div className='podsos'>Каждому</div>
             <div className='podsos'>Предпринимателям</div>
@@ -62,14 +63,14 @@ export const ScrollMenu = () => {
             <div className='podsos last'>Учащимся  </div>
 
           </div>
-         <div className={`modalOverlay`}> </div>
+        
         </div>
 
 
-        <div className={`blocks `}>Официальные документы</div>
-        <div className={`blocks `}>Памятки</div>
+        <div className={`blocks `}> <span>Официальные документы </span></div>
+        <div className={`blocks `}> <span>Памятки </span></div>
 
-        <div style={{ color: '#fb5f3d', marginTop:'30px' }} className={`blocks `}>Единная горячая линия</div>
+        <div className='hotline'>Единная горячая линия</div>
         <div className='Number'>
           8-800-2000-112
 

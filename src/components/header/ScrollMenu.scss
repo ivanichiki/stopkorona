@@ -1,3 +1,13 @@
+
+$mobile: 1160px;
+
+
+@mixin desktop {
+  @media screen and (min-width: #{$mobile}) {
+    @content
+  }
+}
+
 .scrollMenu {
   margin-top: -440px;
   position: fixed;
@@ -8,70 +18,70 @@
   transition-property: margin-top;
   transition-duration: 500ms;
 
-  .modalOverlay{
-    background-color: rgba(0, 0, 0, 0.6);
+ @include desktop {
+display: none;
+ }
+  
+.hotline{
+  color: #fb5f3d ;
+  margin-top: 20px;
 
-    opacity: 0;
- 
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: fixed;
-    top: 595px;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: center;
+}
 
-   
-  }
   i{
-    border: solid black;
+    border: solid #416bff;
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 2px;
     transform: rotate(45deg);
     margin-bottom: 2px;
     margin-left: 2px;
+ 
    }
 }
 
 .scroll{
   margin-top: 80px;
-  .modalOverlay{
-    width:100%;
-    height: 100%;
-    transition-delay: 500ms;
-    transition-duration: 200ms;
-    transition-property: opacity;
-    opacity: 1;
-  }
+
+
 }
 .blocks{
-
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f2f7ff;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 15px;
-  max-height: 30px;
+  max-height: 22px;
   transition-property: max-height;
   transition-duration: 300ms;
   text-align: center;
   overflow: hidden;
   object-fit: cover;
+ 
+  span {
+    color: #416bff;
+    width: 100%;
+  }
   .podsos{
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
-.last {
-
-  border-bottom: 1px solid #e4e4e5;
-}
 
 
 
 }
 .hided {
   max-height: 530px;
-
+  background-color: white;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
 }
 .Number{
   text-align: center;
@@ -82,13 +92,18 @@
   cursor: pointer;
   color:#fb5f3d;
   font-weight: 600;
-  border-radius: 10px;
-  background-color: #fff0ed;
+
   padding: 8px 16px 10px 16px;
 }
 .socseti{
 justify-content: space-between;
+display: none;
 
+.scroll {
+  .socseti{
+    display: block;
+  }
+}
 @media screen and (max-width: 1160px) {
 a {
   margin-right: 9px;
