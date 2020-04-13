@@ -29,6 +29,7 @@ $mobile: 1160px;
       @include mobile {
         font-size: 32px;
         font-weight:900;
+        width: 90%;
       }
     }
     p { 

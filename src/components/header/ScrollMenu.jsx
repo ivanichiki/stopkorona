@@ -44,7 +44,7 @@ export const ScrollMenu = () => {
 
           <NavLink to='/what-is-done/solutions'>   <div onClick={() => {sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Меры правителсьтва РФ</div></NavLink>
           <NavLink to='/what-is-done/council'>  <div onClick={() => {sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Координационный совет</div></NavLink>
-            <div className='podsos last'>Оперативный штаб</div>
+          <NavLink to='/what-is-done/hq'>      <div   onClick={() => {sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }}  className='podsos last'>Оперативный штаб</div></NavLink>
 
           </div>
 
