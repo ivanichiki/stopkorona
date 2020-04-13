@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "58d3f632aaa347ebaa86c04e7de7e9dd",
+    "revision": "ecd01ea84836c4ff19ef5ca29515aa0c",
     "url": "/stopkorona/index.html"
   },
   {
-    "revision": "85bd9acefb2d6b9a739d",
-    "url": "/stopkorona/static/css/main.d5c73b00.chunk.css"
+    "revision": "c46bd6b1af1f9b5d8f80",
+    "url": "/stopkorona/static/css/main.7d5619de.chunk.css"
   },
   {
-    "revision": "847841ddbe03255f817f",
-    "url": "/stopkorona/static/js/2.617b800e.chunk.js"
+    "revision": "80209b10bdb86ad2a29c",
+    "url": "/stopkorona/static/js/2.04ed7131.chunk.js"
   },
   {
     "revision": "e867553593e1bcee119717999d316408",
-    "url": "/stopkorona/static/js/2.617b800e.chunk.js.LICENSE.txt"
+    "url": "/stopkorona/static/js/2.04ed7131.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "85bd9acefb2d6b9a739d",
-    "url": "/stopkorona/static/js/main.bd200b80.chunk.js"
+    "revision": "c46bd6b1af1f9b5d8f80",
+    "url": "/stopkorona/static/js/main.6b3b08a2.chunk.js"
   },
   {
     "revision": "ebe0d00c82b8895a9d12",
