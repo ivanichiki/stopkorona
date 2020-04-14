@@ -5,9 +5,9 @@ import steps from '../../svg/steps.svg'
 
 const List = (props) => {
   return (
-    <div style={{ display: 'flex', position:props.last?'':'relative' }}>
+    <div style={{ display: 'flex', position:'relative' }}>
       <div className='list_circle'>{props.number}
-      <div className='linethrough'></div>
+     {props.last?'': <div className='linethrough'></div>}
       </div>
 
       <div className='list_text'>{props.text}</div>
