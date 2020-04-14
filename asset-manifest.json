@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/stopkorona/static/css/main.e3eb571c.chunk.css",
-    "main.js": "/stopkorona/static/js/main.02f60607.chunk.js",
-    "main.js.map": "/stopkorona/static/js/main.02f60607.chunk.js.map",
+    "main.js": "/stopkorona/static/js/main.7a3a92cc.chunk.js",
+    "main.js.map": "/stopkorona/static/js/main.7a3a92cc.chunk.js.map",
     "runtime-main.js": "/stopkorona/static/js/runtime-main.b585c0bb.js",
     "runtime-main.js.map": "/stopkorona/static/js/runtime-main.b585c0bb.js.map",
     "static/js/2.c8958e67.chunk.js": "/stopkorona/static/js/2.c8958e67.chunk.js",
     "static/js/2.c8958e67.chunk.js.map": "/stopkorona/static/js/2.c8958e67.chunk.js.map",
     "index.html": "/stopkorona/index.html",
-    "precache-manifest.b8d2ac500c1664c08dc496a2ff997c45.js": "/stopkorona/precache-manifest.b8d2ac500c1664c08dc496a2ff997c45.js",
+    "precache-manifest.46396e16f6dd68793537904567d970f5.js": "/stopkorona/precache-manifest.46396e16f6dd68793537904567d970f5.js",
     "service-worker.js": "/stopkorona/service-worker.js",
     "static/css/main.e3eb571c.chunk.css.map": "/stopkorona/static/css/main.e3eb571c.chunk.css.map",
     "static/js/2.c8958e67.chunk.js.LICENSE.txt": "/stopkorona/static/js/2.c8958e67.chunk.js.LICENSE.txt",
@@ -71,6 +71,6 @@
     "static/js/runtime-main.b585c0bb.js",
     "static/js/2.c8958e67.chunk.js",
     "static/css/main.e3eb571c.chunk.css",
-    "static/js/main.02f60607.chunk.js"
+    "static/js/main.7a3a92cc.chunk.js"
   ]
 }
