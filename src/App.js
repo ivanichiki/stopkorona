@@ -20,6 +20,7 @@ import { Fadein } from './components/Fadein';
 import { stataReducer } from './reducers/stateReducer';
 import { Council } from './components/Council';
 import { Hq } from './components/Hq';
+import { AboutCovid } from './components/About_covid/AboutCovid';
 
 
 
@@ -151,6 +152,8 @@ function App() {
           <Route exact path='/what-is-done/council' render={() => <Council  />} />
           <Route exact path='/what-is-done/hq' render={() => <Hq  />} />
           <Route exact path='/what-to-do/business' render={() => <BusinessMesures />} />
+          
+          <Route path="/about-covid/:ref" component={AboutCovid} />
           <Route path="/what-to-do/business/topics/:topicid" component={BusinessTopic} />
           </>  }  
     </div>

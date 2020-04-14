@@ -1,0 +1,134 @@
+$mobile: 1160px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+
+.Symptoms{
+  .title{
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+      display: block; 
+    }
+    .left{
+      width: 550px;
+      @include mobile {
+        width: 95%;
+      }
+    }
+    h2 {
+      font-size: 50px;
+      font-weight: 700;
+      margin-top: 0px;
+   
+      line-height: 1.3;
+
+      @include mobile {
+        font-size: 30px;
+        line-height: 1.1;
+        padding-bottom: 20px;
+      }
+      span {
+        color: #fb5f3d;
+        font-size: 20px;
+        position: relative;
+        bottom: 15px;
+        font-weight: 400;
+        @include mobile {
+          bottom: 10px;
+        }
+      }
+    
+    }
+    p{
+      font-size: 18px;
+      margin-top: -25px;
+    }
+  }
+ .right {
+   .name{
+     font-size: 18px;
+     margin-left: 10px;
+   }
+   .size{
+    color: #83878f;
+    margin-left: 10px;
+    span {
+      margin-left: 3px;
+      color: #fb5f3d;
+    }
+   }
+   .btn{
+     margin-top: 15px;
+     font-size: 17px;
+     height: 40px;
+     color: #3662ff;
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+      justify-content: center;
+     width: 140px;
+     background: #f2f7ff;
+     cursor: pointer;
+   }
+   .btn:hover {
+    background-color: #ebf2ff;
+   }
+ }
+ h3 {
+  color: #003188;
+  font-size: 30px;
+  margin-top: 15px;
+  
+  @include mobile {
+padding-top: 10px;
+font-size: 25px;
+line-height: 1.2;
+margin-left: 5px;
+  }
+}
+.label_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+  justify-content: space-between;
+  @include mobile {
+    justify-content: center;
+  }
+  .label{
+    text-align: center;
+    margin-top: 10px;
+    width: 200px;
+    font-size: 18px;
+    @include mobile {
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+}
+.up_line{
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2px;
+  background-color: #e4e4e5;
+  margin-bottom: 20px;
+}
+.text_under_line{
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 40px;
+  span {
+    color: #fb5f3d;
+    font-weight: 600;
+  }
+}
+}

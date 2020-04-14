@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Hq.scss'
 import { Council_blocks } from './Council_blocks'
 
 export const Hq = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+ 
+
+  }, [])
   return (
     <div className='council_wrapper'>
       <div className='title'> <h1>Оперативный штаб</h1>

@@ -5,21 +5,23 @@ export const UnderHeader = () => {
   const [statistic_toggle, setstatistic_toggle] = useState(false)
   const [simptom_toggle, setsimptom_toggle] = useState(false)
   const [more_toggle, setmore_toggle] = useState(false)
+
+  const id = `${(+new Date).toString(16).slice(4)}`;
   return (
     <div className='under-header'>
       <div className='left_flang'>
 
+      <NavLink to='/about-covid/default'>    <div onMouseLeave={() => setstatistic_toggle(false)} onMouseEnter={() => setstatistic_toggle(true)} className='statistika'>
+      Все о коронавирусе  <i></i>
 
-        <div onMouseLeave={() => setstatistic_toggle(false)} onMouseEnter={() => setstatistic_toggle(true)} className='statistika'>  Все о коронавирусе <i></i>
-
-          <div className={`hiddenstat ${statistic_toggle && 'active'}`}>
-            <div className='scrolltext'>  Симптомы  </div>
+         <div className={`hiddenstat ${statistic_toggle && 'active'}`}>
+         <NavLink to={`/about-covid/symptoms/`}>    <div className='scrolltext'>  Симптомы  </div> </NavLink>
             <div className='scrolltext'>  Пути передачи </div>
             <div className='scrolltext'>  7 шагов по профилактике  </div>
             <div className='scrolltext'>  Мифы о коронавирусе  </div>
             <div className='scrolltext'>  Часто задоваемые вопросы  </div>
           </div>
-        </div>
+        </div></NavLink>
         <NavLink to='/what-is-done/council'> <div onMouseLeave={() => setmore_toggle(false)} onMouseEnter={() => setmore_toggle(true)} className='statistika'>  Что сделано <i></i>
 
           <div className={`hiddenstat ${more_toggle && 'active'}`}>

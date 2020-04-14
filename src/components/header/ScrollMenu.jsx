@@ -27,9 +27,9 @@ export const ScrollMenu = () => {
     <div className={`scrollMenu ${scrollMenuToggle && 'scroll'}`}>
       <Scrollbars style={{ minHeight: 515, maxHeight: 600 }}>
         <div style={{ paddingTop: '40px' }}>
-          <div onClick={() => sethideMenu(!hideMenu)} className={`blocks ${hideMenu && 'hided'}`}> <span>Все о коронавирусе  </span> <i></i>
+          <div  className={`blocks ${hideMenu && 'hided'}`}> <div onClick={() => sethideMenu(!hideMenu)}><span>Все о коронавирусе  </span> <i></i></div>
 
-            <div className='podsos'>Симптомы</div>
+          <NavLink onClick={() => {sethideMenu(!hideMenu); setscrollMenuToggle(false) }} to={`/about-covid/symptoms/`}>      <div  className='podsos'>Симптомы</div> </NavLink>
             <div className='podsos'>Пути передачи</div>
             <div className='podsos'>7 шагов по профилактике</div>
             <div className='podsos'>Мифы о коронавирусе</div>
@@ -40,7 +40,7 @@ export const ScrollMenu = () => {
         </div>
 
         <div >
-          <div className={`blocks ${hideMenu1 && 'hided'}`}> < span  onClick={() => sethideMenu1(!hideMenu1)} >Что сделано?  </ span> <i></i>
+          <div className={`blocks ${hideMenu1 && 'hided'}`}><div onClick={() => sethideMenu1(!hideMenu1)}> < span   >Что сделано?  </ span> <i></i></div>
 
           <NavLink to='/what-is-done/solutions'>   <div onClick={() => {sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Меры правителсьтва РФ</div></NavLink>
           <NavLink to='/what-is-done/council'>  <div onClick={() => {sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Координационный совет</div></NavLink>
