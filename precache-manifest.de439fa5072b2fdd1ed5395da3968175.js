@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ef132af84202214b550d3eae4403dbd4",
+    "revision": "b5a1ab18c62bb12cd050dbfd9ba6bff2",
     "url": "/stopkorona/index.html"
   },
   {
-    "revision": "7fecf6404801905d0062",
-    "url": "/stopkorona/static/css/main.312d088d.chunk.css"
+    "revision": "14c617b0dfab901a0784",
+    "url": "/stopkorona/static/css/main.e2e27c14.chunk.css"
   },
   {
-    "revision": "e6ad1db7c9d5acaa40ff",
-    "url": "/stopkorona/static/js/2.63db8d12.chunk.js"
+    "revision": "dc4c73c1c62719959f33",
+    "url": "/stopkorona/static/js/2.ee1ccf53.chunk.js"
   },
   {
     "revision": "e867553593e1bcee119717999d316408",
-    "url": "/stopkorona/static/js/2.63db8d12.chunk.js.LICENSE.txt"
+    "url": "/stopkorona/static/js/2.ee1ccf53.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7fecf6404801905d0062",
-    "url": "/stopkorona/static/js/main.79d6544a.chunk.js"
+    "revision": "14c617b0dfab901a0784",
+    "url": "/stopkorona/static/js/main.785d9d58.chunk.js"
   },
   {
     "revision": "ebe0d00c82b8895a9d12",
@@ -140,6 +140,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stopkorona/static/media/otsrochka_arend_platexhei.8135be53.svg"
   },
   {
+    "revision": "9b9694649996ee09a525e7118553cdff",
+    "url": "/stopkorona/static/media/pdf.9b969464.svg"
+  },
+  {
     "revision": "495793455f9d2b30f9f0afe99a1b0585",
     "url": "/stopkorona/static/media/pomosch_eksporteram.49579345.svg"
   },
@@ -158,6 +162,46 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fa9ae479a95d9acde9897e58e6ccfe96",
     "url": "/stopkorona/static/media/snixhenie_strah_vznosov_2_.fa9ae479.svg"
+  },
+  {
+    "revision": "458eb793551f87a26b4c97cfc154c1b8",
+    "url": "/stopkorona/static/media/symp1.458eb793.svg"
+  },
+  {
+    "revision": "6e16251a201a1774083ac9ed2b826d84",
+    "url": "/stopkorona/static/media/symp10.6e16251a.svg"
+  },
+  {
+    "revision": "7c438c7e11061971bd673d7c0fd2619a",
+    "url": "/stopkorona/static/media/symp11.7c438c7e.svg"
+  },
+  {
+    "revision": "69cbc0a01e00e90b4ab7faeefbe3cf4a",
+    "url": "/stopkorona/static/media/symp2.69cbc0a0.svg"
+  },
+  {
+    "revision": "bc4d65f69594940dc7499c4198273fd6",
+    "url": "/stopkorona/static/media/symp3.bc4d65f6.svg"
+  },
+  {
+    "revision": "241a4f96cbd0a0a598f6836cdd041908",
+    "url": "/stopkorona/static/media/symp5.241a4f96.svg"
+  },
+  {
+    "revision": "e892280d13ddc2c95935683f32835e84",
+    "url": "/stopkorona/static/media/symp6.e892280d.svg"
+  },
+  {
+    "revision": "cc202aae3608d84c1e118e4e8e9cc660",
+    "url": "/stopkorona/static/media/symp7.cc202aae.svg"
+  },
+  {
+    "revision": "9b5b9dae560cd9846953ccea9ab59b20",
+    "url": "/stopkorona/static/media/symp8.9b5b9dae.svg"
+  },
+  {
+    "revision": "ed86efaca08f37e943c49314cd19ab2a",
+    "url": "/stopkorona/static/media/symp9.ed86efac.svg"
   },
   {
     "revision": "4b16218aa73b039e75cc50066fe1d3e2",
