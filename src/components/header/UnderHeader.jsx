@@ -19,7 +19,7 @@ export const UnderHeader = () => {
          <div className={`hiddenstat ${statistic_toggle && 'active'}`}>
          <NavLink to={`/about-covid/symptoms/`}>    <div onClick={()=>setrender(e=>e+1)} className='scrolltext'>  Симптомы  </div> </NavLink>
          <NavLink to={`/about-covid/transmitted/`}>    <div onClick={()=>setrender(e=>e+1)} className='scrolltext'>  Пути передачи </div></NavLink>
-            <div className='scrolltext'>  7 шагов по профилактике  </div>
+         <NavLink to={`/about-covid/prevention/`}>           <div onClick={()=>setrender(e=>e+1)}  className='scrolltext'>  7 шагов по профилактике  </div></NavLink>
             <div className='scrolltext'>  Мифы о коронавирусе  </div>
             <div className='scrolltext'>  Часто задоваемые вопросы  </div>
           </div>

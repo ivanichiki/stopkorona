@@ -24,6 +24,7 @@ $mobile: 1160px;
         margin-right: auto;
         width: 90%;
         padding-bottom: 30px;
+        max-width: 450px;
       }
     }
   }
@@ -31,9 +32,10 @@ $mobile: 1160px;
     display: flex;
     align-items: center;
     padding-bottom: 30px;
-    img {
+    .img {
       @include mobile {
         width: 80%;
+
       }
     }
     .lbl{

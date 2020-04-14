@@ -30,8 +30,8 @@ export const ScrollMenu = () => {
           <div className={`blocks ${hideMenu && 'hided'}`}> <div onClick={() => sethideMenu(!hideMenu)}><span>Все о коронавирусе  </span> <i></i></div>
 
             <NavLink onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} to={`/about-covid/symptoms/`}>      <div className='podsos'>Симптомы</div> </NavLink>
-            <NavLink to={`/about-covid/transmitted/`}>       <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>Пути передачи</div></NavLink>
-            <div className='podsos'>7 шагов по профилактике</div>
+            <NavLink to={`/about-covid/transmitted/`}> <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>Пути передачи</div></NavLink>
+            <NavLink to={`/about-covid/prevention/`}> <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>7 шагов по профилактике</div></NavLink>
             <div className='podsos'>Мифы о коронавирусе</div>
             <div className='podsos'>Часто задоваемые вопросы</div>
             <div className='podsos last'>Мировая статистика</div>

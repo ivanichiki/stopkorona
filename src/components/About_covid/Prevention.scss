@@ -1,0 +1,83 @@
+$mobile: 1160px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+
+.prevention_wrapper{
+  .title {
+    width: 800px;
+    padding-bottom:20px;
+    @include mobile {
+      width: 50%;
+      padding-bottom:0px;
+    }
+    span {
+      color: #fb5f3d;
+    }
+  }
+  h1 {
+  
+    line-height: 1.2;
+
+  }
+  .prevention_main{
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+      display: block;
+    }
+    .right{
+      @include mobile {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+      }
+    }
+    img {
+      @include mobile {
+
+        width: 90%;
+        max-width: 500px;
+      }
+    }
+  }
+  .list_circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffe2db;
+    color: #fb5f3d;
+    border-radius: 50%;
+
+  }
+  .list_text{
+    margin-top:3px;
+    font-size: 18px;
+    margin-left: 30px;
+    padding-bottom: 50px;
+    width: 600px;
+    @include mobile {
+      width: 85%;
+
+    }
+  }
+ 
+  .linethrough{
+    top: 0;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #e4e4e5;
+    z-index: -1;
+
+    @include mobile {
+
+    }
+  }
+}

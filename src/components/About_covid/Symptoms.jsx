@@ -35,10 +35,10 @@ let onLoaded = ()=> {
   if (counter==11){
     setloaded(true)
   }
-  console.log(counter)
+
 
 }
-console.log(loaded)
+
   return (
     <div onLoad={onLoaded} ref={props.Ref} className='Symptoms'>
       <div className='title'>
