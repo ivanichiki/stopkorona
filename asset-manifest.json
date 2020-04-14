@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/stopkorona/static/css/main.ac5dbd23.chunk.css",
-    "main.js": "/stopkorona/static/js/main.e79f64a8.chunk.js",
-    "main.js.map": "/stopkorona/static/js/main.e79f64a8.chunk.js.map",
+    "main.css": "/stopkorona/static/css/main.e3eb571c.chunk.css",
+    "main.js": "/stopkorona/static/js/main.02f60607.chunk.js",
+    "main.js.map": "/stopkorona/static/js/main.02f60607.chunk.js.map",
     "runtime-main.js": "/stopkorona/static/js/runtime-main.b585c0bb.js",
     "runtime-main.js.map": "/stopkorona/static/js/runtime-main.b585c0bb.js.map",
-    "static/js/2.78174c67.chunk.js": "/stopkorona/static/js/2.78174c67.chunk.js",
-    "static/js/2.78174c67.chunk.js.map": "/stopkorona/static/js/2.78174c67.chunk.js.map",
+    "static/js/2.c8958e67.chunk.js": "/stopkorona/static/js/2.c8958e67.chunk.js",
+    "static/js/2.c8958e67.chunk.js.map": "/stopkorona/static/js/2.c8958e67.chunk.js.map",
     "index.html": "/stopkorona/index.html",
-    "precache-manifest.f91bbbf05e9d961ce99e548ff61429a2.js": "/stopkorona/precache-manifest.f91bbbf05e9d961ce99e548ff61429a2.js",
+    "precache-manifest.b8d2ac500c1664c08dc496a2ff997c45.js": "/stopkorona/precache-manifest.b8d2ac500c1664c08dc496a2ff997c45.js",
     "service-worker.js": "/stopkorona/service-worker.js",
-    "static/css/main.ac5dbd23.chunk.css.map": "/stopkorona/static/css/main.ac5dbd23.chunk.css.map",
-    "static/js/2.78174c67.chunk.js.LICENSE.txt": "/stopkorona/static/js/2.78174c67.chunk.js.LICENSE.txt",
+    "static/css/main.e3eb571c.chunk.css.map": "/stopkorona/static/css/main.e3eb571c.chunk.css.map",
+    "static/js/2.c8958e67.chunk.js.LICENSE.txt": "/stopkorona/static/js/2.c8958e67.chunk.js.LICENSE.txt",
     "static/media/Cube.svg": "/stopkorona/static/media/Cube.7921b586.svg",
     "static/media/Group.png": "/stopkorona/static/media/Group.51cb7858.png",
     "static/media/Lab.png": "/stopkorona/static/media/Lab.724ba984.png",
@@ -50,6 +50,7 @@
     "static/media/skorb.svg": "/stopkorona/static/media/skorb.4916c271.svg",
     "static/media/snimok.jpg": "/stopkorona/static/media/snimok.d22cd909.jpg",
     "static/media/snixhenie_strah_vznosov_2_.svg": "/stopkorona/static/media/snixhenie_strah_vznosov_2_.fa9ae479.svg",
+    "static/media/steps.svg": "/stopkorona/static/media/steps.acde8816.svg",
     "static/media/symp1.svg": "/stopkorona/static/media/symp1.458eb793.svg",
     "static/media/symp10.svg": "/stopkorona/static/media/symp10.6e16251a.svg",
     "static/media/symp11.svg": "/stopkorona/static/media/symp11.7c438c7e.svg",
@@ -68,8 +69,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b585c0bb.js",
-    "static/js/2.78174c67.chunk.js",
-    "static/css/main.ac5dbd23.chunk.css",
-    "static/js/main.e79f64a8.chunk.js"
+    "static/js/2.c8958e67.chunk.js",
+    "static/css/main.e3eb571c.chunk.css",
+    "static/js/main.02f60607.chunk.js"
   ]
 }

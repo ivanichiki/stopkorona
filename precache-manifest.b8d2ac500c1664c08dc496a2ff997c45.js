@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7e2390aef047ef9428554540224d78df",
+    "revision": "c42a3a090e12cfcdfdffd413a41196f7",
     "url": "/stopkorona/index.html"
   },
   {
-    "revision": "39acff0d0729ff6b48ae",
-    "url": "/stopkorona/static/css/main.ac5dbd23.chunk.css"
+    "revision": "ad5640f2be6df13ea7f5",
+    "url": "/stopkorona/static/css/main.e3eb571c.chunk.css"
   },
   {
-    "revision": "c792d6c5adf4d667b323",
-    "url": "/stopkorona/static/js/2.78174c67.chunk.js"
+    "revision": "3305f02af1d66b25254c",
+    "url": "/stopkorona/static/js/2.c8958e67.chunk.js"
   },
   {
     "revision": "e867553593e1bcee119717999d316408",
-    "url": "/stopkorona/static/js/2.78174c67.chunk.js.LICENSE.txt"
+    "url": "/stopkorona/static/js/2.c8958e67.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "39acff0d0729ff6b48ae",
-    "url": "/stopkorona/static/js/main.e79f64a8.chunk.js"
+    "revision": "ad5640f2be6df13ea7f5",
+    "url": "/stopkorona/static/js/main.02f60607.chunk.js"
   },
   {
     "revision": "ebe0d00c82b8895a9d12",
@@ -174,6 +174,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fa9ae479a95d9acde9897e58e6ccfe96",
     "url": "/stopkorona/static/media/snixhenie_strah_vznosov_2_.fa9ae479.svg"
+  },
+  {
+    "revision": "acde8816dc02dbce0bee5ec6f90fed54",
+    "url": "/stopkorona/static/media/steps.acde8816.svg"
   },
   {
     "revision": "458eb793551f87a26b4c97cfc154c1b8",
