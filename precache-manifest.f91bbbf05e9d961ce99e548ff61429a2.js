@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b5a1ab18c62bb12cd050dbfd9ba6bff2",
+    "revision": "7e2390aef047ef9428554540224d78df",
     "url": "/stopkorona/index.html"
   },
   {
-    "revision": "14c617b0dfab901a0784",
-    "url": "/stopkorona/static/css/main.e2e27c14.chunk.css"
+    "revision": "39acff0d0729ff6b48ae",
+    "url": "/stopkorona/static/css/main.ac5dbd23.chunk.css"
   },
   {
-    "revision": "dc4c73c1c62719959f33",
-    "url": "/stopkorona/static/js/2.ee1ccf53.chunk.js"
+    "revision": "c792d6c5adf4d667b323",
+    "url": "/stopkorona/static/js/2.78174c67.chunk.js"
   },
   {
     "revision": "e867553593e1bcee119717999d316408",
-    "url": "/stopkorona/static/js/2.ee1ccf53.chunk.js.LICENSE.txt"
+    "url": "/stopkorona/static/js/2.78174c67.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "14c617b0dfab901a0784",
-    "url": "/stopkorona/static/js/main.785d9d58.chunk.js"
+    "revision": "39acff0d0729ff6b48ae",
+    "url": "/stopkorona/static/js/main.e79f64a8.chunk.js"
   },
   {
     "revision": "ebe0d00c82b8895a9d12",
@@ -76,6 +76,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stopkorona/static/media/gov.0bd5c1e5.svg"
   },
   {
+    "revision": "2daa1086b8bb420dd88af06632f7cb67",
+    "url": "/stopkorona/static/media/how.2daa1086.svg"
+  },
+  {
     "revision": "f51daea7976de064d5fe53f8f63ec3a0",
     "url": "/stopkorona/static/media/icq.f51daea7.svg"
   },
@@ -94,6 +98,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "39abe24b4856c9b892c9cac0e5aa377a",
     "url": "/stopkorona/static/media/line.39abe24b.svg"
+  },
+  {
+    "revision": "bcd7678f0e992fc2490b9913db9a9a16",
+    "url": "/stopkorona/static/media/list-icon.bcd7678f.svg"
+  },
+  {
+    "revision": "1ff3bd56a3cd834c3e850b4bee6c6960",
+    "url": "/stopkorona/static/media/list-icon3.1ff3bd56.svg"
   },
   {
     "revision": "61f4145c5c98383d99e0b3093a24aeb0",
