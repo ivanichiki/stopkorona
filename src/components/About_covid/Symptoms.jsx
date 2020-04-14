@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import './Symptoms.scss'
 import pdf from '../../svg/pdf.svg'
 import load from '../../svg/load.svg'
@@ -13,19 +13,34 @@ import symp8 from '../../svg/symp6.svg'
 import symp9 from '../../svg/symp7.svg'
 import symp10 from '../../svg/symp8.svg'
 
+
 const Labels = (props) => {
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}><img width='180px' src={props.src} alt="" /></div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        
+        <div style={{display:props.loaded?'none':'block'}}  className='preloadblock'></div>
+        <img style={{display:props.loaded?'block':'none'}} width='180px' src={props.src} alt="" /></div>
       <div className='label'>{props.name}</div>
     </div>
   )
 }
 
-
 export const Symptoms = (props) => {
+  
+const [counter, setcounter] = useState(0)
+const [loaded, setloaded] = useState(false)
+let onLoaded = ()=> {
+  setcounter(e=>e+1)
+  if (counter==11){
+    setloaded(true)
+  }
+  console.log(counter)
+
+}
+console.log(loaded)
   return (
-    <div ref={props.Ref} className='Symptoms'>
+    <div onLoad={onLoaded} ref={props.Ref} className='Symptoms'>
       <div className='title'>
         <div className='left'>
           <h2>Симптомы коронавируса <span>COVID—19</span></h2>
@@ -55,22 +70,22 @@ export const Symptoms = (props) => {
       <div><h3>Основные симптомы коронавируса</h3></div>
       <div className='label_wrap'>
 
-        <Labels src={symp1} name='высокая температура тела' />
-        <Labels src={symp2} name='кашель (сухой или с небольшим количеством мокроты)' />
-        <Labels src={symp3} name='одышка' />
-        <Labels src={symp4} name='боль в мышцах' />
-        <Labels src={symp5} name='утомляемость' />
+        <Labels loaded={loaded} src={symp1} name='высокая температура тела' />
+        <Labels loaded={loaded} src={symp2} name='кашель (сухой или с небольшим количеством мокроты)' />
+        <Labels loaded={loaded} src={symp3} name='одышка' />
+        <Labels loaded={loaded} src={symp4} name='боль в мышцах' />
+        <Labels loaded={loaded} src={symp5} name='утомляемость' />
       </div>
 
 
       <div><h3>Редкие симптомы коронавируса</h3></div>
       <div className='label_wrap'>
 
-        <Labels src={symp6} name='головная боль' />
-        <Labels src={symp7} name='заложенность грудной клетки' />
-        <Labels src={symp8} name='кровохарканье' />
-        <Labels src={symp9} name='диарея' />
-        <Labels src={symp10} name='тошнота, рвота' />
+        <Labels loaded={loaded} src={symp6} name='головная боль' />
+        <Labels loaded={loaded} src={symp7} name='заложенность грудной клетки' />
+        <Labels loaded={loaded} src={symp8} name='кровохарканье' />
+        <Labels loaded={loaded} src={symp9} name='диарея' />
+        <Labels loaded={loaded} src={symp10} name='тошнота, рвота' />
       </div>
       <div className='up_line'></div>
       <div className='text_under_line'>Симптомы могут проявиться в течение <span>14 дней</span> после контакта с инфекционным больным. Симптомы во многом сходны со многими респираторными заболеваниями, часто имитируют обычную простуду, могут походить на грипп.</div>

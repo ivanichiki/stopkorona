@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import './UnderHeader.scss'
+import { KoronaContext } from '../../App'
 export const UnderHeader = () => {
   const [statistic_toggle, setstatistic_toggle] = useState(false)
   const [simptom_toggle, setsimptom_toggle] = useState(false)
   const [more_toggle, setmore_toggle] = useState(false)
 
-  const id = `${(+new Date).toString(16).slice(4)}`;
+ const {setrender}=useContext(KoronaContext)
+
   return (
     <div className='under-header'>
       <div className='left_flang'>
@@ -15,8 +17,8 @@ export const UnderHeader = () => {
       Все о коронавирусе  <i></i>
 
          <div className={`hiddenstat ${statistic_toggle && 'active'}`}>
-         <NavLink to={`/about-covid/symptoms/`}>    <div className='scrolltext'>  Симптомы  </div> </NavLink>
-            <div className='scrolltext'>  Пути передачи </div>
+         <NavLink to={`/about-covid/symptoms/`}>    <div onClick={()=>setrender(e=>e+1)} className='scrolltext'>  Симптомы  </div> </NavLink>
+         <NavLink to={`/about-covid/transmitted/`}>    <div onClick={()=>setrender(e=>e+1)} className='scrolltext'>  Пути передачи </div></NavLink>
             <div className='scrolltext'>  7 шагов по профилактике  </div>
             <div className='scrolltext'>  Мифы о коронавирусе  </div>
             <div className='scrolltext'>  Часто задоваемые вопросы  </div>

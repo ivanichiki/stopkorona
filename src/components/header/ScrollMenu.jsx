@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import './ScrollMenu.scss'
 import { KoronaContext } from '../../App'
 import Scrollbars from 'react-custom-scrollbars'
-import  {SocialImgs} from './SocialImgs'
+import { SocialImgs } from './SocialImgs'
 import { NavLink } from 'react-router-dom'
 
 export const ScrollMenu = () => {
@@ -27,10 +27,10 @@ export const ScrollMenu = () => {
     <div className={`scrollMenu ${scrollMenuToggle && 'scroll'}`}>
       <Scrollbars style={{ minHeight: 515, maxHeight: 600 }}>
         <div style={{ paddingTop: '40px' }}>
-          <div  className={`blocks ${hideMenu && 'hided'}`}> <div onClick={() => sethideMenu(!hideMenu)}><span>Все о коронавирусе  </span> <i></i></div>
+          <div className={`blocks ${hideMenu && 'hided'}`}> <div onClick={() => sethideMenu(!hideMenu)}><span>Все о коронавирусе  </span> <i></i></div>
 
-          <NavLink onClick={() => {sethideMenu(!hideMenu); setscrollMenuToggle(false) }} to={`/about-covid/symptoms/`}>      <div  className='podsos'>Симптомы</div> </NavLink>
-            <div className='podsos'>Пути передачи</div>
+            <NavLink onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} to={`/about-covid/symptoms/`}>      <div className='podsos'>Симптомы</div> </NavLink>
+            <NavLink to={`/about-covid/transmitted/`}>       <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>Пути передачи</div></NavLink>
             <div className='podsos'>7 шагов по профилактике</div>
             <div className='podsos'>Мифы о коронавирусе</div>
             <div className='podsos'>Часто задоваемые вопросы</div>
@@ -42,9 +42,9 @@ export const ScrollMenu = () => {
         <div >
           <div className={`blocks ${hideMenu1 && 'hided'}`}><div onClick={() => sethideMenu1(!hideMenu1)}> < span   >Что сделано?  </ span> <i></i></div>
 
-          <NavLink to='/what-is-done/solutions'>   <div onClick={() => {sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Меры правителсьтва РФ</div></NavLink>
-          <NavLink to='/what-is-done/council'>  <div onClick={() => {sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Координационный совет</div></NavLink>
-          <NavLink to='/what-is-done/hq'>      <div   onClick={() => {sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }}  className='podsos last'>Оперативный штаб</div></NavLink>
+            <NavLink to='/what-is-done/solutions'>   <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Меры правителсьтва РФ</div></NavLink>
+            <NavLink to='/what-is-done/council'>  <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Координационный совет</div></NavLink>
+            <NavLink to='/what-is-done/hq'>      <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos last'>Оперативный штаб</div></NavLink>
 
           </div>
 
@@ -63,7 +63,7 @@ export const ScrollMenu = () => {
             <div className='podsos last'>Учащимся  </div>
 
           </div>
-        
+
         </div>
 
 
@@ -76,8 +76,8 @@ export const ScrollMenu = () => {
 
 
       </div>
-      <div style={{marginTop:'40px', marginLeft:'auto', marginRight:'auto', width:'200px'}}>
-       <SocialImgs/>
+        <div style={{ marginTop: '40px', marginLeft: 'auto', marginRight: 'auto', width: '200px' }}>
+          <SocialImgs />
         </div>
       </Scrollbars>
     </div>

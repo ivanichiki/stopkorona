@@ -1,20 +1,29 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useContext } from 'react'
 import './AboutCovid.scss'
 import { Symptoms } from './Symptoms'
 import ScrollAnimation from 'react-animate-on-scroll'
+import { Transmitted } from './Transmitted'
+import { KoronaContext } from '../../App'
 
 export const AboutCovid = ({match}) => {
   const Symptomref = useRef(null)
-  const scrollToRef = (ref) => window.scrollTo({top: ref.current.offsetTop-150, behavior: 'smooth'})
-  const executeScrolltoSym = () => scrollToRef(Symptomref)
+  const Transmitref = useRef(null)
+  const scrollToRef = (ref, value) => window.scrollTo({top: ref.current.offsetTop-value, behavior: 'smooth'})
+  const executeScrolltoSym = (value) => scrollToRef(Symptomref,value)
+  const executeScrolltoTrans = (value) => scrollToRef(Transmitref, value)
 
+  const {render}=useContext(KoronaContext)
 useEffect(() => {
-  window.scrollTo(0, 0)
+
  
   if (match.params.ref==='symptoms') {
-    executeScrolltoSym()
+    executeScrolltoSym(150)
   }
-}, [match.params.ref])
+  if (match.params.ref==='transmitted'){
+  
+    executeScrolltoTrans(150)
+  }
+}, [render, match.params.ref])
 
   return (
     <div className='AboutCorona_wrapper' >
@@ -22,6 +31,9 @@ useEffect(() => {
       <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
       <Symptoms  Ref={Symptomref}/>
       </ScrollAnimation>
+      <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
+        <Transmitted  Ref={Transmitref}/>
+        </ScrollAnimation>
     </div>
   )
 }
