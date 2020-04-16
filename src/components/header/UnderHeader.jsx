@@ -20,8 +20,8 @@ export const UnderHeader = () => {
          <NavLink to={`/about-covid/symptoms/`}>    <div onClick={()=>setrender(e=>e+1)} className='scrolltext'>  Симптомы  </div> </NavLink>
          <NavLink to={`/about-covid/transmitted/`}>    <div onClick={()=>setrender(e=>e+1)} className='scrolltext'>  Пути передачи </div></NavLink>
          <NavLink to={`/about-covid/prevention/`}>           <div onClick={()=>setrender(e=>e+1)}  className='scrolltext'>  7 шагов по профилактике  </div></NavLink>
-            <div className='scrolltext'>  Мифы о коронавирусе  </div>
-            <div className='scrolltext'>  Часто задоваемые вопросы  </div>
+         <NavLink to={`/about-covid/myths/`}>       <div onClick={()=>setrender(e=>e+1)} className='scrolltext'>  Мифы о коронавирусе  </div></NavLink>
+         <NavLink to={`/about-covid/world-statistics/`}>    <div  onClick={()=>setrender(e=>e+1)} className='scrolltext'> Мировая статистика </div></NavLink>
           </div>
         </div></NavLink>
         <NavLink to='/what-is-done/council'> <div onMouseLeave={() => setmore_toggle(false)} onMouseEnter={() => setmore_toggle(true)} className='statistika'>  Что сделано <i></i>
@@ -43,7 +43,7 @@ export const UnderHeader = () => {
 
         <NavLink to='/faq'>  <div className='statistika'>  Вопросы и ответы </div></NavLink>
 
-        <div className='statistika'>  Памятки  </div>
+   
 
 
 

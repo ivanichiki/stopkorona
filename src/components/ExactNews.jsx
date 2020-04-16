@@ -44,7 +44,9 @@ export const ExactNews = ({ match }) => {
 
   return (
     <div onLoad={()=> setloaded(true)} className={`Fadein_wrapper ${loaded && 'show'}`}>
-  
+  <div className='real_wrapper'>
+
+
       <div className='imgtitle' style={{ color: 'white' }}>
         {exactstate.img?
         <>
@@ -67,7 +69,7 @@ export const ExactNews = ({ match }) => {
           <div className='newstitle'>
             <h1>{exactstate.title}</h1>
           </div>
-          <div style={{fontSize:'18px'}}>
+          <div className='exactText' >
           <Markup content={exactstate.text}/>
           </div>
           <div className='source' style={{color:'#8d8795'}}>Источник: <span style={{color:'#fb5f3d'}}> {exactstate.source}</span>  </div>
@@ -75,6 +77,7 @@ export const ExactNews = ({ match }) => {
         : <div style={{paddingBottom:'700px'}}></div>
       }
      <NavLink to='/allnews/1'> <div className='btnback'>К списку новостей</div></NavLink>
+     </div>
     </div>
 
   )

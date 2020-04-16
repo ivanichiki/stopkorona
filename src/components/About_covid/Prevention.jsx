@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Prevention.scss'
 import steps from '../../svg/steps.svg'
 
@@ -17,8 +17,10 @@ const List = (props) => {
 
 
 export const Prevention = (props) => {
+  
+  const [loaded, setloaded] = useState(false)
   return (
-    <div ref={props.Ref} className='prevention_wrapper'>
+    <div onLoad={()=>setloaded(true)}   ref={props.Ref} className='prevention_wrapper'>
       <div className='title'>   <h1><span>7 шагов</span> по профилактике коронавирусной инфекции</h1></div>
 
       <div className='prevention_main'>
@@ -39,7 +41,8 @@ export const Prevention = (props) => {
           <List number='7' last={true} text='Пользуйтесь только индивидуальными предметами личной гигиены (полотенце, зубная щетка).' />
         </div>
         <div className='right'>
-          <img src={steps} alt="" />
+        <div style={{display:loaded?'none':'block'}} className='img'></div>
+          <img style={{display:loaded?'block':'none'}}  src={steps} alt="" />
         </div>
       </div>
     </div>

@@ -4,6 +4,11 @@ import cross from '../../svg/cross.svg'
 import { Markup } from 'interweave'
 
 export const FaqBlock = (props) => {
+
+
+
+ 
+
   const [toggle, settoggle] = useState(false)
   return (
     <div className={`faq_block ${props.last&&'lastfaq'} ${props.faqself&&'faqself'} `}>

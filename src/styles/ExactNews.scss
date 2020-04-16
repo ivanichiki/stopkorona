@@ -1,9 +1,15 @@
-
+$mobile: 1160px;
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
 
 .line{
   padding-top: 30px;
   
   border-bottom: 1px solid #e4e4e5;
+ 
 }
 .imgtitle {
   img {
@@ -12,6 +18,10 @@
     height: 500px;
     object-fit: cover;
   overflow: hidden;
+  @include mobile {
+display: none;
+
+  }
   }
 
 }
@@ -26,6 +36,9 @@
     font-size: 22px;
     width: 100%;
     line-height: 1.1;
+    @include mobile {
+      font-size: 12px;
+        }
   }
   .source{
     padding-top: 20px;
@@ -50,4 +63,15 @@
 }
 .btnback:hover{
   background-color: #cfdef1;
+}
+.real_wrapper{
+  @include mobile {
+    margin-top: -40px;
+  }
+  .exactText{
+    font-size: 18px;
+    @include mobile {
+      font-size: 16px;
+  }
+}
 }

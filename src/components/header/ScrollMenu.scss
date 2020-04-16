@@ -58,9 +58,8 @@ display: none;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
-  max-height: 22px;
-  transition-property: max-height;
-  transition-duration: 300ms;
+
+
   text-align: center;
   overflow: hidden;
   object-fit: cover;
@@ -79,15 +78,24 @@ display: none;
 
 
 }
+.blocks-hided{
+  max-height: 0px;
+  transition-property: max-height;
+  transition-duration: 300ms;
+}
 .choosen {
   background: #dae8ff;
      }
  
 .hided {
-  max-height: 530px;
+
   background-color: white;
   box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+  .blocks-hided {
+    max-height: 530px;
+  }
 }
+
 .Number{
   text-align: center;
   margin-left: auto;

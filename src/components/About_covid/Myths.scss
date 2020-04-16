@@ -1,0 +1,49 @@
+$mobile: 1160px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+.myths_wrapper{
+  span {
+    color: #fb5f3d;
+  }
+  .blocks_wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+  }
+}
+
+.myth{
+  width: 500px;
+  min-height: 500px;
+  padding: 30px 30px 40px 30px;
+  background-color: #f2f7ff;
+  border-radius: 15px;
+  margin-bottom:40px;
+  .name 
+  {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    width: 85%;
+    margin-bottom: 30px;
+    @include mobile {
+      font-size: 20px;
+      width: 95%;
+      margin-bottom: 15px;
+
+    }
+  }
+  .main {
+    font-size: 18px;
+    margin-bottom:15px;
+    @include mobile {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+}

@@ -19,7 +19,7 @@ export const AllNews = ({ match }) => {
   useEffect(() => {
  
     window.scrollTo(0, 0)
-    setloaded(false)
+    setloaded(true)
     setcounter(0)
   }, [match])
 
@@ -43,21 +43,13 @@ let g=0;
 let f=0;
 let counter = 0;
 
-const onLoad = ()=> {
-  setcounter(count+1)
-  console.log(count)
-  console.log(array.filter(el=> el.fields.img).length-1)
 
-  if (count==array.filter(el=> el.fields.img).length-1)
-  setloaded(true)
-
-}
 
 console.log(loaded)
  
   return (
     <div className={`Fadein_wrapper ${loaded && 'show'}`}>
-    <div  onLoad={onLoad} className='allNews_wrapper'>
+    <div  className='allNews_wrapper'>
       <div className='allNews_title'>
         <h1>Новости</h1>
       </div>
@@ -69,7 +61,7 @@ console.log(loaded)
      
           <div  className={`news_header ${counter==postsPerPage&&'withoutline'}`}>
            
-            <div>
+            <div className='leftcolumn'>
         <NavLink to={`/news/${el.fields.id}`}> <img   src={el.fields.img.fields.file.url} alt="" /> </NavLink>
               <div style={{ color: '#8d8795', fontSize: '14px' }}>{el.fields.author} </div>
             </div>
@@ -83,7 +75,7 @@ console.log(loaded)
             <div className={`news_container ${counter==postsPerPage&&'withoutline'}`}>
             <div style={{display:'none'}}></div> 
               <div style={{ color: '#8790ba', fontSize: '14px' }}>{el.fields.publisher}</div>
-              <NavLink to={`/news/${el.fields.id}`}>  <div style={{ fontSize: '24px' }}>{el.fields.title}</div> </NavLink>
+              <NavLink to={`/news/${el.fields.id}`}>  <div className='title_withoutpic' >{el.fields.title}</div> </NavLink>
             </div>
           </>}
           </>

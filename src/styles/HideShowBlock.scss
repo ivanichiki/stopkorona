@@ -53,14 +53,24 @@ $mobile: 1160px;
     span {
       display:flex;
       justify-content:space-between;
+      @include mobile {
+        display:block;
+      }
     }
    ul {
      padding-left:20px;
     display:block;
      width:450px;
+     @include mobile {
+      width:95%;
+      padding-left:0px;
+     }
      li {
       list-style: none;
        padding-bottom: 15px;
+       @include mobile {
+          padding-bottom: 5px;
+       }
      }
     
    }
@@ -73,6 +83,10 @@ $mobile: 1160px;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+    @include mobile {
+      margin-left: 1em;
+  
+     }
    }
 
  .btn {

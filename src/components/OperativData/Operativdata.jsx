@@ -9,7 +9,11 @@ export const Operativdata = () => {
 
   const { modal, setmodal, setmodalId, modalcontent, modalId,stateOper } = useContext(KoronaContext)
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
 
+
+  }, [])
 
   return (
 

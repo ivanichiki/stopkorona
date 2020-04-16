@@ -11,7 +11,7 @@ export const HeaderUp = () => {
   return (
     <div className='header_wrapper'>
     <div className='left_secsion'>
-      <div> <NavLink to='/'><img className='logotip' src={logo} alt="" /></NavLink></div>
+      <div> <NavLink to='/'><img  onClick={()=>setscrollMenuToggle(false)} className='logotip' src={logo} alt="" /></NavLink></div>
 
       <div className='movile-gov' >
         <a target="_blank" href="http://government.ru/">

@@ -5,7 +5,7 @@ import Scrollbars from 'react-custom-scrollbars'
 import { SocialImgs } from './SocialImgs'
 import { NavLink } from 'react-router-dom'
 
-export const ScrollMenu = ({match}) => {
+export const ScrollMenu = ({ match }) => {
 
 
   console.log(match)
@@ -29,38 +29,45 @@ export const ScrollMenu = ({match}) => {
     <div className={`scrollMenu ${scrollMenuToggle && 'scroll'}`}>
       <Scrollbars style={{ minHeight: 515, maxHeight: 600 }}>
         <div style={{ paddingTop: '40px' }}>
-          <div className={`blocks ${hideMenu && 'hided'} ${match&&match.slice(0,11)==='about-covid'?'choosen':''}`}> <div onClick={() => sethideMenu(!hideMenu)}><span>Все о коронавирусе  </span> <i></i></div>
+          <div className={`blocks ${hideMenu && 'hided'} ${match && match.slice(0, 11) === 'about-covid' ? 'choosen' : ''}`}> <div onClick={() => sethideMenu(!hideMenu)}><span>Все о коронавирусе  </span> <i></i></div>
 
-            <NavLink onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} to={`/about-covid/symptoms/`}>      <div className='podsos'>Симптомы</div> </NavLink>
-            <NavLink to={`/about-covid/transmitted/`}> <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>Пути передачи</div></NavLink>
-            <NavLink to={`/about-covid/prevention/`}> <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>7 шагов по профилактике</div></NavLink>
-            <div className='podsos'>Мифы о коронавирусе</div>
-          
-            <div className='podsos last'>Мировая статистика</div>
+            <div className='blocks-hided'>
+
+              <div className='podsos'> <NavLink onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} to={`/about-covid/symptoms/`}>   Симптомы</NavLink></div>
+              <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>   <NavLink to={`/about-covid/transmitted/`}> Пути передачи</NavLink></div>
+             <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>  <NavLink to={`/about-covid/prevention/`}>7 шагов по профилактике</NavLink></div>
+             <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>  <NavLink to={`/about-covid/myths/`}>  Мифы о коронавирусе</NavLink></div>
+
+              <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }}  className='podsos last'> <NavLink to={`/about-covid/world-statistics/`}>Мировая статистика</NavLink></div>
+
+
+            </div>
           </div>
 
         </div>
 
         <div >
-          <div  className={`blocks ${hideMenu1 && 'hided'}  ${match&&match.slice(0,12)==='what-is-done'?'choosen':''}`}><div onClick={() => sethideMenu1(!hideMenu1)}> < span   >Что сделано?  </ span> <i></i></div>
+          <div className={`blocks ${hideMenu1 && 'hided'}  ${match && match.slice(0, 12) === 'what-is-done' ? 'choosen' : ''}`}><div onClick={() => sethideMenu1(!hideMenu1)}> < span   >Что сделано?  </ span> <i></i></div>
 
-            <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>  <NavLink to='/what-is-done/solutions'  > Меры правителсьтва РФ</NavLink></div>
-            <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>  <NavLink to='/what-is-done/council'> Координационный совет</NavLink></div>
-            <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos last'>  <NavLink to='/what-is-done/hq'>     Оперативный штаб</NavLink></div>
+            <div className='blocks-hided'>
+              <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>  <NavLink to='/what-is-done/solutions'  > Меры правителсьтва РФ</NavLink></div>
+              <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>  <NavLink to='/what-is-done/council'> Координационный совет</NavLink></div>
+              <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos last'>  <NavLink to='/what-is-done/hq'>     Оперативный штаб</NavLink></div>
+            </div>
 
           </div>
 
         </div>
 
         <div >
-        <NavLink to='/what-to-do/business'>    <div onClick={() => { setscrollMenuToggle(false) }} className={`blocks ${match&&match==='what-to-do/business'?'choosen':''}`}> <span>Что предпринять?  </span>  </div>
-        </NavLink>
+          <NavLink to='/what-to-do/business'>    <div onClick={() => { setscrollMenuToggle(false) }} className={`blocks ${match && match === 'what-to-do/business' ? 'choosen' : ''}`}> <span>Что предпринять?  </span>  </div>
+          </NavLink>
 
         </div>
 
-        <NavLink to='/faq'>  <div  onClick={() => { setscrollMenuToggle(false) }} className={`blocks ${match&&match.slice(0,11)==='faq'?'choosen':''}`}><span>Часто задоваемые вопросы</span></div></NavLink>
-   
-        <div className={`blocks `}> <span>Памятки </span></div>
+        <NavLink to='/faq'>  <div onClick={() => { setscrollMenuToggle(false) }} className={`blocks ${match && match.slice(0, 11) === 'faq' ? 'choosen' : ''}`}><span>Часто задоваемые вопросы</span></div></NavLink>
+
+    
 
         <div className='hotline'>Единная горячая линия</div>
         <div className='Number'>

@@ -24,13 +24,25 @@ $mobile: 1160px;
       font-size: 36px;
       }
     }
+
+    .img {
+      display:flex;
+      width: 520px;
+      height: 400px;
+      @include mobile {
+        margin-left: 13%;
+        height: 60%;
+        width:90%;
+        max-width: 500px;
+      }
+    }
    img {
      display:flex;
      max-width: 520px;
      @include mobile {
        margin-left: 13%;
        width:90%;
-      max-width: 500px;
+       max-width: 500px;
      }
    }
   }

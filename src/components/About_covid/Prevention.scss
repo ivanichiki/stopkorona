@@ -37,6 +37,15 @@ $mobile: 1160px;
         padding-bottom: 30px;
       }
     }
+    .img {
+      width: 420px;
+      height: 431px;
+      @include mobile {
+        height: 331px;
+        width: 90%;
+        max-width: 500px;
+      }
+    }
     img {
       @include mobile {
 
