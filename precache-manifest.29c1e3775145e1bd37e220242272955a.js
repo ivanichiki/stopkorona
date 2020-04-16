@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1fa68bc6a3725c4d7a970acf16edf6c2",
+    "revision": "981025fa3d7b397ad17aa521d8ec0726",
     "url": "/stopkorona/index.html"
   },
   {
-    "revision": "69b687bba9f9c168a344",
-    "url": "/stopkorona/static/css/main.9bb03652.chunk.css"
+    "revision": "b8eff36f48290c899e57",
+    "url": "/stopkorona/static/css/main.93316e6a.chunk.css"
   },
   {
-    "revision": "f3c5814f85ca85cdfc4e",
-    "url": "/stopkorona/static/js/2.54417a74.chunk.js"
+    "revision": "2eb568e2529c9727bec3",
+    "url": "/stopkorona/static/js/2.fbe37079.chunk.js"
   },
   {
     "revision": "e867553593e1bcee119717999d316408",
-    "url": "/stopkorona/static/js/2.54417a74.chunk.js.LICENSE.txt"
+    "url": "/stopkorona/static/js/2.fbe37079.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "69b687bba9f9c168a344",
-    "url": "/stopkorona/static/js/main.fc4f1762.chunk.js"
+    "revision": "b8eff36f48290c899e57",
+    "url": "/stopkorona/static/js/main.9bae8cbf.chunk.js"
   },
   {
     "revision": "ebe0d00c82b8895a9d12",
