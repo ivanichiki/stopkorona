@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "981025fa3d7b397ad17aa521d8ec0726",
+    "revision": "d2ebc41c6b0be5111dab7364530f9a48",
     "url": "/stopkorona/index.html"
   },
   {
-    "revision": "b8eff36f48290c899e57",
-    "url": "/stopkorona/static/css/main.93316e6a.chunk.css"
+    "revision": "77acec6bb94ea1e56b75",
+    "url": "/stopkorona/static/css/main.67087f4e.chunk.css"
   },
   {
-    "revision": "2eb568e2529c9727bec3",
-    "url": "/stopkorona/static/js/2.fbe37079.chunk.js"
+    "revision": "42438c84a5af91bd7f82",
+    "url": "/stopkorona/static/js/2.f78b75f5.chunk.js"
   },
   {
     "revision": "e867553593e1bcee119717999d316408",
-    "url": "/stopkorona/static/js/2.fbe37079.chunk.js.LICENSE.txt"
+    "url": "/stopkorona/static/js/2.f78b75f5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b8eff36f48290c899e57",
-    "url": "/stopkorona/static/js/main.9bae8cbf.chunk.js"
+    "revision": "77acec6bb94ea1e56b75",
+    "url": "/stopkorona/static/js/main.71abfcc8.chunk.js"
   },
   {
     "revision": "ebe0d00c82b8895a9d12",
@@ -94,6 +94,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "95bdfb7a5f9f7750fd5fd1399a50a2ed",
     "url": "/stopkorona/static/media/instagram.95bdfb7a.svg"
+  },
+  {
+    "revision": "3ecb789ff73340f71e66111633238c8c",
+    "url": "/stopkorona/static/media/jh.3ecb789f.svg"
   },
   {
     "revision": "755dfe512582f9caa17b6ba6c1bec76f",
@@ -240,8 +244,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stopkorona/static/media/watsup.80b6998a.svg"
   },
   {
+    "revision": "1de2310063edb7af34866d86f62b5348",
+    "url": "/stopkorona/static/media/who.1de23100.svg"
+  },
+  {
     "revision": "bee9aab671772a73998a1a4eb1025b57",
     "url": "/stopkorona/static/media/world.bee9aab6.svg"
+  },
+  {
+    "revision": "5241c6f918416dc4d5b57f7147a8d602",
+    "url": "/stopkorona/static/media/ym.5241c6f9.svg"
   },
   {
     "revision": "16cd78b0b0458628a7b1220e04143b4d",

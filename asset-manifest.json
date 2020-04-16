@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/stopkorona/static/css/main.93316e6a.chunk.css",
-    "main.js": "/stopkorona/static/js/main.9bae8cbf.chunk.js",
-    "main.js.map": "/stopkorona/static/js/main.9bae8cbf.chunk.js.map",
+    "main.css": "/stopkorona/static/css/main.67087f4e.chunk.css",
+    "main.js": "/stopkorona/static/js/main.71abfcc8.chunk.js",
+    "main.js.map": "/stopkorona/static/js/main.71abfcc8.chunk.js.map",
     "runtime-main.js": "/stopkorona/static/js/runtime-main.b585c0bb.js",
     "runtime-main.js.map": "/stopkorona/static/js/runtime-main.b585c0bb.js.map",
-    "static/js/2.fbe37079.chunk.js": "/stopkorona/static/js/2.fbe37079.chunk.js",
-    "static/js/2.fbe37079.chunk.js.map": "/stopkorona/static/js/2.fbe37079.chunk.js.map",
+    "static/js/2.f78b75f5.chunk.js": "/stopkorona/static/js/2.f78b75f5.chunk.js",
+    "static/js/2.f78b75f5.chunk.js.map": "/stopkorona/static/js/2.f78b75f5.chunk.js.map",
     "index.html": "/stopkorona/index.html",
-    "precache-manifest.29c1e3775145e1bd37e220242272955a.js": "/stopkorona/precache-manifest.29c1e3775145e1bd37e220242272955a.js",
+    "precache-manifest.3567c82955c9211df7f6e431b6231bd4.js": "/stopkorona/precache-manifest.3567c82955c9211df7f6e431b6231bd4.js",
     "service-worker.js": "/stopkorona/service-worker.js",
-    "static/css/main.93316e6a.chunk.css.map": "/stopkorona/static/css/main.93316e6a.chunk.css.map",
-    "static/js/2.fbe37079.chunk.js.LICENSE.txt": "/stopkorona/static/js/2.fbe37079.chunk.js.LICENSE.txt",
+    "static/css/main.67087f4e.chunk.css.map": "/stopkorona/static/css/main.67087f4e.chunk.css.map",
+    "static/js/2.f78b75f5.chunk.js.LICENSE.txt": "/stopkorona/static/js/2.f78b75f5.chunk.js.LICENSE.txt",
     "static/media/Cube.svg": "/stopkorona/static/media/Cube.7921b586.svg",
     "static/media/Group.png": "/stopkorona/static/media/Group.51cb7858.png",
     "static/media/Lab.png": "/stopkorona/static/media/Lab.724ba984.png",
@@ -30,6 +30,7 @@
     "static/media/how.svg": "/stopkorona/static/media/how.2daa1086.svg",
     "static/media/icq.svg": "/stopkorona/static/media/icq.f51daea7.svg",
     "static/media/instagram.svg": "/stopkorona/static/media/instagram.95bdfb7a.svg",
+    "static/media/jh.svg": "/stopkorona/static/media/jh.3ecb789f.svg",
     "static/media/kred_kanikuli.svg": "/stopkorona/static/media/kred_kanikuli.755dfe51.svg",
     "static/media/krediti_na_zarplatu.svg": "/stopkorona/static/media/krediti_na_zarplatu.ec41a22e.svg",
     "static/media/line.svg": "/stopkorona/static/media/line.39abe24b.svg",
@@ -66,13 +67,15 @@
     "static/media/telega.svg": "/stopkorona/static/media/telega.4b16218a.svg",
     "static/media/vk.svg": "/stopkorona/static/media/vk.d7333227.svg",
     "static/media/watsup.svg": "/stopkorona/static/media/watsup.80b6998a.svg",
+    "static/media/who.svg": "/stopkorona/static/media/who.1de23100.svg",
     "static/media/world.svg": "/stopkorona/static/media/world.bee9aab6.svg",
+    "static/media/ym.svg": "/stopkorona/static/media/ym.5241c6f9.svg",
     "static/media/zig.svg": "/stopkorona/static/media/zig.16cd78b0.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.b585c0bb.js",
-    "static/js/2.fbe37079.chunk.js",
-    "static/css/main.93316e6a.chunk.css",
-    "static/js/main.9bae8cbf.chunk.js"
+    "static/js/2.f78b75f5.chunk.js",
+    "static/css/main.67087f4e.chunk.css",
+    "static/js/main.71abfcc8.chunk.js"
   ]
 }
