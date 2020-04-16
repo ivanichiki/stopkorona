@@ -23,7 +23,7 @@ const [state, setstate] = useState([{id:0, size:'21px', props:measure1, text:'М
 {id:3, size:'21px', props:measure4, text:'Беспроцентные кредиты на зарплату'},
 {id:4, size:'21px', props:measure5, text:'Снижение и отсрочка страховых взносов'},
 {id:5, size:'21px', props:measure6, text:'Налоговые каникулы'},
-{id:6, size:'21px', width:'40px', props:measure7, text:'Отсрочка арендных платежей'},
+{id:6, size:'21px', width:true, props:measure7, text:'Отсрочка арендных платежей'},
 {id:7, size:'21px', props:measure8, text:'Помощь экспертам'},
 
 ])

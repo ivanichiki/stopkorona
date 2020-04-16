@@ -158,7 +158,7 @@ function App() {
           <Route exact path='/' render={() => <Videopage />} />
       </ScrollAnimation>
  
-  <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
+      <ScrollAnimation delay='100' duration='1' animateOnce animateIn="fadeIn">
           <Route exact path='/' render={() => <Menu />} />
       </ScrollAnimation>
     
@@ -168,7 +168,6 @@ function App() {
           <Footer/>
       </ScrollAnimation> 
   
- {/* </div>  */}
       </KoronaContext.Provider>
   
     </HashRouter>

@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom'
 export const ScrollMenu = ({match}) => {
 
 
-  // console.log(match.slice(0,12))
+  console.log(match)
 
   const { scrollMenuToggle, setscrollMenuToggle } = useContext(KoronaContext)
   const [hideMenu, sethideMenu] = useState(false)
@@ -35,7 +35,7 @@ export const ScrollMenu = ({match}) => {
             <NavLink to={`/about-covid/transmitted/`}> <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>Пути передачи</div></NavLink>
             <NavLink to={`/about-covid/prevention/`}> <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>7 шагов по профилактике</div></NavLink>
             <div className='podsos'>Мифы о коронавирусе</div>
-            <div className='podsos'>Часто задоваемые вопросы</div>
+          
             <div className='podsos last'>Мировая статистика</div>
           </div>
 
@@ -53,23 +53,13 @@ export const ScrollMenu = ({match}) => {
         </div>
 
         <div >
-          <div onClick={() => sethideMenu2(!hideMenu2)} className={`blocks ${hideMenu2 && 'hided'}`}> <span>Что предпринять? <i></i> </span>
-
-            <div className='podsos'>Каждому</div>
-            <div className='podsos'>Предпринимателям</div>
-            <div className='podsos'>Работадателям</div>
-            <div className='podsos'>Работникам  </div>
-            <div className='podsos'>Волонтером  </div>
-            <div className='podsos'>Пожилым людям  </div>
-            <div className='podsos'>Родителям  </div>
-            <div className='podsos last'>Учащимся  </div>
-
-          </div>
+        <NavLink to='/what-to-do/business'>    <div onClick={() => { setscrollMenuToggle(false) }} className={`blocks ${match&&match==='what-to-do/business'?'choosen':''}`}> <span>Что предпринять?  </span>  </div>
+        </NavLink>
 
         </div>
 
-
-        <div className={`blocks `}> <span>Официальные документы </span></div>
+        <NavLink to='/faq'>  <div  onClick={() => { setscrollMenuToggle(false) }} className={`blocks ${match&&match.slice(0,11)==='faq'?'choosen':''}`}><span>Часто задоваемые вопросы</span></div></NavLink>
+   
         <div className={`blocks `}> <span>Памятки </span></div>
 
         <div className='hotline'>Единная горячая линия</div>

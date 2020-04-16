@@ -34,21 +34,14 @@ export const UnderHeader = () => {
 
         </div>
         </NavLink>
-        <div onMouseLeave={() => setsimptom_toggle(false)} onMouseEnter={() => setsimptom_toggle(true)} className='statistika'>  Что предпринять <i></i>
+        <NavLink to='/what-to-do/business'>  <div  className='statistika'>  Что предпринять</div></NavLink>
 
-          <div className={`hiddenstat ${simptom_toggle && 'active'}`}>
-            <div className='scrolltext'>  Каждому  </div>
-            <NavLink to='/what-to-do/business'> <div className='scrolltext'>  Предприятиям </div></NavLink>
-            <div className='scrolltext'>  Работадателям </div>
-            <div className='scrolltext'>  Работникам </div>
-            <div className='scrolltext'>  Волонтерам </div>
-            <div className='scrolltext'>  Пожилым людям </div>
+        
+      
 
-          </div>
+        
 
-        </div>
-
-        <div className='statistika'>  Официальные документы  </div>
+        <NavLink to='/faq'>  <div className='statistika'>  Вопросы и ответы </div></NavLink>
 
         <div className='statistika'>  Памятки  </div>
 

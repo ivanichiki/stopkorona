@@ -16,7 +16,7 @@ $mobile: 1160px;
   @include mobile {
     padding-top: 5px;
     height: 140px;
-    width: 95%;
+    width: 85vw;
     padding-bottom: 40px;
     padding-right: 5px;
   }
@@ -25,8 +25,22 @@ $mobile: 1160px;
     width: 100%;
     height: 34%;
     margin-bottom: 40px;
+    @include mobile {
+      margin-top: 10px;
+    }
+    .time {
+      width: 40px;
+      @include mobile {
+        width: 30px;
+      }
+    }
     img{
       width: 85px;
+      @include mobile {
+        position:relative;
+        top:10px;
+        width: 60px;
+      }
     }
   }
   .text {

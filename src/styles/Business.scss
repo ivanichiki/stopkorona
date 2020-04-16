@@ -1,11 +1,28 @@
+$mobile: 1160px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content
+  }
+}
+
+
+
 .Business_wrapper {
 padding-top: 140px;
 padding-bottom: 50px;
+@include mobile {
+  padding-top: 90px;
 
+}
   h1 {
     font-size: 50px;
     line-height: 1;
     padding-bottom: 30px;
+    @include mobile {
+      padding-bottom: 10px;
+      font-size: 36px;
+    }
   }
   .modal_container{
     display: flex;
@@ -41,7 +58,14 @@ padding-bottom: 50px;
   background-color: #f2f7ff;
   padding: 10px 10px 10px 10px;
   cursor: pointer;
+  @include mobile {
+    width:90%;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
 
+    margin-bottom: 30px;
+  }
 }
 .btn_back:hover{
   background-color: #e4edfa;
