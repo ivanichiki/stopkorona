@@ -25,11 +25,11 @@ export const ScrollMenu = ({match}) => {
   }
 
   return (
-    
+
     <div className={`scrollMenu ${scrollMenuToggle && 'scroll'}`}>
       <Scrollbars style={{ minHeight: 515, maxHeight: 600 }}>
         <div style={{ paddingTop: '40px' }}>
-          <div className={`blocks ${hideMenu && 'hided'}  ${match.slice(0,11)==='about-covid'?'choosen':''}`}> <div onClick={() => sethideMenu(!hideMenu)}><span>Все о коронавирусе  </span> <i></i></div>
+          <div className={`blocks ${hideMenu && 'hided'} ${match&&match.slice(0,11)==='about-covid'?'choosen':''}`}> <div onClick={() => sethideMenu(!hideMenu)}><span>Все о коронавирусе  </span> <i></i></div>
 
             <NavLink onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} to={`/about-covid/symptoms/`}>      <div className='podsos'>Симптомы</div> </NavLink>
             <NavLink to={`/about-covid/transmitted/`}> <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>Пути передачи</div></NavLink>
@@ -42,7 +42,7 @@ export const ScrollMenu = ({match}) => {
         </div>
 
         <div >
-          <div  className={`blocks ${hideMenu1 && 'hided'}  ${match.slice(0,12)==='what-is-done'?'choosen':''}`}><div onClick={() => sethideMenu1(!hideMenu1)}> < span   >Что сделано?  </ span> <i></i></div>
+          <div  className={`blocks ${hideMenu1 && 'hided'}  ${match&&match.slice(0,12)==='what-is-done'?'choosen':''}`}><div onClick={() => sethideMenu1(!hideMenu1)}> < span   >Что сделано?  </ span> <i></i></div>
 
             <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>  <NavLink to='/what-is-done/solutions'  > Меры правителсьтва РФ</NavLink></div>
             <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>  <NavLink to='/what-is-done/council'> Координационный совет</NavLink></div>
