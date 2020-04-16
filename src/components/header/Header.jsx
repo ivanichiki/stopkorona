@@ -9,10 +9,12 @@ import { ScrollMenu } from './ScrollMenu'
 
 
 
-export const Header = () => {
+export const Header = ({match}) => {
  
-  const { executeScrolltoVideo, executeScrolltoOper, executeScrolltoSolutions,headerloaded,setheaderloaded } = useContext(KoronaContext)
+  const {headerloaded,setheaderloaded } = useContext(KoronaContext)
   const [counter, setcounter] = useState(0)
+
+ 
 
   function onLoad() {
     setcounter(counter => counter + 1)
@@ -34,7 +36,7 @@ export const Header = () => {
       </div>
  
     </div>
-   <ScrollMenu/>
+   <ScrollMenu match={match.params.path}/>
 
     </>
   )

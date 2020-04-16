@@ -5,7 +5,10 @@ import Scrollbars from 'react-custom-scrollbars'
 import { SocialImgs } from './SocialImgs'
 import { NavLink } from 'react-router-dom'
 
-export const ScrollMenu = () => {
+export const ScrollMenu = ({match}) => {
+
+
+  // console.log(match.slice(0,12))
 
   const { scrollMenuToggle, setscrollMenuToggle } = useContext(KoronaContext)
   const [hideMenu, sethideMenu] = useState(false)
@@ -27,7 +30,7 @@ export const ScrollMenu = () => {
     <div className={`scrollMenu ${scrollMenuToggle && 'scroll'}`}>
       <Scrollbars style={{ minHeight: 515, maxHeight: 600 }}>
         <div style={{ paddingTop: '40px' }}>
-          <div className={`blocks ${hideMenu && 'hided'}`}> <div onClick={() => sethideMenu(!hideMenu)}><span>Все о коронавирусе  </span> <i></i></div>
+          <div className={`blocks ${hideMenu && 'hided'}  ${match.slice(0,11)==='about-covid'?'choosen':''}`}> <div onClick={() => sethideMenu(!hideMenu)}><span>Все о коронавирусе  </span> <i></i></div>
 
             <NavLink onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} to={`/about-covid/symptoms/`}>      <div className='podsos'>Симптомы</div> </NavLink>
             <NavLink to={`/about-covid/transmitted/`}> <div onClick={() => { sethideMenu(!hideMenu); setscrollMenuToggle(false) }} className='podsos'>Пути передачи</div></NavLink>
@@ -40,11 +43,11 @@ export const ScrollMenu = () => {
         </div>
 
         <div >
-          <div className={`blocks ${hideMenu1 && 'hided'}`}><div onClick={() => sethideMenu1(!hideMenu1)}> < span   >Что сделано?  </ span> <i></i></div>
+          <div  className={`blocks ${hideMenu1 && 'hided'}  ${match.slice(0,12)==='what-is-done'?'choosen':''}`}><div onClick={() => sethideMenu1(!hideMenu1)}> < span   >Что сделано?  </ span> <i></i></div>
 
-            <NavLink to='/what-is-done/solutions'>   <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Меры правителсьтва РФ</div></NavLink>
-            <NavLink to='/what-is-done/council'>  <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>Координационный совет</div></NavLink>
-            <NavLink to='/what-is-done/hq'>      <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos last'>Оперативный штаб</div></NavLink>
+            <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>  <NavLink to='/what-is-done/solutions'  > Меры правителсьтва РФ</NavLink></div>
+            <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos'>  <NavLink to='/what-is-done/council'> Координационный совет</NavLink></div>
+            <div onClick={() => { sethideMenu1(!hideMenu1); setscrollMenuToggle(false) }} className='podsos last'>  <NavLink to='/what-is-done/hq'>     Оперативный штаб</NavLink></div>
 
           </div>
 

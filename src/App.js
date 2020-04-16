@@ -21,6 +21,7 @@ import { stataReducer } from './reducers/stateReducer';
 import { Council } from './components/Council';
 import { Hq } from './components/Hq';
 import { AboutCovid } from './components/About_covid/AboutCovid';
+import { Faqself } from './components/Faqself';
 
 
 
@@ -122,8 +123,8 @@ function App() {
     <div style={{overflow:'hidden'}} className='wrapper'>
     
        <div className={`modalwrapper ${modal==false&&'act'}`}><Modal/></div>
-      
-        <Header /> 
+       <Route path="/:path*" component={Header} />
+        {/* <Header />  */}
    {headerloaded&&
    <>
 
@@ -147,7 +148,7 @@ function App() {
           <Route exact path='/what-is-done/council' render={() => <Council  />} />
           <Route exact path='/what-is-done/hq' render={() => <Hq  />} />
           <Route exact path='/what-to-do/business' render={() => <BusinessMesures />} />
-          
+          <Route exact path='/faq' render={() => <Faqself  />} />
           <Route path="/about-covid/:ref" component={AboutCovid} />
           <Route path="/what-to-do/business/topics/:topicid" component={BusinessTopic} />
           </>  }  

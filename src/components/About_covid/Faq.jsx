@@ -1,28 +1,10 @@
 import React, { useState } from 'react'
 import './Faq.scss'
 import faq from '../../svg/faq.svg'
-import cross from '../../svg/cross.svg'
-import { Markup } from 'interweave'
+import { NavLink } from 'react-router-dom'
+import { FaqBlock } from './FaqBlock'
 
-const FaqBlock = (props) => {
-  const [toggle, settoggle] = useState(false)
-  return (
-    <div className={`faq_block `}>
-      <div onClick={() => settoggle(!toggle)} className='faqblock_title'>
-        <div className='title'>
-          {props.name}
-        </div>
-        <div className={`cross  ${toggle && 'rotate'}`}>
-          <img src={cross} alt="" />
-        </div>
-      </div>
-      <div className={`hidden_text  ${toggle && 'activ'}`}>
-        <Markup content={props.text} />
 
-      </div>
-    </div>
-  )
-}
 
 export const Faq = () => {
   return (
@@ -66,8 +48,13 @@ export const Faq = () => {
         <FaqBlock name='Что означает удаленный режим для работодателя и работника?' text='<b>Подробную информацию о переходе на удалённый режим работы можно узнать в памятке Министерства труда и социальной защиты РФ</b>' />
 
 
-        <FaqBlock name='Какие меры нужно соблюдать после выписки из стационара?' text='<b>После выписки необходимо соблюдать такие же меры профилактики вирусных инфекций, как и другим здоровым людям: избегать массовых скоплений людей, мыть руки.</b>' />
+        <FaqBlock last={true} name='Какие меры нужно соблюдать после выписки из стационара?' text='<b>После выписки необходимо соблюдать такие же меры профилактики вирусных инфекций, как и другим здоровым людям: избегать массовых скоплений людей, мыть руки.</b>' />
 
+
+
+     <NavLink to='/faq'>  <div className='faqbtn'>
+          Еще вопросы
+        </div></NavLink> 
       </div>
     </div>
   )

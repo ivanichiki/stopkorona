@@ -11,6 +11,7 @@ $mobile: 1160px;
 .faq_wrapper{
   display: flex;
   justify-content: space-between;
+  padding-bottom: 50px;
   @include mobile {
     display: block;
   }
@@ -40,69 +41,26 @@ $mobile: 1160px;
     @include mobile {
     width: 100%;
     }
-  }
-}
-
-.faq_block {
- 
-  border-bottom: 1px solid #e4e4e5;
-  padding-top: 20px;
-  padding-bottom: 10px;
-
-  .faqblock_title{
-    display: flex;
-   
-    font-size: 26px;
-    font-weight: 600;
-    position: relative;
-    cursor: pointer;
-    user-select: none;
-    @include mobile {
-      font-size: 22px;
-      }
-    .title{
-      width: 90%;
+    .faqbtn{
+      border-radius: 10px;
+      display: inline-block;
+      height: 56px;
+      color: #3662ff;
+      padding: 0 60px;
+      background: #f2f7ff;
+      line-height: 56px;
+      font-weight: 600;
+      transition: background-color .3s;
+      cursor: pointer;
       @include mobile {
-        width: 85%;
-        }
-    }
-    .cross {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 40px;
-      width: 40px;
-      right: 5px;
-      transform: rotate(0deg);
-      transition: transform 200ms;
-    
-      img {
-        width: 26px;
-     
-
+        display: block;
+        text-align: center;
       }
     }
-      .rotate{
-        transform: rotate(-45deg);
+    .faqbtn:hover{
+      background-color: #ebf2ff;
     }
-    .cross:hover {
-      background-color: #ffe2db;
-    
-      border-radius: 50%;
-    }
-  }
-  .hidden_text{
-    padding-top: 20px;
-    font-size: 18px;
-    max-height: 0px;
-    width: 90%;
-    object-fit: cover;
-    overflow: hidden;
-    transition: max-height 200ms;
-  }
 
-  .activ {
-    max-height: 800px;
   }
 }
+
