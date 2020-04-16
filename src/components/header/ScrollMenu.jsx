@@ -25,8 +25,7 @@ export const ScrollMenu = ({match}) => {
   }
 
   return (
-
-
+    
     <div className={`scrollMenu ${scrollMenuToggle && 'scroll'}`}>
       <Scrollbars style={{ minHeight: 515, maxHeight: 600 }}>
         <div style={{ paddingTop: '40px' }}>
