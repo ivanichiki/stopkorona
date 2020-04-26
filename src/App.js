@@ -7,7 +7,6 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { HashRouter, Route } from 'react-router-dom';
 import { AllNews } from './components/AllNews';
 import { ExactNews } from './components/ExactNews';
-import { LinksunderNews } from './components/LinksunderNews';
 import { Videopage } from './components/Videopage';
 import { client } from './client';
 import { Solutions } from './components/Solutions';

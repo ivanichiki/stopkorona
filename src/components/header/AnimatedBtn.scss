@@ -9,109 +9,59 @@ $mobile: 1160px;
   display: none;
   position: relative;
   align-items: center;
+  margin-left: 5px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
   div {
-    text-align: center;
-    width: 20px;
-    height: 2px;
+   
+    width: 24px;
+    height: 0.15em;
     background-color: #003188;
     display: block;
-    font-size: 25px;
-    position: relative;
-
+ 
+    position: absolute;
+    transition: top 500ms ease 0s, transform 500ms ease 500ms;
+  
   
   }
   .up {
  
-   top: -5px;
+   top: 18px;
    
   }
   .down {
+    top:32px;
 
-    bottom: -5px;
   }
-
-.up-active-enter {
-  top:-5px;
-  transform: rotate(0deg);
-}
-.up-active-enter-active {
-  top:2px;
- 
- 
-  transition: top 500ms;
-}
-.up-active-enter-done {
-  transform: rotate(45deg);
-  transition: transform 500ms;
-  top:2px;
-
-}
-.up-active-exit {
-  top:2px;
-  transform: rotate(45deg);
-  transition: top 500ms;
-}
-.up-active-exit-active {
-  transform: rotate(0deg);
-  top:2px;
-  transition: transform 500ms;
-
-}
-.up-active-exit-done {
-  
-  transition: top 500ms;
-  top:-5px;
-}
-
-
-.down-active-enter {
-  bottom:-5px;
-  transform: rotate(0deg);
-}
-.down-active-enter-active {
-bottom:2px;
-  transition: transform 500ms ease 1500ms;
-  transition: bottom 500ms;
-}
-.down-active-enter-done {
-  transition: transform 500ms;
-  transform: rotate(-45deg);
-bottom:2px;
-}
-
-.down-active-exit {
-  transform: rotate(-45deg);
-  transition: bottom 500ms;
- bottom:2px;
-
-}
-.down-active-exit-active {
-  transform: rotate(0deg);
-  transition: transform 500ms;
-bottom:2px;
-
-
-}
-.down-active-exit-done {
-  transform: rotate(0deg);
-  bottom:-5px;
-
-  transition: bottom 500ms;
-
-}
-
-
-
   .center {
-    transform: rotate(0deg);
-    transition-property: opacity;
-    transition-delay: 280ms;
-    opacity: 1;
-   
+    top:25px;
+    transition: opacity 100ms ease 500ms;
   }
-  .center-active {
-  
+
+  .inFirst{
+    top:25px;
+    transform: rotate(45deg);
+  }
+
+  .outFirst{
+    top: 18px;
+    transform: rotate(0deg);
+    transition: top 500ms ease 500ms, transform 500ms ease 0s;
+  }
+
+  .incenter{
     opacity: 0;
+  }
+  .inSecond{
+    top:25px; 
+    transform: rotate(-45deg);
+  }
+  .outSecond{
+    top:32px;
+    transform: rotate(0deg);
+    transition: top 500ms ease 500ms, transform 500ms ease 0s;
   }
 
 
@@ -119,3 +69,4 @@ bottom:2px;
    display: block;
  }
 }
+

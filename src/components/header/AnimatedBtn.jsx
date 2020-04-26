@@ -11,18 +11,11 @@ export const AnimatedBtn = () => {
 
     <div onClick={() => setscrollMenuToggle(!scrollMenuToggle)} className='MENU'>
 
+<div className={`up ${scrollMenuToggle==true? 'inFirst': 'outFirst'} `}>
 
-
-<CSSTransition in={scrollMenuToggle} timeout={500} classNames="up-active">
-        <div className='up'>
-        </div>
-      </CSSTransition>
-
-     <div className={`center ${scrollMenuToggle && 'center-active'}`}></div>
-     
-<CSSTransition in={scrollMenuToggle} timeout={500} classNames="down-active">
-      <div className={`down`}></div>
-      </CSSTransition>
+</div>
+<div className={`center ${scrollMenuToggle==true? 'incenter':''}`}></div>
+<div className={`down ${scrollMenuToggle==true? 'inSecond':'outSecond'} `}></div>
 
     </div>
   )
