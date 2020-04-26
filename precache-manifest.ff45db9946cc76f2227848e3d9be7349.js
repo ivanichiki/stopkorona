@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "18592ae57849aaec51af595cd20b3f8d",
+    "revision": "05927384df09a922cc59443c3a1b79ee",
     "url": "/stopkorona/index.html"
   },
   {
-    "revision": "f9da5c14a74e83ffb7df",
-    "url": "/stopkorona/static/css/main.f31eb3e5.chunk.css"
+    "revision": "4adc715bfe794cf01151",
+    "url": "/stopkorona/static/css/main.668b270f.chunk.css"
   },
   {
-    "revision": "42438c84a5af91bd7f82",
-    "url": "/stopkorona/static/js/2.f78b75f5.chunk.js"
+    "revision": "7826a23eb59ba7ee537b",
+    "url": "/stopkorona/static/js/2.958864c4.chunk.js"
   },
   {
     "revision": "e867553593e1bcee119717999d316408",
-    "url": "/stopkorona/static/js/2.f78b75f5.chunk.js.LICENSE.txt"
+    "url": "/stopkorona/static/js/2.958864c4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f9da5c14a74e83ffb7df",
-    "url": "/stopkorona/static/js/main.71abfcc8.chunk.js"
+    "revision": "4adc715bfe794cf01151",
+    "url": "/stopkorona/static/js/main.1ea93316.chunk.js"
   },
   {
     "revision": "ebe0d00c82b8895a9d12",
@@ -44,10 +44,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stopkorona/static/media/Ok.1c2f2504.png"
   },
   {
-    "revision": "a38c9aede11ab84bb8fede667dba3da1",
-    "url": "/stopkorona/static/media/border.a38c9aed.png"
-  },
-  {
     "revision": "fde5eac4c688f84d1893fab77da95e0e",
     "url": "/stopkorona/static/media/call.fde5eac4.svg"
   },
@@ -58,10 +54,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "52e501adafd619483aef18e3e3d2714a",
     "url": "/stopkorona/static/media/cross.52e501ad.svg"
-  },
-  {
-    "revision": "929531249340525d00159bd00156df19",
-    "url": "/stopkorona/static/media/dostup.92953124.png"
   },
   {
     "revision": "7e8a290bbbc613ca55d27b8f8174c632",
@@ -142,10 +134,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "13f8ac451439a29ffc425a0cb5428be4",
     "url": "/stopkorona/static/media/moratorii_na_proverki_biznesa.13f8ac45.svg"
-  },
-  {
-    "revision": "5a23b0c0f8fdef243132518b0e5339c6",
-    "url": "/stopkorona/static/media/myvmeste.5a23b0c0.png"
   },
   {
     "revision": "e5cbfd59313465f1e09150f7ff05c6cc",
